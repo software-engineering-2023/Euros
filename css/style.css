@@ -32,7 +32,6 @@ body {
      background-position: center;
      background-repeat: no-repeat;
 }
-
 a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -49,6 +48,7 @@ h2,
 h3,
 h4,
 h5,
+h7,
 h6 {
      letter-spacing: 0;
      font-weight: normal;
@@ -83,7 +83,9 @@ h5 {
 h6 {
      font-size: 13px
 }
-
+h7 {
+    font-size: 60px
+}
 *,
 *::after,
 *::before {
@@ -96,6 +98,7 @@ h1 a,
 h2 a,
 h3 a,
 h4 a,
+h7 a,
 h5 a,
 h6 a {
      color: #212121;
@@ -165,6 +168,10 @@ img {
      margin: 0;
      padding: 0;
 }
+.welcome_text h7 {
+    padding-top: 200px;
+    font-weight: lighter;
+}
 
 .form-control:focus {
      border-color: #ffffff !important;
@@ -220,7 +227,6 @@ button {
      max-width: 1170px;
 }
 
-
 /*---------------------------- 
 loader  
 ----------------------------*/
@@ -248,17 +254,16 @@ loader
      width: 280px;
 }
 
-
 /*--------------------------------------------------------------------- 
 header 
 ---------------------------------------------------------------------*/
 
 header {
-     background: #0f132d;
-     width: 100%;
-     padding: 22px 30px;
-     height: 96px;
-     z-index: 9;
+    background: #0f132d;
+    width: 100%;
+    padding: 22px 30px;
+    height: 96px;
+    z-index: 9;
 }
 
 .logo a {
