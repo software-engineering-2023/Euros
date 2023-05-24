@@ -149,7 +149,7 @@ img {
      height: auto;
 }
 
- :focus {
+:focus {
      outline: 0;
 }
 
@@ -172,7 +172,112 @@ img {
     padding-top: 200px;
     font-weight: lighter;
 }
+.light_font {
+    font-weight: lighter;
+}
 
+.enlarged-image {
+    width: 600px;
+    height: auto;
+}
+
+/* Style for the pop-up box */
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    background-color: #f1f1f1;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+.popup-text {
+    padding: 10px;
+    font-weight: bold;
+    color: #404b65;
+}
+/* Style for the button */
+.slide-out-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Style for the button icon */
+.slide-out-button i {
+    color: #555;
+}
+/* Style for the button on hover */
+.slide-out-button:hover {
+    background-color: #ccc;
+}
+/* Style for the onmouseover text */
+.slide-out-button:hover span {
+    color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+/* Style for the onmouseover text */
+.slide-out-button span {
+    display: none;
+}
+/* Style for the onmouseover text on hover */
+.slide-out-button:hover span {
+    display: inline-block;
+}
+
+/* Style for the transparent submit button */
+.transparent-button {
+    background-color: transparent;
+    color: #404b65;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* Style for the submit button on hover */
+.transparent-button:hover {
+    background-color: #face34;
+    color: #fff;
+}
+.popup input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    background-color: #fbfbfb;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 20px;
+    color: #666666;
+    cursor: pointer;
+}
+/* Style for the close button on hover */
+.close-button:hover {
+    color: #1f1f1f;
+}
+
+.profile-info-text {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    padding-left: 20px;
+    color: aquamarine;
+}
 .form-control:focus {
      border-color: #ffffff !important;
      box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
