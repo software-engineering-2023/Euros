@@ -102,9 +102,39 @@ function getURL() { window.location.href; } var protocol = location.protocol; $.
 /* Toggle sidebar
      -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
+	if(document.getElementById("mySidepanel").style.width == "275px"){
+ 	 document.getElementById("mySidepanel").style.width = "0px";
+	}
+  else{
+	document.getElementById("mySidepanel").style.width = "275px"
+  }
 }
 
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
+function checkFields()
+{
+var empt = document.forms["annContent"]["Announcement headline"].value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else 
+{
+alert('Code has accepted : you can try another');
+return true; 
+}
+}
+const openBtn = document.getElementById('openBtn1');
+const popup = document.getElementById('popup1');
+const closeBtn = document.getElementById('closeBtn1');
+
+openBtn.addEventListener('click', () => {
+  popup.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.classList.remove('active');
+});
