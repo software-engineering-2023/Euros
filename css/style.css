@@ -948,3 +948,14 @@ ul.email li i {
 .inner_page .contact {
      margin-top: 90px;
 }
+
+
+
+
+body {
+    display: grid;
+    place-content: center;
+    margin: 0;
+    height: 100vh;
+    font-family: system-ui, sans-serif;
+}
