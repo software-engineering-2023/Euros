@@ -1280,7 +1280,7 @@ ul.email {
     cursor: pointer;
 }
 
-.popup {
+.popup2 {
     display: none;
     position: fixed;
     top: 50%;
@@ -1296,24 +1296,24 @@ ul.email {
     animation-fill-mode: forwards;
 }
 
-#openBtn:focus + #popup {
+#openBtn2:focus + #popup2 {
     display: block;
     animation: fade-out 2s 0.1s ease-in-out forwards;
 }
 
-.popup-content {
+.popup-content2 {
     text-align: center;
 }
 
-    .popup-content h2 {
+    .popup-content2 h2 {
         margin-top: 0;
     }
 
-    .popup-content p {
+    .popup-content2 p {
         margin-bottom: 20px;
     }
 
-.close-button {
+.close-button2 {
     background-color: #fff;
     color: #000;
     padding: 10px 20px;
@@ -1321,7 +1321,7 @@ ul.email {
     cursor: pointer;
 }
 
-    .close-button:hover {
+    .close-button2:hover {
         background-color: #000;
         color: #fff;
     }
