@@ -137,3 +137,52 @@ function closePopup() {
 
 	document.getElementById("popup1").style.display = "none";
 }
+var un = document.getElementById("un").value;
+var pass = document.getElementById("pass").value;
+function logout(){
+	un = ""
+	pass  = ""
+}
+
+function checkUser(event) {
+	event.preventDefault(); // Prevent default form submission behavior
+	
+	un = document.getElementById("un").value;
+	pass = document.getElementById("pass").value;
+   
+	if (un === "admin" && pass === "admin") {
+		window.location.href = "admin.html";
+	}
+	else if (un === "banker" && pass === "banker") {
+		window.location.href = "banker.html";
+	}
+	else if (un === "client" && pass === "client") {
+		window.location.href = "customer.html";
+	}
+	else if (un === "" && pass === "") {
+		alert("Please enter a username and a password");
+		document.getElementById("un").value = "";
+		document.getElementById("pass").value = "";
+	}
+	else if (pass === "") {
+		alert("Please enter a password");
+		document.getElementById("un").value = "";
+	}
+	else if (un === "") {
+		alert("Please enter a username");
+		document.getElementById("pass").value = "";
+	}
+}
+function checkUserinfo(event) {
+	event.preventDefault(); // Prevent default form submission behavior
+	if (un === "admin" && pass === "admin") {
+		window.location.href = "admininfo.html";
+	}
+	else if (un === "banker" && pass === "banker") {
+		window.location.href = "bankerinfo.html";
+	}
+	else if (un === "client" && pass === "client") {
+		window.location.href = "customerinfo.html";
+	}
+	
+}

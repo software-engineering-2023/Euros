@@ -41,12 +41,14 @@
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">My Account</a>
-        <a href="searvices.html">Loans</a>
-        <a href="testimonial.html">My Cards</a>
-        <a href="works.html">Transactions</a>
-        <a href="contact.html">Log Out</a>
+        <a class="active" href="homePage.html">Home</a>
+        <div class="row d_flex">
+            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        </div>
     </div>
     <!-- header -->
     <header>
@@ -56,13 +58,21 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="customer.html">Home Page</a>
+                            <a href="homePage.html">Home Page</a>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <ul class="email text_align_right">
-                            <li class="d_none"><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                            <!--- <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li> -->
+                            <li>
+                                <a href = "login.html">
+                                <button class="homepage-btns">Login</button>
+                            </a>
+                            </li>
+                            <li>
+                                <a href = "Register.html">
+                                <button class="homepage-btns">Register</button>
+                                </a>
+                            </li>
                             <li>
                                 <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
                             </li>
@@ -73,31 +83,11 @@
         </div>
     </header>
     <!-- end header -->
-    <!-- welcome message -->
-    <div class="welcome_text text_align_center">
-        <h7>Welcome to your electronic home </h7>
-    </div>
-    <!-- welcome message end -->
-    <!-- wallet -->
-
-    <!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .my-link {
-            color: rgb(141, 141, 162);
-            text-decoration: none;
-        }
-
-        .my-link:hover {
-            color: rgb(44, 50, 99);
-            text-decoration: underline;
-        }
-    </style>
-</head>
-</html>
    
     <div class="wallet">
+        <div class="welcome_text text_align_center">
+            <h7>Welcome to your electronic home </h7>
+        </div>
         <div class="container-fluid">
             <style>
                 .center-column {
@@ -145,7 +135,7 @@
               </style>
             <div class="row center-column">
                 <div class="col-sm-3 thicker-col">
-                    <div id="wa_hover" class="wallet_box text_align_center">
+                    <div  class="wallet_box text_align_center">
                         <i><img src="images/wa2.svg" alt="#" /></i>
                         <h3>Accounts</h3>
                         <p>Our online banking system offers a variety of account types to suit individual, business, and student needs, providing easy access, competitive interest rates, and tailored services for a seamless banking experience. Choose from Personal Checking, Premium Savings, Business, and Student Accounts to meet your specific financial requirements.</p>
@@ -153,33 +143,39 @@
                         <br>
                         <div class="text_align_center"> 
                              <div class="col-md-12">
+                                <a href = "accountsoverview.html">
                                 <button class="more-info-btn"> More Info</button>
+                                </a>
                             </div> 
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 thicker-col">
-                    <div id="wa_hover" class="wallet_box text_align_center">
+                <div class="col-sm-3 thicker-col">
+                    <div  class="wallet_box text_align_center">
                         <i><img src="images/wa3.svg" alt="#" /></i>
                         <h3>Credit Cards</h3>
                         <p>Our online banking system offers a range of credit cards designed to meet diverse financial needs. From cashback rewards and travel benefits to low-interest rates and flexible payment options, our credit card options provide convenience and financial flexibility for our customers. Choose the credit card that best aligns with your lifestyle and start enjoying the perks today. </p>
                         <br>
                         <div class="text_align_center"> 
                             <div class="col-md-12">
+                                <a href = "creditcardoverview.html">
                                 <button class="more-info-btn"> More Info</button>
+                                </a>
                             </div> 
                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 thicker-col-loan">
-                    <div id="wa_hover" class="wallet_box text_align_center">
+                <div class="col-sm-3 thicker-col-loan">
+                    <div class="wallet_box text_align_center">
                         <i><img src="images/wa4.svg" alt="#" /></i>
                         <h3>Loans</h3>
                         <p>Our online banking system provides a variety of loan options to support your financial goals.Whether you're looking for a personal loan to fund a major purchase or a business loan to expand your enterprise, we offer competitive interest rates, flexible repayment terms, and personalized solutions. Explore our range of loan options and take a step closer to realizing your goals. </p>
                         <br>
                         <div class="text_align_center"> 
                             <div class="col-md-12">
+                                <a href = "loansoverview.html">
                                 <button class="more-info-btn">More Info </button>
+                                </a>
                             </div> 
                        </div>
                     </div>
@@ -251,18 +247,10 @@
                                 </li>
                                 <li>
                                     <a href="Javascript:void(0) ">
-                                        <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@euros.com
+                                        <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@eurosOBS.com
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="copyright text_align_center ">
-                    <div class="container ">
-                        <div class="row ">
-                            <div class="col-md-12 ">
-                            </div>
                         </div>
                     </div>
                 </div>

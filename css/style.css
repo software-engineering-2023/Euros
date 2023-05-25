@@ -948,7 +948,30 @@ ul.email {
 .inner_page .contact {
     margin-top: 90px;
 }
-/* haytham css classes  */
+
+
+
+
+
+                                        /* haytham css classes  */
+
+.homepage-btns {
+     display: inline-block;
+     padding-inline:  5px;
+     font-size: 17px;
+     background-color: #101646;
+     color: whitesmoke;
+     text-decoration: none;
+     border-radius: 3px;
+     font-weight: bold;
+     transition: background-color 0.3s ease;
+     }
+
+
+.homepage-btns:hover{
+     background-color: whitesmoke;
+     color: #48b9ff;
+}
 
 .logo {
     font-size: 27px;
@@ -1475,7 +1498,7 @@ h7 {
     h7 a,
     .welcome_text h7 {
         padding-top: 200px;
-        font-weight: lighter;
+        font-weight: bold;
     }
 
 .light_font {
