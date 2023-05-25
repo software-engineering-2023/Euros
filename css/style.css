@@ -1589,47 +1589,86 @@ h7 {
 
 
 /* Mahran's classes */
--scrollbar {
-    width: 8px;
-    background-color: #f5f5f5;
+
+.listsearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.list::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-
-    .list::-webkit-scrollbar-thumb:hover {
-        background-color: #555;
-    }
-
-.list li {
-    display: block;
+#search {
+    width: 100%;
+    max-width: 300px;
+    height: 46px;
     padding: 10px;
-    margin-bottom: 10px;
-    background-color: #fff;
-    border-radius: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5f5f5;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px; /* add margin-bottom to create space */
 }
 
-    .list li:hover {
-        transform: translateY(-5px);
+    #search:focus {
+        width: 100%;
+        max-width: 500px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .list li:nth-child(even) {
         background-color: #fff;
     }
 
-    .list li:last-child {
-        margin-bottom: 0;
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+    .list::-webkit-scrollbar {
+        width: 8px;
+        background-color: #f5f5f5;
     }
+
+    .list::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+    }
+
+        .list::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+    .list li {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #ffffff00;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-family: Arial, sans-serif;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+        .list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .list li:nth-child(even) {
+            background-color: #ffffff00;
+        }
+
+        .list li:last-child {
+            margin-bottom: 0;
+        }
 
 label {
     color: red;
@@ -1694,6 +1733,49 @@ label {
     transform: rotate(45deg);
 }
 
+.accept_btn {
+    max-width: 191px;
+    display: inline-block;
+    background: transparent;
+    height: 51px;
+    width: 100%;
+    color: #c9c7c7;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: ease-in all 0.5s;
+    border: #ffffff solid 2px;
+}
+
+    .accept_btn:hover {
+        background: #face34;
+        transition: ease-in all 0.5s;
+        border: #face34 solid 2px;
+    }
+
+
+.reject_btn {
+    max-width: 191px;
+    display: inline-block;
+    background: transparent;
+    height: 51px;
+    width: 100%;
+    color: #c9c7c7;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: ease-in all 0.5s;
+    border: #ffffff solid 2px;
+}
+
+    .reject_btn:hover {
+        background: #face34;
+        transition: ease-in all 0.5s;
+        border: #face34 solid 2px;
+    }
+
+
 .hidden {
     display: none;
 }
+

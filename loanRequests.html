@@ -116,28 +116,47 @@
 
 
         </ul>
-         <button class="subs_btn ">Accept</button>
-      
-      <button class="subs_btn ">Reject</button>
+        <button class="accept_btn">Accept</button>
+
+        <button class="reject_btn">Reject</button>
     </div>
-     
+
     <script>
-        const buttons = document.querySelector('.buttons');
-        buttons.addEventListener('click', function (event) {
+        const rejButton = document.querySelector('.reject_btn');
+        const acptButton = document.querySelector('.accept_btn');
+        const checkbox = document.querySelector('.checkbox input[type="checkbox"]');
+        rejButton.addEventListener('click', function (event) {
             const clickedButton = event.target;
             if (clickedButton.tagName === 'BUTTON') {
-                if (clickedButton.textContent == "Accept") {
+                if (clickedButton.textContent == "Reject" && checkbox.checked) {
+                    window.alert("Rejected!");
+                }
+                else {
+                    window.alert("Please select atleast one user");
+                }
+
+            }
+        });
+        acptButton.addEventListener('click', function (event) {
+            const clickedButton = event.target;
+            if (clickedButton.tagName === 'BUTTON') {
+                if (clickedButton.textContent == "Accept" && checkbox.checked) {
                     window.alert("Accepted!");
                 }
                 else {
-                    window.alert("Rejected!");
+                    window.alert("Please select atleast one user");
                 }
+
             }
         });
 
 
 
     </script>
+
+
+
+
     <script>
 
         const search = document.getElementById('search');
@@ -152,123 +171,74 @@
 
                 if (title.indexOf(term) != -1) {
                     item.style.visibility = "visible";
-
+                    list.insertAdjacentElement('afterbegin', item);
                 } else {
                     item.style.visibility = "hidden";
+
+
                 }
             });
         });
     </script>
 
-
     <footer>
         <div class="footer">
+            <!-- report system issue, 3yzin nehotaha f kol el pages-->
+            <!-- Button to trigger the pop-up box -->
+            <div id="slideOutButton" class="slide-out-button" onclick="openPopup()">
+                <i class="fas fa-exclamation-circle"></i>
+                <span> Report Technical Issue</span>
+            </div>
+            <!-- Pop-up box -->
+            <div id="popupBox" class="popup">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+                <p class="popup-text">What is your issue?</p>
+                <input type="text" id="textInput">
+                <br>
+                <button class="transparent-button" onclick="closePopup()">Submit</button>
+            </div>
+            <script>
+                function openPopup() {
+                    // Display the pop-up box
+                    document.getElementById("popupBox").style.display = "block";
+                }
 
+                function closePopup() {
+                    // Get the entered text from the input field
+                    var text = document.getElementById("textInput").value;
 
+                    // 3ayzeen nwady el text dh lel admin b2a
+                    if (text != "") {
+                        alert("Noted. Your issue will be fixed shortly.");
+                        document.getElementById("textInput").value = "";
+                    }
+                    // Hide the pop-up box
+                    document.getElementById("popupBox").style.display = "none";
+                }
+            </script>
+            <!-- end report system issue-->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <a class="logo_bottom" href="index.html">BitCYPO</a>
-                    </div>
                     <div class="col-md-3 col-sm-6" ">
                         <div class="Informa conta ">
                             <h3>Contact Us</h3>
                             <ul>
                                 <li>
                                     <a href="Javascript:void(0) ">
-                                        <i class="fa fa-map-marker " aria-hidden="true"></i> Location
+                                        <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Javascript:void(0) ">
-                                        <i class="fa fa-phone " aria-hidden="true"></i> Call +01 1234567890
+                                        <i class="fa fa-phone " aria-hidden="true "></i> Call +49 1636238603
                                     </a>
                                 </li>
                                 <li>
                                     <a href="Javascript:void(0) ">
-                                        <i class="fa fa-envelope " aria-hidden="true"></i> demo@gmail.com
+                                        <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@euros.com
                                     </a>
                                 </li>
                             </ul>
-                            <ul>
-                                <li>
-                                    Readable content of
-                                </li>
-                                <li>
-                                    a page when looking
-                                </li>
-                                <li>
-                                    at its layoutreadable
-                                </li>
-                                <li>
-                                    content of a page
-                                </li>
-                                <li>
-                                    when looking at its
-                                </li>
-                                <li>
-                                    layout
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 " ">
-                        <div class="Informa helpful">
-                            <h3>Useful Link</h3>
-                            <ul>
-                                <li>
-                                    Readable content of
-                                </li>
-                                <li>
-                                    a page when looking
-                                </li>
-                                <li>
-                                    at its layoutreadable
-                                </li>
-                                <li>
-                                    content of a page
-                                </li>
-                                <li>
-                                    when looking at its
-                                </li>
-                                <li>
-                                    layout
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6" ">
-                        <div class="Informa ">
-                            <h3>Offices</h3>
-                            <ul>
-                                <li>
-                                    Readable content of
-                                </li>
-                                <li>
-                                    a page when looking
-                                </li>
-                                <li>
-                                    at its layoutreadable
-                                </li>
-                                <li>
-                                    content of a page
-                                </li>
-                                <li>
-                                    when looking at its
-                                </li>
-                                <li>
-                                    layout
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 ">
-                        <div class="Informa ">
-                            <h3>Newsletter</h3>
-                            <form class="newslatter_form ">
-                                <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
-                                <button class="subs_btn ">Subscribe</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -276,14 +246,26 @@
                     <div class="container ">
                         <div class="row ">
                             <div class="col-md-12 ">
-                                <p>� 2020 All Rights Reserved. Design by   <a href="https://html.design/ "> Free Html Template</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+     
+        <div class="copyright text_align_center ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <p>© 2020 All Rights Reserved. Design by Euros Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </footer>
+
+
     <!-- end footer -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js "></script>
