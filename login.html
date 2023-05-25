@@ -88,21 +88,53 @@
                         <h2>Login</h2>
                     </div>
                 </div>
-                <div class=" col-md-10 offset-md-1">
+                <<script>
+                    function checkUser(event) {
+                        event.preventDefault(); // Prevent default form submission behavior
+                        
+                        var un = document.getElementById("un").value;
+                        var pass = document.getElementById("pass").value;
+                       
+                        if (un === "admin" && pass === "admin") {
+                            window.location.href = "admin.html";
+                        }
+                        else if (un === "banker" && pass === "banker") {
+                            window.location.href = "banker.html";
+                        }
+                        else if (un === "client" && pass === "client") {
+                            window.location.href = "customer.html";
+                        }
+                        else if (un === "" && pass === "") {
+                            alert("Please enter a username and a password");
+                            document.getElementById("un").value = "";
+                            document.getElementById("pass").value = "";
+                        }
+                        else if (pass === "") {
+                            alert("Please enter a password");
+                            document.getElementById("un").value = "";
+                        }
+                        else if (un === "") {
+                            alert("Please enter a username");
+                            document.getElementById("pass").value = "";
+                        }
+                    }
+                </script>
+                <div class="col-md-10 offset-md-1">
                     <form id="request" class="main_form">
                         <div class="row">
-                            <div class="col-md-6 ">
-                                <input class="contactus" placeholder="Username" type="type" name="Username">
+                            <div class="col-md-6">
+                                <input id="un" class="contactus" placeholder="Username" type="text" name="Username">
                             </div>
                             <div class="col-md-6">
-                                <input class="contactus" placeholder="Password" type="type" Message="Password"></textarea>
+                                <input id="pass" class="contactus" placeholder="Password" type="password" name="Password">
                             </div>
                             <div class="col-md-12">
-                                <button class="send_btn">Login</button>
+                                <button id="loginbtn" onclick="checkUser(event)" class="send_btn">Login</button>
                             </div> 
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>

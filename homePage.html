@@ -7,6 +7,10 @@
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <!-- site metas -->
     <title>bitcypo</title>
     <meta name="keywords" content="">
@@ -16,10 +20,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/yousty.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -33,9 +40,12 @@
     </div>
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">�</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a class="active" href="index.html">Home</a>
         <a href="about.html">My Account</a>
+        <a href="searvices.html">Loans</a>
+        <a href="testimonial.html">My Cards</a>
+        <a href="works.html">Transactions</a>
         <a href="contact.html">Log Out</a>
     </div>
     <!-- header -->
@@ -46,22 +56,13 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="index.html">EurosOBS</a>
+                            <a href="customer.html">Home Page</a>
                         </div>
                     </div>
-                    <!-- <div class="col-sm-5">
-                        <ul class="social_icon text_align_right d_none">
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div> -->
                     <div class="col-sm-4">
                         <ul class="email text_align_right">
-                            <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+                            <li class="d_none"><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <!--- <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li> -->
                             <li>
                                 <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
                             </li>
@@ -71,50 +72,116 @@
             </div>
         </div>
     </header>
-    <div class="welcome_text text_align_center">
-        <h7>WELCOME BANKER</h7>
-    </div>
     <!-- end header -->
-    <!-- start slider section -->
-    <!-- end slider section -->
+    <!-- welcome message -->
+    <div class="welcome_text text_align_center">
+        <h7>Welcome to your electronic home </h7>
+    </div>
+    <!-- welcome message end -->
     <!-- wallet -->
-    <div class="wallet">
-        <div class="col-md-12">
-            
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <a href="cardRequests.html">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img src="images/wa1.svg" alt="#" /></i>
-                        <h3>View users' card requests</h3>
 
-                        <p>Accept or reject user's request on getting a new physical card</p>
-                    </div>
-                </a>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <a href="loanRequests.html">
+    <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .my-link {
+            color: rgb(141, 141, 162);
+            text-decoration: none;
+        }
+
+        .my-link:hover {
+            color: rgb(44, 50, 99);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+</html>
+   
+    <div class="wallet">
+        <div class="container-fluid">
+            <style>
+                .center-column {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh; 
+                }
+                
+              </style>
+              <style>
+                /* Button styling */
+                .more-info-btn {
+                  display: inline-block;
+                  padding: 5px 25px;
+                  background-color: #3e6a9d;
+                  color: white;
+                  text-decoration: none;
+                  border-radius: 3px;
+                  font-weight: bold;
+                  transition: background-color 0.3s ease;
+                }
+            
+                /* Button hover effect */
+                .more-info-btn:hover {
+                  background-color: #b2c7b3;
+                }
+              </style>
+               <style>
+                /* Custom CSS to adjust column width */
+                .thicker-col {
+                  width: 30%; /* Adjust the width value to make the column thicker */
+                }
+              </style>
+               <style>
+                /* Custom CSS to adjust column width */
+                .thicker-col-loan {
+                  width: 100%; /* Adjust the width value to make the column thicker */
+                }
+              </style>
+               <style>
+                .text {
+                  margin-right: 10px; /* Adjust the margin value to create space */
+                }
+              </style>
+            <div class="row center-column">
+                <div class="col-sm-3 thicker-col">
                     <div id="wa_hover" class="wallet_box text_align_center">
                         <i><img src="images/wa2.svg" alt="#" /></i>
-                        <h3>View users' loan requests</a></h3>                   
-                        <p>Accept or reject user's  request on getting a<li>loan</li></p>
+                        <h3>Accounts</h3>
+                        <p>Our online banking system offers a variety of account types to suit individual, business, and student needs, providing easy access, competitive interest rates, and tailored services for a seamless banking experience. Choose from Personal Checking, Premium Savings, Business, and Student Accounts to meet your specific financial requirements.</p>
+                        <br>
+                        <br>
+                        <div class="text_align_center"> 
+                             <div class="col-md-12">
+                                <button class="more-info-btn"> More Info</button>
+                            </div> 
+                        </div>
                     </div>
-                </a>
                 </div>
-                <div class="col-lg-3 col-sm-6" onclick="openPopup()">
+                <div class="col-lg-3 thicker-col">
                     <div id="wa_hover" class="wallet_box text_align_center">
                         <i><img src="images/wa3.svg" alt="#" /></i>
-                        <h3>File technical issue report</h3>
-                        <p>Report any technical issue that you<li>face</li></p>
+                        <h3>Credit Cards</h3>
+                        <p>Our online banking system offers a range of credit cards designed to meet diverse financial needs. From cashback rewards and travel benefits to low-interest rates and flexible payment options, our credit card options provide convenience and financial flexibility for our customers. Choose the credit card that best aligns with your lifestyle and start enjoying the perks today. </p>
+                        <br>
+                        <div class="text_align_center"> 
+                            <div class="col-md-12">
+                                <button class="more-info-btn"> More Info</button>
+                            </div> 
+                       </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 thicker-col-loan">
                     <div id="wa_hover" class="wallet_box text_align_center">
                         <i><img src="images/wa4.svg" alt="#" /></i>
-                        <h3><a href="userReports.html">View user's Reports</a></h3>
-                        <p>Freeze/unfreeze user's card if any fraud transaction happened</p>
+                        <h3>Loans</h3>
+                        <p>Our online banking system provides a variety of loan options to support your financial goals.Whether you're looking for a personal loan to fund a major purchase or a business loan to expand your enterprise, we offer competitive interest rates, flexible repayment terms, and personalized solutions. Explore our range of loan options and take a step closer to realizing your goals. </p>
+                        <br>
+                        <div class="text_align_center"> 
+                            <div class="col-md-12">
+                                <button class="more-info-btn">More Info </button>
+                            </div> 
+                       </div>
                     </div>
                 </div>
             </div>
@@ -127,10 +194,7 @@
     <!-- end graf -->
     <!-- testimonial -->
     <!-- works -->
-    <!-- contact -->
-    <!-- end contact -->
     <!-- footer -->
-
     <footer>
         <div class="footer">
             <!-- report system issue, 3yzin nehotaha f kol el pages-->
@@ -174,9 +238,11 @@
                             <h3>Contact Us</h3>
                             <ul>
                                 <li>
+                                    <li>
                                     <a href="Javascript:void(0) ">
                                         <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
                                     </a>
+                                </li>
                                 </li>
                                 <li>
                                     <a href="Javascript:void(0) ">
@@ -205,35 +271,14 @@
         <div class="copyright text_align_center ">
             <div class="container ">
                 <div class="row ">
-                    <div class="col-sm-12">
-                        <div class="alert fade alert-simple alert-info alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
-                            <button type="button" class="close font__size-18" data-dismiss="alert">
-                                <span aria-hidden="true">
-                                    <i class="fa fa-times blue-cross"></i>
-                                </span>
-                                <span class="sr-only">Close</span>
-                            </button>
-                            <i class="start-icon  fa fa-info-circle faa-shake animated"></i>
-                            <strong class="font__weight-semibold">Heads up!</strong> This alert needs your attention, but it's not super important.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright text_align_center ">
-            <div class="container ">
-                <div class="row ">
                     <div class="col-md-12 ">
-                        <p>© 2020 All Rights Reserved. Design by Euros Team</p>
+                        <p>© 2023 All Rights Reserved. Design by Euros Team</p>
                     </div>
                 </div>
             </div>
         </div>
-
+        </div>
     </footer>
-
-
     <!-- end footer -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js "></script>
@@ -242,8 +287,3 @@
     <script src="js/custom.js "></script>
 </body>
 </html>
-
-
-
-
-

@@ -127,3 +127,13 @@ alert('Code has accepted : you can try another');
 return true; 
 }
 }
+
+function openPopup() {
+	// Display the pop-up box
+	document.getElementById("popup1").style.display = "block";
+}
+
+function closePopup() {
+
+	document.getElementById("popup1").style.display = "none";
+}
