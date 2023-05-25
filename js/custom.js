@@ -127,14 +127,3 @@ alert('Code has accepted : you can try another');
 return true; 
 }
 }
-const openBtn = document.getElementById('openBtn1');
-const popup = document.getElementById('popup1');
-const closeBtn = document.getElementById('closeBtn1');
-
-openBtn.addEventListener('click', () => {
-  popup.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  popup.classList.remove('active');
-});
