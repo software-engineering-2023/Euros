@@ -116,14 +116,16 @@
 
 
         </ul>
+        
+            <button class="subs_btn ">Accept</button>
+      
+            <button class="subs_btn ">Reject</button>
+        
 
     </div>
-    <div class="buttons">
-        <button>Accept</button>
-        <button>Reject</button>
-    </div>
+    
     <script>
-        const buttons = document.querySelector('.buttons');
+        const buttons = document.querySelector('.subs_btn');
         buttons.addEventListener('click', function (event) {
             const clickedButton = event.target;
             if (clickedButton.tagName === 'BUTTON') {
