@@ -83,23 +83,136 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
+                    <div id="cardApp" class="wallet_box text_align_center ma_hover">
                         <i><img src="images/wa1.svg" alt="#" /></i>
-                        <h3>GOVERNMENT BILLS</h3>
-                        <p>It is a long established fact that a reader will be distracted by </p>
+                        <h3>Apply for a credit card</h3>
+                        <p>Click here to apply for a credit card on one of your active accounts </p>
                     </div>
                 </div>
+                <div id="popupContainerCard" class="appPopup-container">
+                    <div class="appPopup-content appPopup-content-border">
+                        <p class="appPopup-title">CARD APPLICATION</p>
+                        <br></br>
+                        <br></br>
+                        <form>
+                            <label for="name" class="appPopup-label">Account Number:</label>
+                            <select type="text" id="name" placeholder="Choose account" class="appPopup-input" required>
+                                <option value="">Choose account</option>
+                                <option value="1abc2345678">1abc2345678</option>
+                                <option value="9abc8764523">9abc8764523</option>
+                                <option value="4abc7294058">4abc7294058</option>
+                            </select>
+                            <br></br>
+                            <label for="amount" class="appPopup-label">Card Limit:</label>
+                            <select type="number" id="limit" placeholder="Set limit" class="appPopup-input" required>
+                                <option value="">Set limit</option>
+                                <option value="5000">5000</option>
+                                <option value="10000">10000</option>
+                                <option value="15000">15000</option>
+                                <option value="20000">20000</option>
+                            </select>
+                            <br></br>
+                            <br></br>
+                            <button type="button" id="applyCardButton" onClick="applyCardApp()" class="appPopup-button"> Apply</button>
+                        </form>
+                        <button id="closeCardAppButton" onClick="closeCardAppPopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+                <script>
+                    var applyCardBtn = document.getElementById("cardApp");
+                    var popupContainerCard = document.getElementById("popupContainerCard");
+                    var closeCardAppBtn = document.getElementById("closeCardAppButton");
+                    var applyCardButton = document.getElementById("applyCardButton");
+
+                    function applyCardApp() {
+                        var text = document.getElementById("name").value;
+                        var text1 = document.getElementById("limit").value;
+                        if (text1 != "") {
+                            if (text != "") {
+                                alert("Your request is being reviewed.");
+                            }
+                        }
+                        closeCardAppPopup();
+                    }
+                    function closeCardAppPopup() {
+                        popupContainerCard.style.display = "none";
+                    }
+
+                    applyCardBtn.addEventListener("click", function () {
+                        popupContainerCard.style.display = "block";
+                    });
+                </script>
+
                 <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
+                    <div id="loanApp" class="wallet_box text_align_center ma_hover">
                         <i><img src="images/wa2.svg" alt="#" /></i>
-                        <h3>SEND COINS</h3>
-                        <p>It is a long established fact that a reader will be distracted by </p>
+                        <h3>apply for a loan</h3>
+                        <p>Click here to apply for a Personal/Car loan. Please read the terms & conditions beforehand. </p>
                     </div>
                 </div>
+
+                <div id="popupContainerLoan" class="appPopup-container">
+                    <div class="appPopup-content appPopup-content-border">
+                        <p class="appPopup-title">LOAN APPLICATION</p>
+                        <form>
+                            <label for="loanType" class="appPopup-label">Loan Type:</label>
+                            <select type="text" id="loanType" placeholder="Choose loan type" class="appPopup-input" required>
+                                <option value="">Choose loan type</option>
+                                <option value="Car">Car</option>
+                                <option value="Personal">Personal</option>
+                            </select>
+                            <br></br>
+                            <label for="loanAmount" class="appPopup-label">Loan Amount:</label>
+                            <input type="number" id="loanAmount" placeholder="Specify loan amount" class="appPopup-input" required> </input>
+                            <br></br>
+                            <label for="settlementPlan" class="appPopup-label">SettlementPlan:</label>
+                            <select type="text" id="settlementPlan" placeholder="Choose convienient plan" class="appPopup-input" required>
+                                <option value="">Choose convienient plan</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="Yearly">Yearly</option>
+                            </select>
+                            <br></br>
+                            <label for="interestRate" class="appPopup-label">Interest Rate:</label>
+                            <select type="text" id="interestRate" placeholder="Choose from availabe rates" class="appPopup-input" required>
+                                <option value="">Choose from availabe rates</option>
+                                <option value="5 percent">5%</option>
+                                <option value="10 percent">10%</option>
+                            </select>
+                            <br></br>
+                            <button type="button" id="applyLoanButton" onClick="applyLoanApp()" class="appPopup-button"> Apply</button>
+                        </form>
+                        <button id="closeLoanAppButton" onClick="closeLoanAppPopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+                <script>
+                    var applyLoanBtn = document.getElementById("loanApp");
+                    var popupContainerLoan = document.getElementById("popupContainerLoan");
+                    var closeLoanAppBtn = document.getElementById("closeLoanAppButton");
+                    var applyLoanButton = document.getElementById("applyLoanButton");
+
+                    function applyLoanApp() {
+                        var text = document.getElementById("interestRate").value;
+                        var text1 = document.getElementById("settlementPlan").value;
+                        var text2 = document.getElementById("loanType").value;
+                        var text3 = document.getElementById("loanAmount").value;
+                        if (text1 != "" && text != "" && text2 != "" && text3 != "") {
+                            alert("Your request is being reviewed.");
+                        }
+                        closeLoanAppPopup();
+                    }
+                    function closeLoanAppPopup() {
+                        popupContainerLoan.style.display = "none";
+                    }
+
+                    applyLoanBtn.addEventListener("click", function () {
+                        popupContainerLoan.style.display = "block";
+                    });
+                </script>
+
                 <div class="col-lg-3 col-sm-6">
                     <div id="wa_hover" class="wallet_box text_align_center">
                         <i><img src="images/wa3.svg" alt="#" /></i>
-                        <h3>MOBILE APP </h3>
+                        <h3>open a new account</h3>
                         <p>It is a long established fact that a reader will be distracted by </p>
                     </div>
                 </div>
@@ -125,25 +238,29 @@
         <div class="footer">
             <!-- report system issue, 3yzin nehotaha f kol el pages-->
             <!-- Button to trigger the pop-up box -->
-            <div id="slideOutButton" class="slide-out-button" onclick="openPopup()">
+            <div id="slideOutButton" class="slide-out-button" onclick="openReportPopup()">
                 <i class="fas fa-exclamation-circle"></i>
                 <span> Report Technical Issue</span>
             </div>
             <!-- Pop-up box -->
-            <div id="popupBox" class="popup">
-                <span class="close-button" onclick="closePopup()">&times;</span>
+            <div id="popupBoxReport" class="popup">
+                <span class="close-button" onclick="closeReportPopup()">&times;</span>
                 <p class="popup-text">What is your issue?</p>
                 <input type="text" id="textInput">
                 <br>
-                <button class="transparent-button" onclick="closePopup()">Submit</button>
+                <button class="transparent-button" id="submitButton" onclick="closeReportPopup()">Submit</button>
             </div>
             <script>
-                function openPopup() {
+                var popupBoxReport = document.getElementById("popupBoxReport");
+
+                var submitButton = document.getElementById("submitButton");
+
+                function openReportPopup() {
                     // Display the pop-up box
-                    document.getElementById("popupBox").style.display = "block";
+                    popupBoxReport.style.display = "block";
                 }
 
-                function closePopup() {
+                function closeReportPopup() {
                     // Get the entered text from the input field
                     var text = document.getElementById("textInput").value;
 
@@ -153,7 +270,7 @@
                         document.getElementById("textInput").value = "";
                     }
                     // Hide the pop-up box
-                    document.getElementById("popupBox").style.display = "none";
+                    popupBoxReport.style.display = "none";
                 }
             </script>
             <!-- end report system issue-->
