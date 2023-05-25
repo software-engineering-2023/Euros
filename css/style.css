@@ -1625,7 +1625,7 @@ h7 a,
      display: block;
      padding: 10px;
      margin-bottom: 10px;
-     background-color: #f;
+     background-color: transparent;
      border-radius: 5px;
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
      transition: all 0.3s ease-in-out;
@@ -1642,7 +1642,7 @@ h7 a,
      }
 
      .list li:nth-child(even) {
-         background-color: #f;
+         background-color: transparent;
      }
 
      .list li:last-child {
