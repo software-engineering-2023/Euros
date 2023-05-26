@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="ListOfTransactions" herf ="css/ListOfTransactions.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
@@ -34,13 +35,15 @@
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="searvices.html">Searvices</a>
-        <a href="testimonial.html">Testimonial</a>
-        <a href="works.html">Works</a>
-        <a class="active" href="Transactions.html">Transactions</a>
+        <a href="customer.html">Home</a>
+        <a href="about.html">My Profile</a>
+        <a href="searvices.html">Cards</a>
+        <a href="testimonial.html">Loans</a>
+        <a class="active" href="ViewTransactions.html">Transactions</a>
+        <a href="homePage.html">logout</a>
+
     </div>
+
     <!-- header -->
     <header>
         <!-- header inner -->
@@ -112,6 +115,7 @@
                         <th scope="col">Activity</th>
                         <th scope="col">Mode</th>
                         <th scope="col">Date</th>
+                        <th scope="col">TransactionID</th>
                         <th scope="col" class="text-right">Amount</th>
                     </tr>
                 </thead>
@@ -126,37 +130,130 @@
                             </span>
                         </td>
                         <td class="text-muted">12 Jul 2020, 12:30 PM</td>
+                        <td class="text-muted">#57473829</td>
                         <td class="d-flex justify-content-end align-items-center">
                             <span class="fa fa-long-arrow-up mr-1"></span> $52.9
                         </td>
                     </tr>
-                    <tr> <td scope="row"> <span class="fa fa-bed mr-1"></span> Hotel Leela Palace </td> <td><span class="fa fa-cc-mastercard"></span></td> <td class="text-muted">11 Jul 2020, 2:00 PM</td> <td class="d-flex justify-content-end align-items-center"> <span class="fa fa-long-arrow-up mr-1"></span> $18.9 </td> </tr>
-                    <tr> <td scope="row"> <span class="fa fa-exchange mr-1"></span> Monthly Salary </td> <td><span class="fa fa-cc-visa"></span></td> <td class="text-muted">10 Jul 2020, 8:30 PM</td> <td class="d-flex justify-content-end align-items-center"> <span class="fa fa-long-arrow-down mr-1"></span> $9,765.00 </td> </tr>
-                    <tr> <td scope="row"> <span class="fa fa-exchange mr-1"></span> Xbox Purchase </td> <td><span class="fa fa-cc-mastercard"></span></td> <td class="text-muted">12 May 2020, 4:30 PM</td> <td class="d-flex justify-content-end align-items-center"> <span class="fa fa-long-arrow-up mr-1"></span> $198.90 </td> </tr>
-                    <tr> <td scope="row"> <span class="fa fa-cutlery mr-1"></span> Dinner Party </td> <td><span class="fa fa-cc-visa"></span></td> <td class="text-muted">11 May 2020, 5:30 PM</td> <td class="d-flex justify-content-end align-items-center"> <span class="fa fa-long-arrow-up mr-1"></span> $12.90 </td> </tr>
-                    <tr> <td scope="row"> <span class="fa fa-briefcase mr-1"></span> Nandini Hills Ride </td> <td><span class="fa fa-cc-mastercard"></span></td> <td class="text-muted">10 May 2020, 01:30 PM</td> <td class="d-flex justify-content-end align-items-center"> <span class="fa fa-long-arrow-up mr-1"></span> $97.9 </td> </tr>
-                    <tr> <td scope="row"> <span class="fa fa-briefcase mr-1"></span> Goa Beach Party </td> <td><span class="fa fa-cc-visa"></span></td> <td class="text-muted">09 May 2020, 01:30 PM</td> <td class="d-flex justify-content-end align-items-center"> <span class="fa fa-long-arrow-up mr-1"></span> $97.9 </td> </tr>
+                    <tr>
+                        <td scope="row">
+                            <span class="fa fa-bed mr-1">
+                            </span> Hotel Leela Palace
+                        </td>
+                        <td>
+                            <span class="fa fa-cc-mastercard">
+                            </span>
+                        </td>
+                        <td class="text-muted">11 Jul 2020, 2:00 PM</td>
+                        <td class="text-muted">
+                            #012458780
+                        </td>
+                        <td class="d-flex justify-content-end align-items-center">
+                            <span class="fa fa-long-arrow-up mr-1"></span> $18.9
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <span class="fa fa-exchange mr-1">
+                            </span> Monthly Salary
+                        </td>
+                        <td>
+                            <span class="fa fa-cc-visa">
+                            </span>
+                        </td>
+                        <td class="text-muted">10 Jul 2020, 8:30 PM</td>
+                        <td class="text-muted">
+                            #76444326
+                        </td>
+                        <td class="d-flex justify-content-end align-items-center">
+                            <span class="fa fa-long-arrow-down mr-1"></span> $9,765.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <span class="fa fa-exchange mr-1">
+                            </span> Xbox Purchase
+                        </td>
+                        <td>
+                            <span class="fa fa-cc-mastercard">
+                            </span>
+                        </td>
+                        <td class="text-muted">12 May 2020, 4:30 PM</td>
+                        <td class="text-muted">
+                            #36548791
+                        </td>
+                        <td class="d-flex justify-content-end align-items-center">
+                            <span class="fa fa-long-arrow-up mr-1"></span> $198.90
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <span class="fa fa-cutlery mr-1">
+                            </span> Dinner Party
+                        </td>
+                        <td><span class="fa fa-cc-visa"></span></td>
+                        <td class="text-muted">11 May 2020, 5:30 PM</td>
+                        <td class="text-muted">
+                            #98537547
+                        </td>
+                        <td class="d-flex justify-content-end align-items-center"> 
+                        <span class="fa fa-long-arrow-up mr-1"></span> $12.90 </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <span class="fa fa-briefcase mr-1">
+                            </span> Nandini Hills Ride
+                        </td>
+                        <td>
+                            <span class="fa fa-cc-mastercard">
+                            </span>
+                        </td>
+                        <td class="text-muted">10 May 2020, 01:30 PM</td>
+                        <td class="text-muted">
+                            #23548760
+                        </td>
+                        <td class="d-flex justify-content-end align-items-center">
+                            <span class="fa fa-long-arrow-up mr-1"></span> $97.9
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <span class="fa fa-briefcase mr-1">
+                            </span> Goa Beach Party
+                        </td>
+                        <td>
+                            <span class="fa fa-cc-visa">
+                            </span>
+                        </td>
+                        <td class="text-muted">09 May 2020, 01:30 PM</td>
+                        <td class="text-muted">
+                            #43876219
+                        </td>
+                        <td class="d-flex justify-content-end align-items-center">
+                            <span class="fa fa-long-arrow-up mr-1"></span> $97.9
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-        <div class="d-flex justify-content-between align-items-center results"> 
-        <span class="pl-md-3">Showing<b class="text-white"> 1-7 0f 200 </b> trasactions</span> 
-        <div class="pt-3">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&lt;</span>
-                        </a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&gt;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div> 
+        <div class="d-flex justify-content-between align-items-center results">
+            <span class="pl-md-3">Showing<b class="text-white"> 1-7 0f 200 </b> trasactions</span>
+            <div class="pt-3">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&lt;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
     </div>
@@ -164,7 +261,7 @@
 
         const search = document.getElementById('search');
         const list = document.querySelector('.list');
-        //const listItems = list.querySelectorAll('li');
+        const listItems = list.querySelectorAll('li');
         search.addEventListener('keyup', function (event) {
             const term = event.target.value.toLowerCase();
 
