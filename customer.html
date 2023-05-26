@@ -42,10 +42,10 @@
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a class="active" href="index.html">Home</a>
-        <a href="about.html">My Account</a>
-        <a href="searvices.html">Loans</a>
-        <a href="testimonial.html">My Cards</a>
-        <a href="works.html">Transactions</a>
+        <a href="myaccount.html">My Account</a>
+        <a href="loans.html">My Loans</a>
+        <a href="cards.html">My Cards</a>
+        <a href="ViewTransactions.html">My Transactions</a>
         <a href="contact.html">Log Out</a>
     </div>
     <!-- header -->
@@ -210,12 +210,55 @@
                 </script>
 
                 <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
+                    <div id="AccApp" class="wallet_box text_align_center ma_hover">
                         <i><img src="images/wa3.svg" alt="#" /></i>
-                        <h3>open a new account</h3>
-                        <p>It is a long established fact that a reader will be distracted by </p>
+                        <h3>Open a new account</h3>
+                        <p>Simple steps to open a new account </p>
                     </div>
                 </div>
+                <div id="popupContainerAcc" class="appPopup-container">
+                    <div class="appPopup-content appPopup-content-border">
+                        <p class="appPopup-title">NEW ACCOUNT</p>
+                        <form>
+                            <br /><br />
+                            <br /><br />
+                            <label for="AccType" class="appPopup-label">Account Type:</label>
+                            <select type="text" id="AccType" placeholder="Choose account type" class="appPopup-input" required>
+                                <option value="">Choose account type</option>
+                                <option value="Current">Current</option>
+                                <option value="Savings">Savings</option>
+                            </select>
+                            <br></br>
+                            <label for="nationalID" class="appPopup-label">National ID:</label>
+                            <input type="number" id="nationalID" placeholder="Enter national ID" class="appPopup-input" required> </input>
+                            <br></br>
+                            <button type="button" id="applyAccButton" onClick="applyAccApp()" class="appPopup-button">Open </button>
+                        </form>
+                        <button id="closeAccAppButton" onClick="closeAccAppPopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+                <script>
+                    var applyAccBtn = document.getElementById("AccApp");
+                    var popupContainerAcc = document.getElementById("popupContainerAcc");
+                    var closeAccAppBtn = document.getElementById("closeAccAppButton");
+                    var applyAccButton = document.getElementById("applyAccButton");
+
+                    function applyAccApp() {
+                        var text = document.getElementById("AccType").value;
+                        var text1 = document.getElementById("nationalID").value;
+                        if (text1 != "" && text != "") {
+                            alert("Your request is being reviewed.");
+                        }
+                        closeAccAppPopup();
+                    }
+                    function closeAccAppPopup() {
+                        popupContainerAcc.style.display = "none";
+                    }
+
+                    applyAccBtn.addEventListener("click", function () {
+                        popupContainerAcc.style.display = "block";
+                    });
+                </script>
                 <div class="col-lg-3 col-sm-6">
                     <div id="wa_hover" class="wallet_box text_align_center">
                         <i><img src="images/wa4.svg" alt="#" /></i>
