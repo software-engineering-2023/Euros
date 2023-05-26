@@ -122,15 +122,55 @@
         <button class="reject_btn">Unfreeze</button>
     </div>
 
+    <div id="popupContainerCard" class="appPopup-container">
+        <div class="appPopup-content appPopup-content-border">
+            <p class="appPopup-title">CARD APPLICATION</p>
+            <br></br>
+            <br></br>
+            <form>
+                <label for="name" class="appPopup-label">Card Number:</label>
+                <div class="textbox-container">
+                    <input type="text" class="textbox" placeholder="Enter card number">
+                    <div class="textbox-error">Please enter the card number you want to freeze/unfreeze</div>
+                </div>
+                <br></br>
+               
+                <br></br>
+                <br></br>
+                <button type="button" id="applyCardButton" onClick="applyCardApp()" class="appPopup-button"> Freeze</button>
+            </form>
+            <button id="closeCardAppButton" onClick="closeCardAppPopup()" class="appPopup-close-button">Close</button>
+        </div>
+    </div>
+
+
+
     <script>
+        var popupContainerCard = document.getElementById("popupContainerCard");
+        var closeCardAppBtn = document.getElementById("closeCardAppButton");
+        var applyCardButton = document.getElementById("applyCardButton");
         const rejButton = document.querySelector('.reject_btn');
         const acptButton = document.querySelector('.accept_btn');
         const checkbox = document.querySelector('.checkbox input[type="checkbox"]');
+
+        function applyCardApp() {
+            var text = document.getElementById(".textbox");
+          
+                if (text.value.trim != "") {
+                    window.alert("Freezed");
+                }
+            
+            closeCardAppPopup();
+        }
+        function closeCardAppPopup() {
+            popupContainerCard.style.display = "none";
+        }
         rejButton.addEventListener('click', function (event) {
             const clickedButton = event.target;
             if (clickedButton.tagName === 'BUTTON') {
                 if (clickedButton.textContent == "Unfreeze" && checkbox.checked) {
-                    window.alert("Unfreezed");
+                    popupContainerCard.style.display = "block";
+
                 }
                 else {
                     window.alert("Please select atleast one user's report");
@@ -138,11 +178,12 @@
 
             }
         });
+       
         acptButton.addEventListener('click', function (event) {
             const clickedButton = event.target;
             if (clickedButton.tagName === 'BUTTON') {
                 if (clickedButton.textContent == "Freeze" && checkbox.checked) {
-                    window.alert("Freezed");
+                    popupContainerCard.style.display = "block";
                 }
                 else {
                     window.alert("Please select atleast one user's report");
@@ -150,7 +191,6 @@
 
             }
         });
-
 
 
     </script>
