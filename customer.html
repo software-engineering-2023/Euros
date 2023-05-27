@@ -92,7 +92,7 @@
                         <p>Click here to apply for a credit card on one of your active accounts </p>
                     </div>
                 </div>
-                <div id="popupContainerCard" class="appPopup-container appPopup-content-border">
+                <div id="popupContainerCard" class="appPopup-container">
                     <div class="appPopup-content appPopup-content-border">
                         <p class="appPopup-title">CARD APPLICATION</p>
                         <br></br>
@@ -153,35 +153,35 @@
                         <p>Click here to apply for a Personal/Car loan. Please read the terms & conditions beforehand. </p>
                     </div>
                 </div>
-
-                <div id="popupContainerLoan" class="appPopup-container">
+                <div id="popupContainerLoan" class="appPopup-container ">
                     <div class="appPopup-content appPopup-content-border">
                         <p class="appPopup-title">LOAN APPLICATION</p>
                         <form>
+                            <br></br>
                             <label for="loanType" class="appPopup-label">Loan Type:</label>
                             <select type="text" id="loanType" placeholder="Choose loan type" class="appPopup-input" required>
                                 <option value="">Choose loan type</option>
                                 <option value="Car">Car</option>
                                 <option value="Personal">Personal</option>
                             </select>
-                            <br></br>
+                            <br>
                             <label for="loanAmount" class="appPopup-label">Loan Amount:</label>
                             <input type="number" id="loanAmount" placeholder="Specify loan amount" class="appPopup-input" required> </input>
-                            <br></br>
+                            <br>
                             <label for="settlementPlan" class="appPopup-label">SettlementPlan:</label>
                             <select type="text" id="settlementPlan" placeholder="Choose convienient plan" class="appPopup-input" required>
                                 <option value="">Choose convienient plan</option>
                                 <option value="Monthly">Monthly</option>
                                 <option value="Yearly">Yearly</option>
                             </select>
-                            <br></br>
+                            <br>
                             <label for="interestRate" class="appPopup-label">Interest Rate:</label>
                             <select type="text" id="interestRate" placeholder="Choose from availabe rates" class="appPopup-input" required>
                                 <option value="">Choose from availabe rates</option>
                                 <option value="5 percent">5%</option>
                                 <option value="10 percent">10%</option>
-                            </select>
-                            <br></br>
+                            </select><br>
+                            <br></br><br>
                             <button type="button" id="applyLoanButton" onClick="applyLoanApp()" class="appPopup-button"> Apply</button>
                         </form>
                         <button id="closeLoanAppButton" onClick="closeLoanAppPopup()" class="appPopup-close-button">Close</button>
@@ -221,7 +221,7 @@
                 </div>
                 <div id="popupContainerAcc" class="appPopup-container">
                     <div class="appPopup-content appPopup-content-border">
-                        <p class="appPopup-title">NEW ACCOUNT</p>
+                        <p class="appPopup-title">OPEN ACCOUNT</p>
                         <form>
                             <br /><br />
                             <br /><br />
@@ -234,6 +234,7 @@
                             <br></br>
                             <label for="nationalID" class="appPopup-label">National ID:</label>
                             <input type="number" id="nationalID" placeholder="Enter national ID" class="appPopup-input" required> </input>
+                            <br></br>
                             <br></br>
                             <button type="button" id="applyAccButton" onClick="applyAccApp()" class="appPopup-button">Open </button>
                         </form>
@@ -262,6 +263,105 @@
                         popupContainerAcc.style.display = "block";
                     });
                 </script>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div id="TransferM" class="wallet_box text_align_center ma_hover">
+                        <i><img src="images/wa3.svg" alt="#" /></i>
+                        <h3>Transfer Money</h3>
+                        <p>The fastest, easiest, and safest way to transfer money to any account in any bank</p>
+                    </div>
+                </div>
+                <div id="popupContainerTransfer" class="appPopup-container">
+                    <div class="appPopup-content appPopup-content-border">
+                        <p class="appPopup-title">TRANSFER TO</p>
+                        <form>
+                            <label for="fromAcc" class="appPopup-label">From Account:</label>
+                            <select type="text" id="fromAcc" placeholder="Choose account" class="appPopup-input" required>
+                                <option value="">Choose account</option>
+                                <option value="1abc2345678">1abc2345678</option>
+                                <option value="9abc8764523">9abc8764523</option>
+                                <option value="4abc7294058">4abc7294058</option>
+                            </select><br>
+                            <label for="recieverIBAN" class="appPopup-label">Reciever IBAN:</label>
+                            <input type="text" id="recieverIBAN" placeholder="Enter reciever IBAN" class="appPopup-input" required> </input><br>
+                            <label for="recieverBIC" class="appPopup-label">Reciever BIC:</label>
+                            <input type="number" id="recieverBIC" placeholder="Enter reciever BIC" class="appPopup-input" required> </input><br>
+                            <label for="transferType" class="appPopup-label">Transfer Type:</label>
+                            <select type="text" id="transferType" placeholder="Choose transfer type" class="appPopup-input" required>
+                                <option value="">Choose transfer type</option>
+                                <option value="Internal">Internal</option>
+                                <option value="Domestic">Domestic</option>
+                                <option value="International">International</option>
+                            </select><br>
+                            <label for="amountSend" class="appPopup-label">Amount to transfer:</label>
+                            <input type="number" id="amountSend" placeholder="Enter amount to transfer" class="appPopup-input" required> </input><br>
+                            <label for="eSignature" class="appPopup-label">E-Signature:</label>
+                            <div>
+                                <canvas id="signatureCanvas" width="200" height="35"></canvas>
+                                <button class="appPopup-close-button" onclick="clearSignature()">Clear</button>
+                            </div>
+                            <button type="button" id="transferButton" onClick="transferMoney()" class="appPopup-button">Transfer </button>
+                        </form>
+                        <button id="closeTransferButton" onClick="closeTransferPopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+                <script>
+                    const canvas = document.getElementById('signatureCanvas');
+                    const ctx = canvas.getContext('2d');
+                    let isDrawing = false;
+                    canvas.addEventListener('mousedown', startDrawing);
+                    canvas.addEventListener('mousemove', draw);
+                    canvas.addEventListener('mouseup', stopDrawing);
+                    canvas.addEventListener('mouseout', stopDrawing);
+                    function startDrawing(e) {
+                        isDrawing = true;
+                        draw(e);
+                    }
+                    function draw(e) {
+                        if (!isDrawing) return;
+                        ctx.lineWidth = 2;
+                        ctx.lineCap = 'round';
+                        const rect = canvas.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        ctx.lineTo(x, y);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.moveTo(x, y);
+                    }
+                    function stopDrawing() {
+                        isDrawing = false;
+                    }
+                    function clearSignature() {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    }
+
+                    var transferM = document.getElementById("TransferM");
+                    var popupContainerTransfer = document.getElementById("popupContainerTransfer");
+                    var closeTransferButton = document.getElementById("closeTransferButton");
+                    var transferButton = document.getElementById("transferButton");
+
+                    function transferMoney() {
+                        var text = document.getElementById("fromAcc").value;
+                        var text1 = document.getElementById("recieverIBAN").value;
+                        var text2 = document.getElementById("recieverBIC").value;
+                        var text3 = document.getElementById("transferType").value;
+                        var text4 = document.getElementById("amountSend").value;
+                        var text5 = document.getElementById("signatureCanvas").value;
+                        if (text != "" && text1 != "" && text2 != "" && text3 != "" && text4 != "" && text5 != "") {
+                            alert("The transfer has been done successfully.");
+                        }
+                        closeTransferPopup();
+                    }
+                    function closeTransferPopup() {
+                        popupContainerTransfer.style.display = "none";
+                        clearSignature();
+                    }
+                    transferM.addEventListener("click", function () {
+                        popupContainerTransfer.style.display = "block";
+                    });
+                </script>
+
             </div>
         </div>
     </div>
