@@ -368,7 +368,6 @@ ul.email {
     background-color: transparent;
     color: white;
     border: none;
-   
 }
 
 
@@ -954,25 +953,25 @@ ul.email {
 
 
 
-                                        /* haytham css classes  */
+/* haytham css classes  */
 
 .homepage-btns {
-     display: inline-block;
-     padding-inline:  5px;
-     font-size: 17px;
-     background-color: #101646;
-     color: whitesmoke;
-     text-decoration: none;
-     border-radius: 3px;
-     font-weight: bold;
-     transition: background-color 0.3s ease;
-     }
-
-
-.homepage-btns:hover{
-     background-color: whitesmoke;
-     color: #48b9ff;
+    display: inline-block;
+    padding-inline: 5px;
+    font-size: 17px;
+    background-color: #101646;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
+
+
+    .homepage-btns:hover {
+        background-color: whitesmoke;
+        color: #48b9ff;
+    }
 
 .logo {
     font-size: 27px;
@@ -1259,13 +1258,22 @@ ul.email {
     padding: 15px;
 }
 
+
 .report-topic-heading,
 .item1 {
-    width: 1200px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 170px;
+    width: 1350px;
+    display: flex,left;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
     justify-content: space-between;
-    align-items: left;
 }
+
+.item1::-webkit-scrollbar {
+    display: none;
+}
+
 
 .t-op {
     font-size: 20px;
@@ -1498,7 +1506,6 @@ h7 {
 
     h7 a,
     .welcome_text h7 {
-        color: whitesmoke;
         padding-top: 200px;
         font-weight: bold;
     }
@@ -1621,7 +1628,7 @@ h7 {
     align-items: center;
 }
 
-#search {
+#searchBanker {
     width: 150px;
     max-width: 300px;
     height: 46px;
@@ -1632,12 +1639,11 @@ h7 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
     font-size: 16px;
-
     outline: none;
     margin-bottom: 20px; /* add margin-bottom to create space */
 }
 
-    #search:focus {
+    #searchBanker:focus {
         width: 100%;
         max-width: 500px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -1766,7 +1772,6 @@ label {
     height: 51px;
     width: 100%;
     color: #000;
-    visibility: visible;
     font-size: 17px;
     text-transform: uppercase;
     font-weight: 500;
@@ -1886,12 +1891,13 @@ label {
     color: #555;
     margin-bottom: 5px;
 }
+
 .appPopup-details {
     font-family: Poppins, sans-serif;
     font-size: 16px;
     color: #555;
     padding-top: 10px;
-    left:10px;
+    left: 10px;
 }
 
 
