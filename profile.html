@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>bitcypo</title>
+    <title>Euros OBS</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/yousty.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
@@ -36,11 +37,12 @@
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="searvices.html">Searvices</a>
-        <a href="works.html">Works</a>
-        <a href="contact.html">Contact</a>
+        <a href="customer.html">Home</a>
+        <a href="myAccounts.html">My Accounts</a>
+        <a href="myLoans.html">My Loans</a>
+        <a href="myCards.html">My Cards</a>
+        <a href="ViewTransactions.html">My Transactions</a>
+        <a href="login.html">Log Out</a>
     </div>
     <!-- header -->
     <header>
@@ -50,12 +52,12 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="customer.html">HOME</a>
+                            <a href="homePage.html">EurosOBS</a>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <ul class="email text_align_right">
-                            <li class="d_none"><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="d_none"><a href=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
                             <!--- <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li> -->
                             <li>
                                 <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
@@ -67,42 +69,31 @@
         </div>
     </header>
     <!-- end header -->
-
     <!-- profile -->
-    <div class="testimonial">
-        <div class="container-fluid">
+    <div class="welcome_text text_align_center">
+        <h7>PERSONAL PROFILE</h7>
+    </div>
+    <div id="about" class="profileabout">
+        <div class="center-container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="border_testi">
+                    <div class="profileabout_border">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="titlepage text_align_center">
-                                    <h2>PROFILE</h2>
+                            <div class="col-md-6">
+                                <div class="text_align_left profileabout_text">
+                                    <h1>Username:</h1>   <p>client</p><br>
+                                    <h1>Name:</h1>   <p>Yousty</p><br>
+                                    <h1>Gender:</h1>    <p>Female</p><br>
+                                    <h1>Age: </h1>   <p>21</p><br>
+                                    <h1>Adress: </h1>   <p>Spandau</p><br>
+                                    <h1>Phone Number: </h1>   <p>+201111111111</p><br>
+                                    <h1>Password:</h1>  <p>mshHasa</p>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="row d_flex">
-                            <div class="col-md-10 offset-md-1">
-                                <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <div class="testimonial_text text_align_center">
-                                                    <i><img src="images/euros.jpg" alt="#"  class="enlarged-image"/></i>
-                                                    <h3>Euros</h3>
-                                                    <span>obs in progress</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-9">
-                                                <div class="profile-info-text text_align_left">
-                                                    <p>  Name: blabla</p>
-                                                    <p>  BankID: blabla</p>
-                                                    <p>  Phone Number: blabla</p>
-                                                    <p>  Address: blabla</p>
-                                                    <p>  Birth date: blabla</p>
-                                                    <p>  E-signature: blabla</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="col-md-6">
+                                <div class="profileabout_img">
+                                    <figure><img class="img_responsive" src="images/profile.png" alt="#" /></figure>
                                 </div>
                             </div>
                         </div>
@@ -111,44 +102,47 @@
             </div>
         </div>
     </div>
-    <!-- end testimonial -->
+    <!-- end profile -->
     <!-- footer -->
     <footer>
         <div class="footer">
-            <!-- report system issue, 3yzin nehotaha f kol el pages-->
-            <!-- Button to trigger the pop-up box -->
-            <div id="slideOutButton" class="slide-out-button" onclick="openPopup()">
+            <!-- report issue-->
+            <!-- Button to pop-up box -->
+            <div id="slideOutButton" class="slide-out-button" onclick="openReportPopup()">
                 <i class="fas fa-exclamation-circle"></i>
                 <span> Report Technical Issue</span>
             </div>
             <!-- Pop-up box -->
-            <div id="popupBox" class="popup">
-                <span class="close-button" onclick="closePopup()">&times;</span>
+            <div id="popupBoxReport" class="popup">
+                <span class="close-button" onclick="closeReportPopup()">&times;</span>
                 <p class="popup-text">What is your issue?</p>
                 <input type="text" id="textInput">
                 <br>
-                <button class="transparent-button" onclick="closePopup()">Submit</button>
+                <button class="transparent-button" id="submitButton" onclick="closeReportPopup()">Submit</button>
             </div>
             <script>
-                function openPopup() {
-                    // Display the pop-up box
-                    document.getElementById("popupBox").style.display = "block";
+                var popupBoxReport = document.getElementById("popupBoxReport");
+
+                var submitButton = document.getElementById("submitButton");
+
+                function openReportPopup() {
+                    // Display pop-up box
+                    popupBoxReport.style.display = "block";
                 }
 
-                function closePopup() {
-                    // Get the entered text from the input field
+                function closeReportPopup() {
+                    // Get the entered text
                     var text = document.getElementById("textInput").value;
 
-                    // 3ayzeen nwady el text dh lel admin b2a
                     if (text != "") {
                         alert("Noted. Your issue will be fixed shortly.");
                         document.getElementById("textInput").value = "";
                     }
-                    // Hide the pop-up box
-                    document.getElementById("popupBox").style.display = "none";
+                    // Hide pop-up box
+                    popupBoxReport.style.display = "none";
                 }
             </script>
-            <!-- end report system issue-->
+            <!-- end report issue-->
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6" ">
@@ -188,18 +182,18 @@
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <p>© 2020 All Rights Reserved. Design by Euros Team</p>
+                        <p>© 2023 All Rights Reserved. Design by Euros Team</p>
                     </div>
                 </div>
             </div>
         </div>
         </div>
     </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js "></script>
-      <script src="js/bootstrap.bundle.min.js "></script>
-      <script src="js/jquery-3.0.0.min.js "></script>
-      <script src="js/custom.js "></script>
-   </body>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="js/jquery-3.0.0.min.js "></script>
+    <script src="js/custom.js "></script>
+</body>
 </html>
