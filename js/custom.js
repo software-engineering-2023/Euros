@@ -186,3 +186,5 @@ function checkUserinfo(event) {
 	}
 	
 }
+
+const switchBox = document.getElementById('mySwitch');
