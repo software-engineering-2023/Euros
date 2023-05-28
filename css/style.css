@@ -1568,6 +1568,7 @@ h7 {
 
     h7 a,
     .welcome_text h7 {
+        color: whitesmoke;
         padding-top: 200px;
         font-weight: bold;
     }

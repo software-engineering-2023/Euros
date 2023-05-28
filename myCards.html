@@ -76,42 +76,609 @@
         </div>
     </header>
     <!-- end header -->
-    <div class="blabla"></div>
-    <style 
-    <!--toaster svg-->
-    <div class="center-container"
-        <div class="wallet-picture">
-            <!-- wallet svg -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="whitesmoke" class="bi bi-wallet" viewBox="0 0 16 16" id="IconChangeColor">
-                <path d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z" id="mainIconPathAttribute"></path>
-            </svg>
-            <div class="card-picture">
-                <!-- card svg -->
-                <svg width="300" stroke-width="1.5" height="300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor"> <path d="M19 20H5C3.89543 20 3 19.1046 3 18V9C3 7.89543 3.89543 7 5 7H19C20.1046 7 21 7.89543 21 9V18C21 19.1046 20.1046 20 19 20Z" stroke="transparent" id="mainIconPathAttribute"></path> <path d="M7 7V3.6C7 3.26863 7.26863 3 7.6 3H16.4C16.7314 3 17 3.26863 17 3.6V7" stroke="#face34" id="mainIconPathAttribute"></path> <path d="M10 3V7" stroke="blue" id="mainIconPathAttribute"></path> <path d="M12 3V7" stroke="#face34" id="mainIconPathAttribute"></path> <path d="M16.5 14C16.2239 14 16 13.7761 16 13.5C16 13.2239 16.2239 13 16.5 13C16.7761 13 17 13.2239 17 13.5C17 13.7761 16.7761 14 16.5 14Z" fill="transparent" stroke="transparent" stroke-linecap="round" stroke-linejoin="round" id="mainIconPathAttribute"></path> </svg>
+    <div class="welcome_text text_align_center">
+        <h7>MY CARDS</h7>
+    </div>
+    <!--toaster-->
+    <div class="center-container">
+        <div class="card-container">
+            <div id="card1" class="card-picture">
+                <svg class="card-picture" fill="whitesmoke" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>credit-card</title> <path d="M0 26.016q0 0.832 0.576 1.408t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.408v-20q0-0.832-0.576-1.408t-1.408-0.608h-28q-0.832 0-1.44 0.608t-0.576 1.408v20zM2.016 26.016v-14.016h28v14.016h-28zM2.016 8v-1.984h28v1.984h-28zM4 24h4v-1.984h-4v1.984zM4 20h6.016v-5.984h-6.016v5.984zM10.016 24h4v-1.984h-4v1.984zM16 24h4v-1.984h-4v1.984zM22.016 24h1.984v-1.984h-1.984v1.984zM26.016 24h1.984v-1.984h-1.984v1.984z"></path> </g></svg>
+                <div class="cardInfo">
+                   
+                        <h1 class="visafont">VISA</h1>
+                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0092727290</span></h1>
+                        <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Yousty</span></h1>
+                        <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 15/27</span></h1>
+                        <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 212</span></h1>
+                        
+                            <div class="smallContainer" style="justify-content: space-between;"> 
+                                <button type="button" id="viewPts1" onClick="viewPts1()" class="card-btn">Points</button>
+                                <button type="button" id="viewLimit1" onClick="viewLimit1()" class="card-btn">Limit </button>
+                                <button type="button" id="payBill1" onClick="viewBill1()" class="card-btn">Pay Bill</button>
+                                <button type="button" id="repCard1" onClick="viewReport1()" class="card-repbtn">Report! </button>
+                            </div>
+                </div>
+                <!--bill popup-->
+                <div id="card1BillPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeBill1" class="cardPopup-close-button" onClick="closeBill1()">&times;</span>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount1" class="cardPopup-text"> 3600</span></h1>
+                            <input type="number" id="payAmount1" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <button type="button" id="pay1" onClick="pay1()" class="cardPopup-button">Pay</button>
+                        </div>
+                    </div>
+                </div>
+                <!--points popup-->
+                <div id="card1PointsPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closePts1" class="cardPopup-close-button" onClick="closePts1()">&times;</span>
+                            <h1 class="cardPopup-text">  Points: <span id="points1" class="cardPopup-text"> 1300</span></h1><br>
+                            <button type="button" id="claimPoints1" onClick="claimPoints1()" class="cardPopup-button">Claim Points</button>
+                        </div>
+                    </div>
+                </div>
+                <!--limit popup-->
+                <div id="card1LimitPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeLimit1" class="cardPopup-close-button" onClick="closeLimit1()">&times;</span>
+                            <h1 class="cardPopup-text">  Limit:</h1>
+                            <span id="limit1" class="cardPopup-textlimit"> 10000</span>
+                        </div>
+                    </div>
+                </div>
+                <!--report popup-->
+                <div id="card1ReportPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeReport1" class="cardPopup-close-button" onClick="closeReport1()">&times;</span><br>
+                            <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
+                                <option value="">Issue for report</option>
+                                <option value="Theft">Theft</option>
+                                <option value="Loss">Loss</option>
+                                <option value="Damage">Damage</option>
+                            </select><br><br>
+                            <button type="button" id="submitReport1" onClick="submitReport1()" class="cardPopup-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <script>
+            var card1PointsPopup = document.getElementById("card1PointsPopup");
+            var card1LimitPopup = document.getElementById("card1LimitPopup");
+            var card1ReportPopup = document.getElementById("card1ReportPopup");
+            var card1BillPopup = document.getElementById("card1BillPopup");
+
+            function viewBill1() {
+                card1BillPopup.style.display = "block";
+            }
+            function closeBill1() {
+                card1BillPopup.style.display = "none";
+            }
+            function pay1() {
+                var req = document.getElementById("reqAmount1").value;
+                var payed = document.getElementById("payAmount1").value;
+                if (payed != "") {
+                    var amount = (req - payed);
+                    console.log(amount);
+                    document.getElementById("reqAmount1").textContent = amount+"";
+                    alert("Payment received");
+                    document.getElementById("payAmount1").value = "";
+                    closeBill1();
+                }
+                
+            }
+
+            function viewPts1() {
+                card1PointsPopup.style.display = "block";
+                //open pts popup
+            }
+            function closePts1() {
+                //close pts popup
+                card1PointsPopup.style.display = "none";
+            }
+
+            function viewPts1() {
+                card1PointsPopup.style.display = "block";
+                //open pts popup
+            }
+            function closePts1() {
+                //close pts popup
+                card1PointsPopup.style.display = "none";
+            }
+            function claimPoints1() {
+                //claim points 1
+                document.getElementById("points1").textContent = "0";
+                alert("Points have been claimed");
+                closePts1();
+            }
+
+            function viewLimit1() {
+                card1LimitPopup.style.display = "block";
+                //open pts popup
+            }
+            function closeLimit1() {
+                //close pts popup
+                card1LimitPopup.style.display = "none";
+            }
+
+            function viewReport1() {
+                card1ReportPopup.style.display = "block";
+                //open rep popup
+            }
+            function closeReport1() {
+                //close rep popup
+                card1ReportPopup.style.display = "none";
+            }
+            function submitReport1() {
+                //submit report
+                alert("Report has been submitted and card will now be blocked.");
+                closeReport1();
+                //document.getElementById("card1").className = "card-picture-blocked";
+            }
+        </script>
+        <div class="card-container">
+            <div id="card2" class="card-picture">
+                <svg class="card-picture" fill="whitesmoke" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>credit-card</title> <path d="M0 26.016q0 0.832 0.576 1.408t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.408v-20q0-0.832-0.576-1.408t-1.408-0.608h-28q-0.832 0-1.44 0.608t-0.576 1.408v20zM2.016 26.016v-14.016h28v14.016h-28zM2.016 8v-1.984h28v1.984h-28zM4 24h4v-1.984h-4v1.984zM4 20h6.016v-5.984h-6.016v5.984zM10.016 24h4v-1.984h-4v1.984zM16 24h4v-1.984h-4v1.984zM22.016 24h1.984v-1.984h-1.984v1.984zM26.016 24h1.984v-1.984h-1.984v1.984z"></path> </g></svg>
+                <div class="cardInfo">
+                    
+                        <h1 class="visafont">VISA</h1>
+                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0095527290</span></h1>
+                        <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina</span></h1>
+                        <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 5/25</span></h1>
+                        <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 948</span></h1>
+                        <div class="smallContainer" style="justify-content: space-between;">
+                            <button type="button" id="viewPts2" onClick="viewPts2()" class="card-btn">Points</button>
+                            <button type="button" id="viewLimit2" onClick="viewLimit2()" class="card-btn">Limit </button>
+                            <button type="button" id="payBill2" onClick="viewBill2()" class="card-btn">Pay Bill</button>
+                            <button type="button" id="repCard2" onClick="viewReport2()" class="card-repbtn">Report! </button>
+                        </div>
+          
+                </div>
+                <!--bill popup-->
+                <div id="card2BillPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeBill2" class="cardPopup-close-button" onClick="closeBill2()">&times;</span>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount2" class="cardPopup-text"> 3600</span></h1>
+                            <input type="number" id="payAmount2" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <button type="button" id="pay2" onClick="pay2()" class="cardPopup-button">Pay</button>
+                        </div>
+                    </div>
+                </div>
+                <!--points popup-->
+                <div id="card2PointsPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closePts2" class="cardPopup-close-button" onClick="closePts2()">&times;</span>
+                            <h1 class="cardPopup-text">  Points: <span id="points2" class="cardPopup-text"> 1300</span></h1><br>
+                            <button type="button" id="claimPoints2" onClick="claimPoints2()" class="cardPopup-button">Claim Points</button>
+                        </div>
+                    </div>
+                </div>
+                <!--limit popup-->
+                <div id="card2LimitPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeLimit2" class="cardPopup-close-button" onClick="closeLimit2()">&times;</span>
+                            <h1 class="cardPopup-text">  Limit: </h1>
+                            <span id="limit2" class="cardPopup-textlimit"> 15000</span>
+                        </div>
+                    </div>
+                </div>
+                <!--report popup-->
+                <div id="card2ReportPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeReport2" class="cardPopup-close-button" onClick="closeReport2()">&times;</span><br>
+                            <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
+                                <option value="">Issue for report</option>
+                                <option value="Theft">Theft</option>
+                                <option value="Loss">Loss</option>
+                                <option value="Damage">Damage</option>
+                            </select><br><br>
+                            <button type="button" id="submitReport1" onClick="submitReport2()" class="cardPopup-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var card2PointsPopup = document.getElementById("card2PointsPopup");
+            var card2LimitPopup = document.getElementById("card2LimitPopup");
+            var card2ReportPopup = document.getElementById("card2ReportPopup");
+            var card2BillPopup = document.getElementById("card2BillPopup");
+
+            function viewBill2() {
+                card2BillPopup.style.display = "block";
+            }
+            function closeBill2() {
+                card2BillPopup.style.display = "none";
+            }
+            function pay2() {
+                var req2 = document.getElementById("reqAmount2").value;
+                var payed2 = document.getElementById("payAmount2").value;
+                if (payed2 != "") {
+                    var amount2 = (req2 - payed2);
+                    document.getElementById("reqAmount2").textContent = amount2;
+                    alert("Payment received");
+                    document.getElementById("payAmount2").value = "";
+                    closeBill2();
+                }
+                
+            }
+
+            function viewPts2() {
+                card2PointsPopup.style.display = "block";
+                //open pts popup
+            }
+            function closePts2() {
+                //close pts popup
+                card2PointsPopup.style.display = "none";
+            }
+            function claimPoints2() {
+                //claim points 1
+                document.getElementById("points2").textContent = "0";
+                alert("Points have been claimed");
+                closePts2();
+            }
+
+            function viewLimit2() {
+                card2LimitPopup.style.display = "block";
+                //open pts popup
+            }
+            function closeLimit2() {
+                //close pts popup
+                card2LimitPopup.style.display = "none";
+            }
+
+            function viewReport2() {
+                card2ReportPopup.style.display = "block";
+                //open rep popup
+            }
+            function closeReport2() {
+                //close rep popup
+                card2ReportPopup.style.display = "none";
+            }
+            function submitReport2() {
+                //submit report
+                alert("Report has been submitted and card will now be blocked.");
+                closeReport2();
+                //document.getElementById("card1").className = "card-picture-blocked";
+            }
+        </script>
+        <div class="card-container">
+            <div id="card3" class="card-picture">
+                <svg class="card-picture" fill="whitesmoke" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>credit-card</title> <path d="M0 26.016q0 0.832 0.576 1.408t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.408v-20q0-0.832-0.576-1.408t-1.408-0.608h-28q-0.832 0-1.44 0.608t-0.576 1.408v20zM2.016 26.016v-14.016h28v14.016h-28zM2.016 8v-1.984h28v1.984h-28zM4 24h4v-1.984h-4v1.984zM4 20h6.016v-5.984h-6.016v5.984zM10.016 24h4v-1.984h-4v1.984zM16 24h4v-1.984h-4v1.984zM22.016 24h1.984v-1.984h-1.984v1.984zM26.016 24h1.984v-1.984h-1.984v1.984z"></path> </g></svg>
+                <div class="cardInfo">
+                    <div>
+                        <h1 class="visafont">MASTERCARD</h1>
+                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0092727290</span></h1>
+                        <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina Nabil</span></h1>
+                        <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 1/30</span></h1>
+                        <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 237</span></h1>
+                        <div class="smallContainer" style="justify-content: space-between;">
+                            <button type="button" id="viewPts3" onClick="viewPts3()" class="card-btn">Points</button>
+                            <button type="button" id="viewLimit3" onClick="viewLimit3()" class="card-btn">Limit </button>
+                            <button type="button" id="payBill3" onClick="viewBill3()" class="card-btn">Pay Bill</button>
+                            <button type="button" id="repCard3" onClick="viewReport3()" class="card-repbtn">Report! </button>
+                        </div>
+                    </div>
+                </div>
+                <!--bill popup-->
+                <div id="card3BillPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeBill3" class="cardPopup-close-button" onClick="closeBill3()">&times;</span>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount3" class="cardPopup-text"> 3600</span></h1>
+                            <input type="number" id="payAmount3" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <button type="button" id="pay3" onClick="pay3()" class="cardPopup-button">Pay</button>
+                        </div>
+                    </div>
+                </div>
+                <!--points popup-->
+                <div id="card3PointsPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closePts3" class="cardPopup-close-button" onClick="closePts3()">&times;</span>
+                            <h1 class="cardPopup-text">  Points: <span id="points3" class="cardPopup-text"> 300</span></h1><br>
+                            <button type="button" id="claimPoints3" onClick="claimPoints3()" class="cardPopup-button">Claim Points</button>
+                        </div>
+                    </div>
+                </div>
+                <!--limit popup-->
+                <div id="card3LimitPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeLimit3" class="cardPopup-close-button" onClick="closeLimit3()">&times;</span>
+                            <h1 class="cardPopup-text">  Limit:</h1>
+                            <span id="limit3" class="cardPopup-textlimit"> 5000</span>
+                        </div>
+                    </div>
+                </div>
+                <!--report popup-->
+                <div id="card3ReportPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeReport3" class="cardPopup-close-button" onClick="closeReport3()">&times;</span><br>
+                            <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
+                                <option value="">Issue for report</option>
+                                <option value="Theft">Theft</option>
+                                <option value="Loss">Loss</option>
+                                <option value="Damage">Damage</option>
+                            </select><br><br>
+                            <button type="button" id="submitReport3" onClick="submitReport3()" class="cardPopup-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var card3PointsPopup = document.getElementById("card3PointsPopup");
+            var card3LimitPopup = document.getElementById("card3LimitPopup");
+            var card3ReportPopup = document.getElementById("card3ReportPopup");
+            var card3BillPopup = document.getElementById("card3BillPopup");
+
+            function viewBill3() {
+                card3BillPopup.style.display = "block";
+            }
+            function closeBill3() {
+                card3BillPopup.style.display = "none";
+            }
+            function pay3() {
+                var req3 = document.getElementById("reqAmount3").value;
+                var payed3 = document.getElementById("payAmount3").value;
+                if (payed3 != "") {
+                    var amount3 = (req3 - payed3);
+                    document.getElementById("reqAmount3").textContent = amount3.toString;
+                    alert("Payment received");
+                    document.getElementById("payAmount3").value = "";
+                    closeBill3();
+                }
+                
+            }
+
+            function viewPts3() {
+                card3PointsPopup.style.display = "block";
+                //open pts popup
+            }
+            function closePts3() {
+                //close pts popup
+                card3PointsPopup.style.display = "none";
+            }
+            function claimPoints3() {
+                //claim points 1
+                document.getElementById("points3").textContent = "0";
+                alert("Points have been claimed");
+                closePts3();
+            }
+
+            function viewLimit3() {
+                card3LimitPopup.style.display = "block";
+                //open pts popup
+            }
+            function closeLimit3() {
+                //close pts popup
+                card3LimitPopup.style.display = "none";
+            }
+
+            function viewReport3() {
+                card3ReportPopup.style.display = "block";
+                //open rep popup
+            }
+            function closeReport3() {
+                //close rep popup
+                card3ReportPopup.style.display = "none";
+            }
+            function submitReport3() {
+                //submit report
+                alert("Report has been submitted and card will now be blocked.");
+                closeReport3();
+                //document.getElementById("card1").className = "card-picture-blocked";
+            }
+        </script>
+        <div class="card-container">
+            <div id="card4" class="card-picture">
+                <svg class="card-picture" fill="whitesmoke" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>credit-card</title> <path d="M0 26.016q0 0.832 0.576 1.408t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.408v-20q0-0.832-0.576-1.408t-1.408-0.608h-28q-0.832 0-1.44 0.608t-0.576 1.408v20zM2.016 26.016v-14.016h28v14.016h-28zM2.016 8v-1.984h28v1.984h-28zM4 24h4v-1.984h-4v1.984zM4 20h6.016v-5.984h-6.016v5.984zM10.016 24h4v-1.984h-4v1.984zM16 24h4v-1.984h-4v1.984zM22.016 24h1.984v-1.984h-1.984v1.984zM26.016 24h1.984v-1.984h-1.984v1.984z"></path> </g></svg>
+                <div class="cardInfo">
+                    <div>
+                        <h1 class="visafont">MASTERCARD</h1>
+                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0056272720</span></h1>
+                        <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Ay khara</span></h1>
+                        <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 10/39</span></h1>
+                        <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 111</span></h1>
+                        <div class="smallContainer" style="justify-content: space-between;">
+                            <button type="button" id="viewPts4" onClick="viewPts4()" class="card-btn">Points</button>
+                            <button type="button" id="viewLimit4" onClick="viewLimit4()" class="card-btn">Limit </button>
+                            <button type="button" id="payBill4" onClick="viewBill4()" class="card-btn">Pay Bill</button>
+                            <button type="button" id="repCard4" onClick="viewReport4()" class="card-repbtn">Report! </button>
+                        </div>
+                    </div>
+                </div>
+                <!--bill popup-->
+                <div id="card4BillPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeBill4" class="cardPopup-close-button" onClick="closeBill4()">&times;</span>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount4" class="cardPopup-text"> 3600</span></h1>
+                            <input type="number" id="payAmount4" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <button type="button" id="pay4" onClick="pay4()" class="cardPopup-button">Pay</button>
+                        </div>
+                    </div>
+                </div>
+                <!--points popup-->
+                <div id="card4PointsPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closePts4" class="cardPopup-close-button" onClick="closePts4()">&times;</span>
+                            <h1 class="cardPopup-text">  Points: <span id="points4" class="cardPopup-text"> 300</span></h1><br>
+                            <button type="button" id="claimPoints4" onClick="claimPoints4()" class="cardPopup-button">Claim Points</button>
+                        </div>
+                    </div>
+                </div>
+                <!--limit popup-->
+                <div id="card4LimitPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeLimit4" class="cardPopup-close-button" onClick="closeLimit4()">&times;</span>
+                            <h1 class="cardPopup-text">  Limit: </h1>
+                            <span id="limit4" class="cardPopup-textlimit"> 10000</span>
+                        </div>
+                    </div>
+                </div>
+                <!--report popup-->
+                <div id="card4ReportPopup" class="cardPopup">
+                    <div class="cardPopup-content">
+                        <div>
+                            <span id="closeReport4" class="cardPopup-close-button" onClick="closeReport4()">&times;</span><br>
+                            <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
+                                <option value="">Issue for report</option>
+                                <option value="Theft">Theft</option>
+                                <option value="Loss">Loss</option>
+                                <option value="Damage">Damage</option>
+                            </select><br><br>
+                            <button type="button" id="submitReport4" onClick="submitReport4()" class="cardPopup-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var card4PointsPopup = document.getElementById("card4PointsPopup");
+            var card4LimitPopup = document.getElementById("card4LimitPopup");
+            var card4ReportPopup = document.getElementById("card4ReportPopup");
+            var card4BillPopup = document.getElementById("card4BillPopup");
+
+            function viewBill4() {
+                card4BillPopup.style.display = "block";
+            }
+            function closeBill4() {
+                card4BillPopup.style.display = "none";
+            }
+            function pay3() {
+                var req4 = document.getElementById("reqAmount4").value;
+                var payed4 = document.getElementById("payAmount4").value;
+                if (payed4 != "") {
+                    var amount4 = (req4 - payed4);
+                    document.getElementById("reqAmount4").textContent = amount4.toString;
+                    alert("Payment received");
+                    document.getElementById("payAmount4").value = "";
+                    closeBill4();
+                }
+                
+            }
+
+            function viewPts4() {
+                card4PointsPopup.style.display = "block";
+                //open pts popup
+            }
+            function closePts4() {
+                //close pts popup
+                card4PointsPopup.style.display = "none";
+            }
+            function claimPoints4() {
+                //claim points 1
+                document.getElementById("points4").textContent = "0";
+                alert("Points have been claimed");
+                closePts4();
+            }
+
+            function viewLimit4() {
+                card4LimitPopup.style.display = "block";
+                //open pts popup
+            }
+            function closeLimit4() {
+                //close pts popup
+                card4LimitPopup.style.display = "none";
+            }
+
+            function viewReport4() {
+                card4ReportPopup.style.display = "block";
+                //open rep popup
+            }
+            function closeReport4() {
+                //close rep popup
+                card4ReportPopup.style.display = "none";
+            }
+            function submitReport4() {
+                //submit report
+                alert("Report has been submitted and card will now be blocked.");
+                closeReport4();
+                //document.getElementById("card1").className = "card-picture-blocked";
+            }
+        </script>
+
     </div>
-    <!--toaster svg-->
+    <!--toaster-->
+
     <!-- footer -->
     <footer>
         <div class="footer">
+
+            <button id="viewPendingBtn" class="view-btn">View Pending Applications</button>
+
+            <div id="panel" class="panel">
+                <h2>Pending Applications</h2>
+                <ul id="applicationsList"></ul>
+            </div>
+            <script>
+                // Get the elements
+                const viewPendingBtn = document.getElementById('viewPendingBtn');
+                const panel = document.getElementById('panel');
+                const applicationsList = document.getElementById('applicationsList');
+
+                // Add click event listener to the button
+                viewPendingBtn.addEventListener('click', () => {
+                    // Simulate fetching pending applications from server
+                    const pendingApplications = [
+                        { cardNumber: '1234', accountNumber: '5678', cardType: 'Visa', status: 'pending' },
+                        { cardNumber: '5678', accountNumber: '9101', cardType: 'Mastercard', status: 'rejected' },
+                        { cardNumber: '9101', accountNumber: '2345', cardType: 'Amex', status: 'pending' }
+                    ];
+
+                    // Clear previous list items
+                    applicationsList.innerHTML = '';
+
+                    // Populate the list with pending applications
+                    pendingApplications.forEach(application => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `Card Number: ${application.cardNumber}<br>
+                          Account Number: ${application.accountNumber}<br>
+                          Card Type: ${application.cardType}<br>
+                          Status: <span class="${application.status === 'rejected' ? 'rejected' : ''}">${application.status}</span>`;
+                        applicationsList.appendChild(listItem);
+                    });
+
+                    // Toggle the panel by changing the right value
+                    panel.style.right = panel.style.right === '0px' ? '-300px' : '0px';
+                });
+
+            </script>
             <!-- report issue-->
             <!-- Button to pop-up box -->
-            <div id="slideOutButton" class="slide-out-button" onclick="openReportPopup()">
+            <div id="slideOutButton" class="slide-out-button" onClick="openReportPopup()">
                 <i class="fas fa-exclamation-circle"></i>
                 <span> Report Technical Issue</span>
             </div>
             <!-- Pop-up box -->
             <div id="popupBoxReport" class="popup">
-                <span class="close-button" onclick="closeReportPopup()">&times;</span>
+                <span class="close-button" onClick="closeReportPopup()">&times;</span>
                 <p class="popup-text">What is your issue?</p>
                 <input type="text" id="textInput">
                 <br>
-                <button class="transparent-button" id="submitButton" onclick="closeReportPopup()">Submit</button>
+                <button class="transparent-button" id="submitButton" onClick="closeReportPopup()">Submit</button>
             </div>
             <script>
                 var popupBoxReport = document.getElementById("popupBoxReport");
-
                 var submitButton = document.getElementById("submitButton");
 
                 function openReportPopup() {
