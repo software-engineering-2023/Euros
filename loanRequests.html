@@ -34,11 +34,8 @@
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="searvices.html">Searvices</a>
-        <a href="testimonial.html">Testimonial</a>
-        <a href="works.html">Works</a>
+        <a href="banker.html">Home</a>
+        <a href="works.html">My Account</a>
         <a class="active" href="login.html">Login</a>
     </div>
     <!-- header -->
@@ -73,113 +70,162 @@
                 </div>
             </div>
         </div>
+
     </header>
 
-    <div class="listsearch">
-        <input type="text" id="search" placeholder="Search...">
-        <ul class="list">
-            <li>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    User 1 applying for loan
-                </label>
-            </li>
-            <li>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    User 2 applying for education loan
-                </label>
-            </li>
-            <li>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    User 3 applying for car loan
-                </label>
-            </li>
-            <li>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    User 4 applying for car loan
-                </label>
-            </li>
-            <li>
-                <label class="checkbox">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                    User 5 applying for loan
-                </label>
-            </li>
 
 
-        </ul>
-        <button class="accept_btn">Accept</button>
 
-        <button class="reject_btn">Reject</button>
+    <div class=" report-container">
+        <div class="report-header">
+            <h1 style="color: rgb(2, 47, 121)">Loan Requests</h1>
+            <input type="text" id="searchBanker" placeholder="Search...">
+
+        </div>
+
+        <div class="report-body">
+            <div class="report-topic-heading">
+                <p style="color: rgb(2, 47, 121)" class="t-op">Username</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">Loan Type</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">Level</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">Action</p>
+            </div>
+            <br>
+            <div class="items ">
+                <div class="item1">
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 1</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">Education</p>
+                    <p style="color: rgb(216, 7, 7)" class=" t-op-nextlvl">Urgent</p>
+                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
+                    <div id="popupContainerCard" class="appPopup-container">
+                        <div class="appPopup-content appPopup-content-border">
+                            <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
+                            <p class="appPopup-title">Accept/Reject Loan</p>
+                            <label class="appPopup-details">Details: LOAN DETAILS</label>
+
+
+                            <br></br>
+                            <form>
+                                <label for="name" class="appPopup-label">Loan ID:</label>
+                                <div class="textbox-container">
+                                    <input type="text" class="textbox" placeholder="Enter card number">
+                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
+                                </div>
+
+
+                                <button class="accept_btn" onClick="accept()">Accept</button>
+                            </form>
+                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="reject()">Reject</button>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="item1">
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 2</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">Debt Consolidation </p>
+                    <p style="color: rgb(225, 103, 9)" class=" t-op-nextlvl">High</p>
+                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
+
+                </div>
+                <br>
+                <div class="item1">
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 3</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">Personal</p>
+                    <p style="color: rgb(255, 194, 28)" class=" t-op-nextlvl">Normal</p>
+                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
+
+                </div>
+                <br>
+                <div class="item1">
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 4</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">Car Loan</p>
+                    <p style="color: rgb(62, 176, 5)" class=" t-op-nextlvl">Low</p>
+                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
+
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script>
-        const rejButton = document.querySelector('.reject_btn');
-        const acptButton = document.querySelector('.accept_btn');
-        const checkbox = document.querySelector('.checkbox input[type="checkbox"]');
-        rejButton.addEventListener('click', function (event) {
-            const clickedButton = event.target;
-            if (clickedButton.tagName === 'BUTTON') {
-                if (clickedButton.textContent == "Reject" && checkbox.checked) {
-                    window.alert("Rejected!");
-                }
-                else {
-                    window.alert("Please select atleast one user");
-                }
-
-            }
-        });
-        acptButton.addEventListener('click', function (event) {
-            const clickedButton = event.target;
-            if (clickedButton.tagName === 'BUTTON') {
-                if (clickedButton.textContent == "Accept" && checkbox.checked) {
-                    window.alert("Accepted!");
-                }
-                else {
-                    window.alert("Please select atleast one user");
-                }
-
-            }
-        });
-
-
-
-    </script>
-
-
 
 
     <script>
+        const searchBox = document.getElementById('searchBanker');
+        searchBox.addEventListener('keyup', searchReports);
+        function searchReports() {
+            // Get the search query from the search box
+            const query = searchBox.value.toLowerCase();
 
-        const search = document.getElementById('search');
-        const list = document.querySelector('.list');
-        const listItems = list.querySelectorAll('li');
-        search.addEventListener('keyup', function (event) {
-            const term = event.target.value.toLowerCase();
+            // Get all the report items
+            const reportItems = document.querySelectorAll('.item1');
 
-            Array.from(listItems).forEach(function (item) {
-                const title = item.textContent.toLowerCase();
+            // Loop through all the report items and hide/show them depending on whether they match the search query
+            reportItems.forEach(item => {
 
+                const headline = item.querySelector('.t-op-nextlvl').textContent.toLowerCase();
+                const btn = item.querySelector('.accept_btn');
+                if (headline.includes(query)) {
+                    item.style.visibility = 'visible';
+                    btn.style.visibility = 'visible';
 
-                if (title.indexOf(term) != -1) {
-                    item.style.visibility = "visible";
-                    list.insertAdjacentElement('afterbegin', item);
+                    if (item.parentNode.firstChild !== item) {
+                        item.parentNode.insertBefore(item, item.parentNode.firstChild);
+                    }
                 } else {
-                    item.style.visibility = "hidden";
+                    item.style.visibility = 'hidden';
+                    btn.style.visibility = 'hidden';
 
 
                 }
             });
-        });
+        }
+        var pop1 = document.getElementById("popupContainerCard");
+
+        function AR() {
+
+            event.preventDefault();
+            pop1.style.display = "block";
+
+        }
+
+
+        function accept() {
+            event.preventDefault();
+            const inputField = document.querySelector('.textbox');
+            if (inputField.value.trim() === '') {
+                window.alert("Please enter a loan id");
+            }
+            else {
+                pop1.style.display = "none";
+                window.alert("Accepted!");
+
+            }
+        }
+        function reject() {
+            event.preventDefault();
+            const inputField = document.querySelector('.textbox');
+            if (inputField.value.trim() === '') {
+                window.alert("Please enter a loan id");
+            }
+            else {
+                pop1.style.display = "none";
+                window.alert("Rejected!");
+
+            }
+
+        }
+        function closePop() {
+            event.preventDefault();
+            pop1.style.display = "none";
+
+        }
+
+
+
+
     </script>
+
 
     <footer>
         <div class="footer">
@@ -252,7 +298,7 @@
                 </div>
             </div>
         </div>
-     
+
         <div class="copyright text_align_center ">
             <div class="container ">
                 <div class="row ">

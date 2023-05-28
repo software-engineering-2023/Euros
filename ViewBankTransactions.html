@@ -17,8 +17,7 @@
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/yousty.css">
-    <link rel="ListOfTransactions" herf="css/ListOfTransactions.css">
-
+    <link rel="stylesheet" href="css/ListOfTransactions.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
@@ -26,8 +25,172 @@
     <!-- extras -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: #777;
+            font-family: 'Poppins', sans-serif
+        }
+
+        .wrapper {
+            background-color: #222;
+            min-height: 100px;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 10px 30px
+        }
+
+        .dark,
+        .input:focus {
+            background-color: #222
+        }
+
+        .navbar {
+            padding: 0.5rem 0rem
+        }
+
+            .navbar .navbar-brand {
+                font-size: 30px
+            }
+
+        #income {
+            border-right: 1px solid #bbb
+        }
+
+        .notify {
+            display: none
+        }
+
+        .nav-item .nav-link .fa-bell-o,
+        .fa-long-arrow-down,
+        .fa-long-arrow-up {
+            padding: 10px 10px;
+            background-color: #444;
+            border-radius: 50%;
+            position: relative;
+            font-size: 18px
+        }
+
+            .nav-item .nav-link .fa-bell-o::after {
+                content: '';
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #ffc0cb;
+                right: 10px;
+                top: 10px
+            }
+
+        .nav-item input {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding: 3px 8px;
+            width: 75%;
+            background-color: #555;
+            color: #fff;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px
+        }
+
+            .nav-item input:focus {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0
+            }
+
+        #searchButton {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background-color: #555;
+            padding: 3px 10px;
+            color: #fff;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            cursor: pointer
+        }
+
+            #searchButton i {
+                font-size: 18px
+            }
+
+        .notify {
+            display: none
+        }
+
+            .notify.active {
+                display: block
+            }
+
+        .list-notify {
+            position: absolute;
+            background-color: #444;
+            min-width: 200px;
+            border-radius: 4px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+            padding: 10px;
+            left: -93px;
+            top: 40px;
+            font-size: 15px;
+            list-style: none;
+            text-align: left;
+            color: #fff;
+            z-index: 1000
+        }
+
+            .list-notify li {
+                padding: 5px 0;
+                border-bottom: 1px solid #555
+            }
+
+                .list-notify li:last-child {
+                    border-bottom: none
+                }
+
+        .notify.active .fa-bell-o {
+            background-color: #555
+        }
+
+        .notify.active .list-notify {
+            display: block
+        }
+
+        .notify.active .fa-bell-o::after {
+            display: none
+        }
+
+        .user-box {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+            .user-box .text {
+                color: #fff;
+                font-size: 15px
+            }
+
+            .user-box .text-white {
+                color: #fff
+            }
+
+                .user-box .text-white.money {
+                    font-weight: bold;
+                    font-size: 20px
+                }
+    </style>
 </head>
 <!-- body -->
 
@@ -43,7 +206,7 @@
         <a href="myAccounts.html">My Accounts</a>
         <a href="myLoans.html">My Loans</a>
         <a href="myCards.html">My Cards</a>
-        <a class="active">My Transactions</a>
+        <a class="active" href="Transactions.html">My Transactions</a>
         <a href="login.html">Log Out</a>
     </div>
 
@@ -70,7 +233,7 @@
                     <div class="col-sm-4">
                         <ul class="email text_align_right">
                             <li class="d_none"><a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                         
+
                             <li>
                                 <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
                             </li>
@@ -81,18 +244,66 @@
         </div>
     </header>
     <div class="wrapper rounded">
-        <!--3ayzeen nezbot shakl el header-->
         <nav class="navbar navbar-expand-lg navbar-dark dark d-lg-flex align-items-lg-start">
-            <h7 class="navbar-brand welcome_text text_align_center">
-                TRANSACTIONS
-                <p class="text-muted pl-1">
-                    Welcome to your transactions
-                </p>
-            </h7>
+            <a class="navbar-brand" href="#">
+                Account Transactions
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
+
                 </span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="fa fa-bell-o font-weight-bold">
+                            </span>
+                            <span class="notify">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+
+                        </a>
+                        <!-- Add an input field for date selection -->
+                        <input type="date" id="dateRange">
+
+                        <!-- Add a button to initiate the search -->
+
+                        <button id="searchButton"><span class="fa fa-search"></span></button>
+
+
+                        <script>
+// Get references to the date input field and the search button
+const dateInput = document.getElementById('dateRange');
+const searchButton = document.getElementById('searchButton');
+
+// Add event listener to the search button
+searchButton.addEventListener('click', function () {
+                                // Retrieve the entered or selected date range
+                                const startDate = new Date(dateInput.value);
+                                const endDate = new Date(startDate);
+                                endDate.setDate(endDate.getDate() + 1); // Add 1 day to include transactions up to the end of the selected day
+
+                                // Iterate over the transaction rows and compare their dates
+                                const transactionRows = document.querySelectorAll('.table tbody tr');
+                                transactionRows.forEach(function (row) {
+                                    const dateCell = row.querySelector('td:nth-child(3)');
+                                    const transactionDate = new Date(dateCell.textContent);
+
+                                    // Show or hide the transaction row based on the date comparison
+                                    if (transactionDate >= startDate && transactionDate < endDate) {
+                                        row.style.display = 'table-row';
+                                    } else {
+                                        row.style.display = 'none';
+                                    }
+                                });
+});
+                        </script>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="row mt-2 pt-2">
             <div class="col-md-6" id="income">
@@ -117,7 +328,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Activity</th>
-                        <th scope="col">Mode</th>
+                        <th scope="col">Account No.</th>
                         <th scope="col">Date</th>
                         <th scope="col">TransactionID</th>
                         <th scope="col" class="text-right">Amount</th>
@@ -129,9 +340,8 @@
                             <span class="fa fa-briefcase mr-1">
                             </span> Coorg Trip
                         </td>
-                        <td>
-                            <span class="fa fa-cc-mastercard">
-                            </span>
+                        <td class="text-muted">
+                            #7654321
                         </td>
                         <td class="text-muted">12 Jul 2020, 12:30 PM</td>
                         <td class="text-muted">#57473829</td>
@@ -144,9 +354,8 @@
                             <span class="fa fa-bed mr-1">
                             </span> Hotel Leela Palace
                         </td>
-                        <td>
-                            <span class="fa fa-cc-mastercard">
-                            </span>
+                        <td class="text-muted">
+                            #1234567
                         </td>
                         <td class="text-muted">11 Jul 2020, 2:00 PM</td>
                         <td class="text-muted">
@@ -161,9 +370,8 @@
                             <span class="fa fa-exchange mr-1">
                             </span> Monthly Salary
                         </td>
-                        <td>
-                            <span class="fa fa-cc-visa">
-                            </span>
+                        <td class="text-muted">
+                            #1234567
                         </td>
                         <td class="text-muted">10 Jul 2020, 8:30 PM</td>
                         <td class="text-muted">
@@ -178,9 +386,8 @@
                             <span class="fa fa-exchange mr-1">
                             </span> Xbox Purchase
                         </td>
-                        <td>
-                            <span class="fa fa-cc-mastercard">
-                            </span>
+                        <td class="text-muted">
+                            #7654321
                         </td>
                         <td class="text-muted">12 May 2020, 4:30 PM</td>
                         <td class="text-muted">
@@ -195,22 +402,24 @@
                             <span class="fa fa-cutlery mr-1">
                             </span> Dinner Party
                         </td>
-                        <td><span class="fa fa-cc-visa"></span></td>
+                        <td class="text-muted">
+                            #1234567
+                        </td>
                         <td class="text-muted">11 May 2020, 5:30 PM</td>
                         <td class="text-muted">
                             #98537547
                         </td>
-                        <td class="d-flex justify-content-end align-items-center"> 
-                        <span class="fa fa-long-arrow-up mr-1"></span> $12.90 </td>
+                        <td class="d-flex justify-content-end align-items-center">
+                            <span class="fa fa-long-arrow-up mr-1"></span> $12.90
+                        </td>
                     </tr>
                     <tr>
                         <td scope="row">
                             <span class="fa fa-briefcase mr-1">
                             </span> Nandini Hills Ride
                         </td>
-                        <td>
-                            <span class="fa fa-cc-mastercard">
-                            </span>
+                        <td class="text-muted">
+                            #7654321
                         </td>
                         <td class="text-muted">10 May 2020, 01:30 PM</td>
                         <td class="text-muted">
@@ -225,9 +434,8 @@
                             <span class="fa fa-briefcase mr-1">
                             </span> Goa Beach Party
                         </td>
-                        <td>
-                            <span class="fa fa-cc-visa">
-                            </span>
+                        <td class="text-muted">
+                            #1234567
                         </td>
                         <td class="text-muted">09 May 2020, 01:30 PM</td>
                         <td class="text-muted">
@@ -263,10 +471,10 @@
     </div>
     <script>
 
-        const search = document.getElementById('search');
-        const list = document.querySelector('.list');
-        const listItems = list.querySelectorAll('li');
-        search.addEventListener('keyup', function (event) {
+const search = document.getElementById('search');
+const list = document.querySelector('.list');
+const listItems = list.querySelectorAll('li');
+search.addEventListener('keyup', function (event) {
             const term = event.target.value.toLowerCase();
 
             Array.from(listItems).forEach(function (item) {
@@ -280,7 +488,7 @@
                     item.style.visibility = "hidden";
                 }
             });
-        });
+});
     </script>
 
 
@@ -309,7 +517,7 @@
                 function openReportPopup() {
                     // Display pop-up box
                     popupBoxReport.style.display = "block";
-                }
+}
 
                 function closeReportPopup() {
                     // Get the entered text
@@ -321,7 +529,7 @@
                     }
                     // Hide pop-up box
                     popupBoxReport.style.display = "none";
-                }
+}
             </script>
             <!-- end report issue-->
             <div class="container">
