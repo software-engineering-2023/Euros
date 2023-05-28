@@ -34,9 +34,9 @@
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">�</a>
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">My Account</a>
-        <a href="contact.html">Log Out</a>
+        <a class="active" href="banker.html">Home</a>
+        <a href="bankeraccount.html">My Account</a>
+        <a href="homePage.html">Log Out</a>
     </div>
     <!-- header -->
     <header>
@@ -46,7 +46,7 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="index.html">EurosOBS</a>
+                            <a href="banker.html">EurosOBS</a>
                         </div>
                     </div>
                     <!-- <div class="col-sm-5">
@@ -71,7 +71,7 @@
             </div>
         </div>
     </header>
-    <div class="welcome_text text_align_center">
+    <div class="welcome_text2 text_align_center">
         <h7>WELCOME BANKER</h7>
     </div>
     <!-- end header -->
@@ -80,45 +80,46 @@
     <!-- wallet -->
     <div class="wallet">
         <div class="col-md-12">
-            
+
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <a href="cardRequests.html">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img src="images/wa1.svg" alt="#" /></i>
-                        <h3>View users' card requests</h3>
+                        <div id="wa_hover" class="wallet_box text_align_center">
+                            <i><img src="images/wa1.svg" alt="#" /></i>
+                            <h3>View users' card requests</h3>
 
-                        <p>Accept or reject user's request on getting a new physical card</p>
-                    </div>
-                </a>
+                            <p>Accept or reject user's request on getting a new physical card</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <a href="loanRequests.html">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img src="images/wa2.svg" alt="#" /></i>
-                        <h3>View users' loan requests</a></h3>                   
-                        <p>Accept or reject user's  request on getting a<li>loan</li></p>
-                    </div>
+                        <div id="wa_hover" class="wallet_box text_align_center">
+                            <i><img src="images/wa2.svg" alt="#" /></i>
+                            <h3>View users' loan requests
+                    </a></h3>
+                    <p>Accept or reject user's  request on getting a<li>loan</li></p>
+                </div>
                 </a>
+            </div>
+            <div class="col-lg-3 col-sm-6" onclick="openPopup1()">
+                <div id="wa_hover" class="wallet_box text_align_center">
+                    <i><img src="images/wa3.svg" alt="#" /></i>
+                    <h3>File technical issue report</h3>
+                    <p>Report any technical issue that you<li>face</li></p>
                 </div>
-                <div class="col-lg-3 col-sm-6" onclick="openPopup()">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img src="images/wa3.svg" alt="#" /></i>
-                        <h3>File technical issue report</h3>
-                        <p>Report any technical issue that you<li>face</li></p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div id="wa_hover" class="wallet_box text_align_center">
-                        <i><img src="images/wa4.svg" alt="#" /></i>
-                        <h3><a href="userReports.html">View user's Reports</a></h3>
-                        <p>Freeze/unfreeze user's card if any fraud transaction happened</p>
-                    </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div id="wa_hover" class="wallet_box text_align_center">
+                    <i><img src="images/wa4.svg" alt="#" /></i>
+                    <h3><a href="userReports.html">View user's Reports</a></h3>
+                    <p>Freeze/unfreeze user's card if any fraud transaction happened</p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- end wallet -->
     <!-- about -->
@@ -135,72 +136,73 @@
         <div class="footer">
             <!-- report system issue, 3yzin nehotaha f kol el pages-->
             <!-- Button to trigger the pop-up box -->
-            <div id="slideOutButton" class="slide-out-button" onclick="openPopup()">
+            <div id="slideOutButton" class="slide-out-button" onclick="openPopup1()">
                 <i class="fas fa-exclamation-circle"></i>
                 <span> Report Technical Issue</span>
             </div>
             <!-- Pop-up box -->
-            <div id="popupBox" class="popup">
-                <span class="close-button" onclick="closePopup()">&times;</span>
+            <div id="popupBox1" class="popup">
+                <span class="close-button" onclick="closePopup1()">&times;</span>
                 <p class="popup-text">What is your issue?</p>
                 <input type="text" id="textInput">
                 <br>
-                <button class="transparent-button" onclick="closePopup()">Submit</button>
+                <button class="transparent-button" onclick="closePopup1()">Submit</button>
             </div>
-            <script>
-                function openPopup() {
-                    // Display the pop-up box
-                    document.getElementById("popupBox").style.display = "block";
-                }
+        </div>
+        <script>
+            function openPopup1() {
+                // Display the pop-up box
+                document.getElementById("popupBox1").style.display = "block";
+            }
 
-                function closePopup() {
-                    // Get the entered text from the input field
-                    var text = document.getElementById("textInput").value;
+            function closePopup1() {
+                // Get the entered text from the input field
+                var text = document.getElementById("textInput").value;
 
-                    // 3ayzeen nwady el text dh lel admin b2a
-                    if (text != "") {
-                        alert("Noted. Your issue will be fixed shortly.");
-                        document.getElementById("textInput").value = "";
-                    }
-                    // Hide the pop-up box
-                    document.getElementById("popupBox").style.display = "none";
+                // 3ayzeen nwady el text dh lel admin b2a
+                if (text != "") {
+                    alert("Noted. Your issue will be fixed shortly.");
+                    document.getElementById("textInput").value = "";
                 }
-            </script>
-            <!-- end report system issue-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="Informa conta ">
-                            <h3>Contact Us</h3>
-                            <ul>
-                                <li>
-                                    <a href="Javascript:void(0) ">
-                                        <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Javascript:void(0) ">
-                                        <i class="fa fa-phone " aria-hidden="true "></i> Call +49 1636238603
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Javascript:void(0) ">
-                                        <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@euros.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="copyright text_align_center ">
-                    <div class="container ">
-                        <div class="row ">
-                            <div class="col-md-12 ">
-                            </div>
-                        </div>
+                // Hide the pop-up box
+                document.getElementById("popupBox1").style.display = "none";
+            }
+        </script>
+        <!-- end report system issue-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="Informa conta ">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <a href="Javascript:void(0) ">
+                                    <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Javascript:void(0) ">
+                                    <i class="fa fa-phone " aria-hidden="true "></i> Call +49 1636238603
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Javascript:void(0) ">
+                                    <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@euros.com
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="copyright text_align_center ">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-md-12 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="copyright text_align_center ">
             <div class="container ">
