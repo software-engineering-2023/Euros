@@ -1257,6 +1257,11 @@ ul.email {
     overflow-x: auto;
     padding: 15px;
 }
+.report-body12 {
+    max-width: 300px;
+    overflow-x: hidden;
+    padding: 15px;
+}
 
 
 .report-topic-heading,
@@ -1376,6 +1381,63 @@ ul.email {
     to {
         opacity: 0;
     }
+}
+
+.dropdown12 {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown12 select {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  .dropdown12 .arrow {
+    content: "\25BC"; /* Unicode character for the down arrow */
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(50%);
+    color: #888;
+    pointer-events: none;
+  }
+  
+  .dropdown12 select:focus,
+  .dropdown12 select:hover {
+    border-color: #999;
+  }
+  
+  .dropdown12 select:focus + .arrow,
+  .dropdown12 select:hover + .arrow {
+    color: #555;
+  }
+  
+
+.report-container2{
+    min-height: 450px;
+    max-width: 300px;
+    margin: auto auto auto 170px;
+    background-color: #ffffff;
+    align-items: left;
+    border-radius: 30px;
+    border: 2px solid rgb(2, 47, 121);
+    padding: 0px 20px 20px 20px;
+}
+.report-container3{
+    min-height: 450px;
+    max-width: 300px;
+    margin: auto auto auto 170px;
+    background-color: #ffffff;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid rgb(2, 47, 121);
+    padding: 0px 20px 20px 20px;
 }
 
 .popup1 {

@@ -1280,6 +1280,16 @@ ul.email {
     border: 2px solid rgb(2, 47, 121);
     padding: 0px 20px 20px 20px;
 }
+.report-container2{
+    min-height: 300px;
+    max-width: 1400px;
+    margin: auto auto auto 170px;
+    background-color: #ffffff;
+    align-items: left;
+    border-radius: 30px;
+    border: 2px solid rgb(2, 47, 121);
+    padding: 0px 20px 20px 20px;
+}
 .report-container1 {
     min-height: 300px;
     max-width: 1000px;
