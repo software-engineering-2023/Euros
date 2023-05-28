@@ -1216,8 +1216,8 @@ ul.email {
 }
 
 .report-container {
-    min-height: 300px;
-    max-width: 1300px;
+    min-height: 100%;
+    max-width: 80%;
     margin: 70px auto 0px auto;
     background-color: #ffffff;
     border-radius: 30px;
@@ -1226,7 +1226,7 @@ ul.email {
 }
 
 .report-header {
-    height: 80px;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1242,8 +1242,8 @@ ul.email {
 }
 
 .view {
-    height: 35px;
-    width: 130px;
+    height: 100%;
+    width: 100%;
     border-radius: 8px;
     background-color: rgb(2, 47, 121);
     color: white;
@@ -1253,7 +1253,7 @@ ul.email {
 }
 
 .report-body {
-    max-width: 1400px;
+    max-width: 100%;
     overflow-x: auto;
     padding: 15px;
 }
@@ -1269,7 +1269,7 @@ ul.email {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 170px;
-    width: 1350px;
+    width: 100%;
     display: flex,left;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     justify-content: space-between;
@@ -1290,19 +1290,27 @@ ul.email {
     letter-spacing: 0px;
     font-weight: 600;
 }
-
+.t-op-nextlvl2 {
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+.t-op-nextlvl3 {
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
 .label-tag {
-    width: 160px;
+    width: 100%;
     text-align: center;
     background-color: rgb(2, 47, 121);
     color: white;
     border-radius: 4px;
 }
 
-.popup-toggle {
-    display: none;
-}
 
+<<<<<<< HEAD
+=======
 .open-button {
     background-color: #4CAF50;
     color: #fff;
@@ -1555,6 +1563,7 @@ ul.email {
     .checkbox-wrapper-29 .checkbox__label {
         margin-right: calc(var(--size) * 0.45);
     }
+>>>>>>> 5b5989a28516901945ba95ad3e1de1328ee05f56
 
 
 /* Youstina's classes */
@@ -1961,6 +1970,7 @@ label {
     color: #555;
     padding-top: 10px;
     left: 10px;
+    cursor: pointer;
 }
 
 
@@ -2156,4 +2166,9 @@ label {
 &:after {
     transform: rotate(-45deg);
 }
+}
+.welcome_text2 h7 {
+    padding-top: 200px;
+    font-weight: lighter;
+    font: sans-serif;
 }
