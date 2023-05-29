@@ -513,6 +513,18 @@ canvas {
     cursor: pointer;
     transition: ease-in all 0.3s;
 }
+.reminderBills {
+    margin-top: 7px;
+    font-size: 17px;
+    font-family: Poppins, sans-serif;
+    color: rgb(2, 47, 121);
+    font-weight: bold;
+    background-color: transparent;
+}
+.reminderBills:hover {
+
+    color: lightsteelblue;
+}
 
     .cardPopup-close-button:hover {
         color: lightsteelblue;
@@ -562,7 +574,7 @@ canvas {
 .viewPending-btn {
     transition: ease-in all 0.3s;
     border-radius: 3px;
-    background-color: rgb(2, 47, 121);
+    background-color: #1f1f1f;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
     font-size: 17px;
