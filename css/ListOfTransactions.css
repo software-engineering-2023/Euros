@@ -27,9 +27,16 @@ body {
     padding: 0.5rem 0rem
 }
 
-    .navbar .navbar-brand {
-        font-size: 30px
+    .navbar-brand {
+        font-size: 30px;
+        color: #000;
     }
+
+.blabla{
+    color:red;
+    font-size: 30px;
+}
+
 
 #income {
     border-right: 1px solid #bbb
@@ -142,13 +149,13 @@ body {
         color: #fff
     }
 
-.table-dark {
-    background-color: #222
+.table-white {
+    background-color: #fff
 }
 
 .table thead th {
     text-transform: uppercase;
-    color: #bbb;
+    color: #646c74;
     font-size: 12px
 }
 
@@ -198,21 +205,22 @@ tbody tr td .fa-long-arrow-up, tbody tr td .fa-long-arrow-down {
     }
 
 .pagination .page-item .page-link {
-    background-color: #444;
-    color: #fff;
+    background-color: rgb(2,47,121);
+    color: rgb(2,47,121);
     padding: 0.3rem .75rem;
     border: none;
     border-radius: 0
 }
 
     .pagination .page-item .page-link span {
-        font-size: 16px
+        font-size: 16px;
+        color: rgb(2,47,121);
     }
 
 .pagination .page-item.disabled .page-link {
-    background-color: #333;
-    color: #eee;
-    cursor: crosshair
+    background-color: rgb(2,47,121);
+    color: rgb(2,47,121);
+    cursor: crosshair;
 }
 
 @media(min-width:768px) and (max-width: 991px) {
@@ -232,7 +240,11 @@ tbody tr td .fa-long-arrow-up, tbody tr td .fa-long-arrow-down {
     }
 
     .nav-item .fa-search {
-        padding-left: 10px
+        padding-left: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        border: solid #5B6DCD 10px;
+        padding: 5px;
     }
 
     .navbar-nav .nav-item {
