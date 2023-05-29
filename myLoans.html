@@ -36,12 +36,16 @@
         <div class="loader"><img src="images/loading.gif" alt="" /></div>
     </div>
     <!-- end loader -->
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="homePage.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="login.html">Login</a>
-    </div>
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="customer.html">Home</a>
+            <a href="myAccounts.html">My Accounts</a>
+            <a class="active" href="myLoans.html">My Loans</a>
+            <a href="myCards.html">My Cards</a>
+            <a href="Transactions.html">My Transactions</a>
+            <a href="Bills.html">My Bills</a>
+            <a href="login.html">Log Out</a>
+        </div>
     <!-- header -->
     <header>
         <!-- header inner -->
@@ -155,79 +159,79 @@
     <br>
             
     <div class="items">
-    <div class="item5">
-    <p style="color: rgb(2, 47, 121); text-align: left;" class="t-op-nextlvl">LO-0001</p>
-    <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl ">Car</p>
-    <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl">50,000$</p>
-    <button id="openBtn1" onclick="openPopup6(event)"  class="t-op-nextlvl label-tag close-button1">Set reminder</button>
-    <div id="popup5" class="popup1">
-        <div class="popup-content align-items-center">                   
-            <div class="report-container3">
-                <div class="report-header5">
-                    <h1  style="color: rgb(2, 47, 121)">Choose prefered <br> date and time</h1>
-                    <button id="openBtn17" onclick="closePopup6(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
-</div>
-                        <div  style="text-align: center;align-content: center; align-items: center;" class="report-body12">
-                                            <div class="report-topic-heading">
-                                                <p  style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
-                                            </div>
+        <div class="item5">
+            <p style="color: rgb(2, 47, 121); text-align: left;" class="t-op-nextlvl">LO-0001</p>
+            <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl ">Car</p>
+            <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl">50,000$</p>
+            <button id="openBtn1" onclick="openPopup6(event)" class="t-op-nextlvl label-tag close-button1">Set reminder</button>
+            <div id="popup5" class="popup1">
+                <div class="popup-content align-items-center">
+                    <div class="report-container3">
+                        <div class="report-header5">
+                            <h1 style="color: rgb(2, 47, 121)">Choose prefered <br> date and time</h1>
+                            <button id="openBtn17" onclick="closePopup6(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                        </div>
+                        <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
+                            <div class="report-topic-heading">
+                                <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                            </div>
                             <br>
-            <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
-                                                <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
-                                                    <select name="date" id="day">
-                                                        <option value="" selected disabled>Day</option>
-                                                        <option value="01">01</option>
-                                                        <option value="02">02</option>
-                                                        <option value="03">03</option>
-                                                        <option value="04">04</option>
-                                                        <option value="05">05</option>
-                                                        <option value="06">06</option>
-                                                        <option value="07">07</option>
-                                                        <option value="08">08</option>
-                                                        <option value="09">09</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                        <option value="13">13</option>
-                                                        <option value="14">14</option>
-                                                        <option value="15">15</option>
-                                                        <option value="16">16</option>
-                                                        <option value="17">17</option>
-                                                        <option value="18">18</option>
-                                                        <option value="19">19</option>
-                                                        <option value="20">20</option>
-                                                        <option value="21">21</option>
-                                                        <option value="22">22</option>
-                                                        <option value="23">23</option>
-                                                        <option value="24">24</option>
-                                                        <option value="25">25</option>
-                                                        <option value="26">26</option>
-                                                        <option value="27">27</option>
-                                                        <option value="28">28</option>
-                                                        <option value="29">29</option>
-                                                        <option value="30">30</option>
-                                                        <option value="31">31</option>
-                                                    </select>
-                                                </div>
-                        <br>
-                                                    <div style="text-align: center;align-items: center;"  class="dropdown12">
-                                                        <select name="month" id="month">
-                                                        <option value="" selected disabled>Freq</option>
-                                                        <option value="01">Monthly</option>
-                                                        <option value="02">3 Months</option>
-                                                        <option value="02">6 Months</option>
-                                                        <!-- Add more options for the date -->
-                                                        </select>
-                                                    </div>
-            </div>
-<br>
-            <div class="report-topic-heading">
-                <p  style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
-            </div>
-<br>
-                                <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;"  class = "row">
-                                    <div style="text-align: center;align-items: center;" class="dropdown12">
-                                        <select name="time" id="hour">
+                            <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
+                                <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
+                                    <select name="date" id="day">
+                                        <option value="" selected disabled>Day</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-items: center;" class="dropdown12">
+                                    <select name="month" id="month">
+                                        <option value="" selected disabled>Freq</option>
+                                        <option value="01">Monthly</option>
+                                        <option value="02">3 Months</option>
+                                        <option value="02">6 Months</option>
+                                        <!-- Add more options for the date -->
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="report-topic-heading">
+                                <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                            </div>
+                            <br>
+                            <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
+                                <div style="text-align: center;align-items: center;" class="dropdown12">
+                                    <select name="time" id="hour">
                                         <option value="" selected disabled>Hour</option>
                                         <option value="00:00">00:00</option>
                                         <option value="01:00">01:00</option>
@@ -254,10 +258,10 @@
                                         <option value="22:00">22:00</option>
                                         <option value="23:00">23:00</option>
                                         <!-- Add more options for the time -->
-                                        </select>
-                                    </div>
-                                    <div  style="text-align: center;align-items: center;"  class="dropdown12">
-                                        <select name="time" id="min">
+                                    </select>
+                                </div>
+                                <div style="text-align: center;align-items: center;" class="dropdown12">
+                                    <select name="time" id="min">
                                         <option value="" selected disabled>Min</option>
                                         <option value="00">00</option>
                                         <option value="01">01</option>
@@ -320,24 +324,24 @@
                                         <option value="58">58</option>
                                         <option value="59">59</option>
                                         <!-- Add more options for the time -->
-                                        </select>
-                                    </div>
-        </div>
-<br>
-            <button style="text-align: center;align-items: center;"  onclick="closePopup6(event)" id = "closebtn12" class="close-button1">Set</button>
-    </div>
-</div>
-</div>
-
-</div>
-
-                    <div id="popup8" class="popup2">
-                        <div class="popup-content2">
-                            <h2>Reminder set successfully</h2>
-                            <button id="closebutton12" onclick="closePopup9(event)" class="close-button1">Close</button>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <button style="text-align: center;align-items: center;" onclick="closePopup6(event)" id="closebtn12" class="close-button1">Set</button>
                         </div>
                     </div>
                 </div>
+
+            </div>
+
+            <div id="popup8" class="popup2">
+                <div class="popup-content2">
+                    <h2>Reminder set successfully</h2>
+                    <button id="closebutton12" onclick="closePopup9(event)" class="close-button1">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
     <br>
 
