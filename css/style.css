@@ -2219,3 +2219,10 @@ label {
     padding-top: 200px;
     font-weight: lighter;
 }
+
+
+.notifbanker {
+    background-color: lightsteelblue;
+    color: rgb(2, 47, 121);
+    font-family: 'Poppins', sans-serif;
+}
