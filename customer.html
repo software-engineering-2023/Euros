@@ -9,8 +9,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
     <!-- site metas -->
     <title>Euros OBS</title>
     <meta name="keywords" content="">
@@ -81,9 +79,44 @@
         <h7>WELCOME USER</h7>
     </div>
     <!-- welcome message end -->
+    <!-- notifs -->
+    <div class="copyright text_align_center ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="notif alert fade alert-simple alert-info alert-dismissible text-left font_family-montserrat fontsize-16 fontweight-light brk-library-rendered rendered show" role="alert" data-brk-library="component_alert">
+                        <button type="button" class="close font__size-18" data-dismiss="alert">
+                            <span aria-hidden="true">
+                                <i class="fa fa-times blue-cross"></i>
+                            </span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <i class="start-icon  fa fa-info-circle faa-shake animated"></i>
+                        <strong class="font__weight-semibold">Heads up!</strong> Your car loan payment is due in the next two days!
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-12">
+                    <div class="notif alert fade alert-simple alert-info alert-dismissible text-left font_family-montserrat fontsize-16 fontweight-light brk-library-rendered rendered show" role="alert" data-brk-library="component_alert">
+                        <button type="button" class="close font__size-18" data-dismiss="alert">
+                            <span aria-hidden="true">
+                                <i class="fa fa-times blue-cross"></i>
+                            </span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <i class="start-icon  fa fa-info-circle faa-shake animated"></i>
+                        <strong class="font__weight-semibold">Heads up!</strong> The card application issue you have reported has been resolved. We're waiting for your application :)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end notifs -->
     <!-- wallet -->
-    
-    <div class="wallet">
+
+    <div class="mallet">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
@@ -102,8 +135,8 @@
                             <select type="text" id="name" placeholder="Choose account" class="appPopup-input" required>
                                 <option value="">Choose account</option>
                                 <option value="1abc2345678">1abc2345678</option>
-                                <option value="9abc8764523">9abc8764523</option>
-                                <option value="4abc7294058">4abc7294058</option>
+                                <option value="9abc8764523">9abc8765432</option>
+                                <option value="4abc7294058">1abc0234567</option>
                             </select><br>
                             <label for="name" class="appPopup-label">Card Holder Name:</label>
                             <input type="text" id="cardName" placeholder="Specifyname on card" class="appPopup-input" required> </input><br>
@@ -116,10 +149,10 @@
                             <label for="amount" class="appPopup-label">Card Limit:</label>
                             <select type="number" id="limit" placeholder="Set limit" class="appPopup-input" required>
                                 <option value="">Set limit</option>
-                                <option value="5000">5000</option>
-                                <option value="10000">10000</option>
-                                <option value="15000">15000</option>
-                                <option value="20000">20000</option>
+                                <option value="5000">5000$</option>
+                                <option value="10000">10000$</option>
+                                <option value="15000">15000$</option>
+                                <option value="20000">20000$</option>
                             </select>
                             <br></br>
                             <label for="documentLoan" class="appPopup-label">Required Documents:</label>
@@ -186,8 +219,10 @@
                             <label for="interestRate" class="appPopup-label">Interest Rate:</label>
                             <select type="text" id="interestRate" placeholder="Choose from availabe rates" class="appPopup-input" required>
                                 <option value="">Choose from availabe rates</option>
-                                <option value="5 percent">5%</option>
-                                <option value="10 percent">10%</option>
+                                <option value="10 percent">1.5%</option>
+                                <option value="5 percent">3%</option>
+                                <option value="10 percent">5%</option>
+                                <option value="10 percent">7%</option>
                             </select><br>
                             <label for="documentLoan" class="appPopup-label">Required Documents:</label>
                             <input type="file" accept="application/pdf"><br><br /><br>
@@ -232,7 +267,7 @@
                     <div class="appPopup-content appPopup-content-border">
                         <p class="appPopup-title">OPEN ACCOUNT</p>
                         <form>
-                            <br><br/><br>
+                            <br><br /><br>
                             <label for="AccType" class="appPopup-label">Account Type:</label>
                             <select type="text" id="AccType" placeholder="Choose account type" class="appPopup-input" required>
                                 <option value="">Choose account type</option>
@@ -288,13 +323,13 @@
                             <select type="text" id="fromAcc" placeholder="Choose account" class="appPopup-input" required>
                                 <option value="">Choose account</option>
                                 <option value="1abc2345678">1abc2345678</option>
-                                <option value="9abc8764523">9abc8764523</option>
-                                <option value="4abc7294058">4abc7294058</option>
+                                <option value="9abc8764523">9abc8765432</option>
+                                <option value="4abc7294058">1abc0234567</option>
                             </select><br>
-                            <label for="recieverIBAN" class="appPopup-label">Reciever IBAN:</label>
-                            <input type="text" id="recieverIBAN" placeholder="Enter reciever IBAN" class="appPopup-input" required> </input><br>
-                            <label for="recieverBIC" class="appPopup-label">Reciever BIC:</label>
-                            <input type="number" id="recieverBIC" placeholder="Enter reciever BIC" class="appPopup-input" required> </input><br>
+                            <label for="recieverIBAN" class="appPopup-label">Recipient IBAN:</label>
+                            <input type="text" id="recieverIBAN" placeholder="Enter recipient IBAN" class="appPopup-input" required> </input><br>
+                            <label for="recieverBIC" class="appPopup-label">Recipient BIC:</label>
+                            <input type="number" id="recieverBIC" placeholder="Enter recipient BIC" class="appPopup-input" required> </input><br>
                             <label for="transferType" class="appPopup-label">Transfer Type:</label>
                             <select type="text" id="transferType" placeholder="Choose transfer type" class="appPopup-input" required>
                                 <option value="">Choose transfer type</option>
@@ -375,12 +410,6 @@
         </div>
     </div>
     <!-- end wallet -->
-    <!-- about -->
-    <!-- end about -->
-    <!-- graf -->
-    <!-- end graf -->
-    <!-- testimonial -->
-    <!-- works -->
     <!-- footer -->
     <footer>
         <div class="footer">

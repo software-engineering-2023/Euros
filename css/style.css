@@ -417,7 +417,7 @@ ul.email {
     padding: 0;
 }
 
-.bluid {
+.Fid {
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     max-width: 540px;
@@ -1957,7 +1957,7 @@ label {
         left: 0;
         width: 100%;
         height: 5px;
-        background-color: rgb(2, 47, 121);
+        background-color: lightsteelblue;
     }
 
 #closePopup {

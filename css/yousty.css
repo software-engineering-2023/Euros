@@ -124,7 +124,7 @@
     border: none;
 }
 .appPopup-content-border {
-    border: #0c4190 solid 5px;
+    border: lightsteelblue solid 5px;
 }
 .appPopup-content {
     background-color: #fbfbfb;
@@ -184,8 +184,9 @@ canvas {
 
 
 .appPopup-button:hover {
-    background-color: #2F79E8;
-    color: #fff;
+    transition: ease-in all 0.3s;
+    background-color: lightsteelblue;
+    color: #404b65;
 }
 .appPopup-close-button {
     font-family: Poppins, sans-serif;
@@ -203,7 +204,7 @@ canvas {
     }
 
 .mallet {
-    padding: 113px 30px 0 30px;
+    padding: 20px 30px 0 30px;
 }
 
 .mallet_box {
@@ -257,6 +258,14 @@ canvas {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
 }
+
+.notif {
+    background-color: lightsteelblue;
+    color: rgb(2, 47, 121);
+    font-family: 'Poppins', sans-serif;
+}
+
+
 /*
 .wallet-picture {
     display: inline-block;
@@ -269,12 +278,16 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 .wallet-picture:hover.card-picture{
     display: none;
 }
 */
+.disable-hover .cardInfo {
+    visibility: hidden;
+}
 .card-picture {
     width: 200px; /* Initial width of the card */
     height: 200px; /* Initial height of the card */
@@ -306,7 +319,7 @@ canvas {
     border-radius: 8px;
     line-height: 80px;
     background-color: #0f1e42;
-    border: rgb(2, 47, 121) solid 6px;
+    border: lightsteelblue solid 6px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -323,17 +336,7 @@ canvas {
     background-color: transparent;
     align-content: center;
 }
-.appPopup-button {
-    font-weight: bold;
-    font-family: Poppins, sans-serif;
-    font-size: 15px;
-    color: #f1f1f1;
-    background-color: #404b65;
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-    transition: ease-in all 0.3s;
-}
+
 .card-btn {
     line-height: normal;
     font-size: 12px;
@@ -461,12 +464,29 @@ canvas {
     border-radius: 5px;
     border: #0f1e42 solid 3px;
 }
+
+.popup1 {
+    display: none; /* Hide the popup by default */
+    position: fixed;
+    top: 50%;
+    left: 46.5%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 9999;
+}
+
 .cardPopup-input {
     font-family: Poppins, sans-serif;
-    font-size: 12px;
+    font-size: 9px;
     color: #777;
-    padding: 5px;
+    padding: 3px;
     border: 1px solid #ccc;
+}
+.transtext{
+    color: transparent;
+    font-size:7px;
 }
 .cardPopup-text {
     padding-top: 8px;
@@ -495,7 +515,7 @@ canvas {
 }
 
     .cardPopup-close-button:hover {
-        color: #2F79E8;
+        color: lightsteelblue;
         background-color: transparent;
     }
 
@@ -512,12 +532,13 @@ canvas {
 }
 
     .cardPopup-button:hover {
-        background-color: #2F79E8;
-        color: #fff;
+        background-color: lightsteelblue;
+        color: #404b65;
     }
 
 .viewPending-btn {
-    background-color: #404b65;
+    border-radius:3px;
+    background-color: rgb(2, 47, 121);
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
     font-size: 17px;
@@ -526,11 +547,24 @@ canvas {
     cursor: pointer;
     
 }
-.viewPending-btn:hover {
-    color: whitesmoke;
-    background-color: #2a5aa3;
-
+    .viewPending-btn:hover {
+        color: rgb(2, 47, 121);
+        background-color: lightsteelblue;
+    }
+.reminder-button {
+    border-radius: 4px;
+    background-color: lightsteelblue;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(2, 47, 121);
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
 }
+    .reminder-button:hover {
+        color:whitesmoke;
+        background-color: rgb(2, 47, 121)
+    }
 .rejected {
     color: darkred;
 }
@@ -607,7 +641,7 @@ canvas {
     padding: 60px 0 60px 0;
 }
 .profileabout_border {
-    border: #2F79E8 solid 5px;
+    border: lightsteelblue solid 5px;
     padding: 60px 80px;
 }
 

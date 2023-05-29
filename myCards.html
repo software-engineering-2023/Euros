@@ -22,6 +22,7 @@
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/yousty.css">
+
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
@@ -88,8 +89,8 @@
 
                     <h1 class="visafont">VISA</h1>
                     <h1 class="cardInfo-text"></h1>
-                    <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0092727290</span></h1>
-                    <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Yousty</span></h1>
+                    <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 123456789</span></h1>
+                    <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina Beshay</span></h1>
                     <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 15/27</span></h1>
                     <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 212</span></h1>
                     <h1 class="cardInfo-text"></h1>
@@ -105,8 +106,9 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeBill1" class="cardPopup-close-button" onClick="closeBill1()">&times;</span>
-                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount1" class="cardPopup-text"> 3600</span></h1>
-                            <input type="number" id="payAmount1" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount1" class="cardPopup-text"> 3600$</span></h1>
+                            <h1 class="cardPopup-text">  Due: <span id="due1" class="cardPopup-text"> 23/6/2023</span></h1>
+                            <input type="number" id="payAmount1" placeholder="Amount to pay" class="cardPopup-input" required>
                             <button type="button" id="pay1" onClick="pay1()" class="cardPopup-button">Pay</button>
                         </div>
                     </div>
@@ -116,7 +118,7 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closePts1" class="cardPopup-close-button" onClick="closePts1()">&times;</span>
-                            <h1 class="cardPopup-text">  Points: <span id="points1" class="cardPopup-text"> 1300</span></h1><br>
+                            <h1 class="cardPopup-text">  Total points: <span id="points1" class="cardPopup-text"> 1260pts</span></h1><br>
                             <button type="button" id="claimPoints1" onClick="claimPoints1()" class="cardPopup-button">Claim Points</button>
                         </div>
                     </div>
@@ -127,7 +129,7 @@
                         <div>
                             <span id="closeLimit1" class="cardPopup-close-button" onClick="closeLimit1()">&times;</span>
                             <h1 class="cardPopup-text">  Limit:</h1>
-                            <span id="limit1" class="cardPopup-textlimit"> 10000</span>
+                            <span id="limit1" class="cardPopup-textlimit"> 10000$</span>
                         </div>
                     </div>
                 </div>
@@ -136,12 +138,14 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeReport1" class="cardPopup-close-button" onClick="closeReport1()">&times;</span><br>
+                            <h1 class="cardPopup-text">  Reporting Issue:</h1>
                             <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
                                 <option value="">Issue for report</option>
                                 <option value="Theft">Theft</option>
                                 <option value="Loss">Loss</option>
                                 <option value="Damage">Damage</option>
-                            </select><br><br>
+                            </select><br>
+                            <h6 class="transtext">jj</h6>
                             <button type="button" id="submitReport1" onClick="submitReport1()" class="cardPopup-button">Submit</button>
                         </div>
                     </div>
@@ -163,18 +167,20 @@
                 card1BillPopup.style.display = "none";
             }
             function pay1() {
-                var req = document.getElementById("reqAmount1").value;
-                var payed = document.getElementById("payAmount1").value;
-                if (payed != "") {
-                    var amount = (req - payed);
+                var reqAmountElement = document.getElementById("reqAmount1");
+                var req = parseFloat(reqAmountElement.innerText.slice(0, -1));
+                var payed = parseInt(document.getElementById("payAmount1").value);
+                if (!isNaN(payed)) {
+                    var amount = req - payed;
                     console.log(amount);
-                    document.getElementById("reqAmount1").textContent = amount+"";
+                    reqAmountElement.innerText = amount + reqAmountElement.innerText.slice(-1);
                     alert("Payment received");
                     document.getElementById("payAmount1").value = "";
                     closeBill1();
                 }
-                
             }
+
+
 
             function viewPts1() {
                 card1PointsPopup.style.display = "block";
@@ -219,8 +225,9 @@
             }
             function submitReport1() {
                 //submit report
-                alert("Report has been submitted and card will now be blocked.");
+                alert("Report has been submitted and card will now be blocked. A request for a replacement has been issued for you.");
                 closeReport1();
+                document.getElementById("card1").classList.toggle("disable-hover");
                 //document.getElementById("card1").className = "card-picture-blocked";
             }
         </script>
@@ -231,8 +238,8 @@
 
                     <h1 class="visafont">VISA</h1>
                     <h1 class="cardInfo-text"></h1>
-                    <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0095527290</span></h1>
-                    <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina</span></h1>
+                    <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 987654321</span></h1>
+                    <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina Aboukalam</span></h1>
                     <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 5/25</span></h1>
                     <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 948</span></h1>
                     <h1 class="cardInfo-text"></h1>
@@ -249,8 +256,9 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeBill2" class="cardPopup-close-button" onClick="closeBill2()">&times;</span>
-                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount2" class="cardPopup-text"> 3600</span></h1>
-                            <input type="number" id="payAmount2" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount2" class="cardPopup-text"> 4200$</span></h1>
+                            <h1 class="cardPopup-text">  Due: <span id="due2" class="cardPopup-text"> 14/6/2023</span></h1>
+                            <input type="number" id="payAmount2" placeholder="Amount to pay" class="cardPopup-input" required>
                             <button type="button" id="pay2" onClick="pay2()" class="cardPopup-button">Pay</button>
                         </div>
                     </div>
@@ -260,7 +268,7 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closePts2" class="cardPopup-close-button" onClick="closePts2()">&times;</span>
-                            <h1 class="cardPopup-text">  Points: <span id="points2" class="cardPopup-text"> 1300</span></h1><br>
+                            <h1 class="cardPopup-text">  Total points: <span id="points2" class="cardPopup-text"> 1300pts</span></h1><br>
                             <button type="button" id="claimPoints2" onClick="claimPoints2()" class="cardPopup-button">Claim Points</button>
                         </div>
                     </div>
@@ -271,7 +279,7 @@
                         <div>
                             <span id="closeLimit2" class="cardPopup-close-button" onClick="closeLimit2()">&times;</span>
                             <h1 class="cardPopup-text">  Limit: </h1>
-                            <span id="limit2" class="cardPopup-textlimit"> 15000</span>
+                            <span id="limit2" class="cardPopup-textlimit"> 15000$</span>
                         </div>
                     </div>
                 </div>
@@ -280,19 +288,21 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeReport2" class="cardPopup-close-button" onClick="closeReport2()">&times;</span><br>
+                            <h1 class="cardPopup-text">  Reporting Issue:</h1>
                             <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
                                 <option value="">Issue for report</option>
                                 <option value="Theft">Theft</option>
                                 <option value="Loss">Loss</option>
                                 <option value="Damage">Damage</option>
-                            </select><br><br>
+                            </select><br>
+                            <h6 class="transtext">jj</h6>
                             <button type="button" id="submitReport1" onClick="submitReport2()" class="cardPopup-button">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <script>
             var card2PointsPopup = document.getElementById("card2PointsPopup");
             var card2LimitPopup = document.getElementById("card2LimitPopup");
@@ -306,16 +316,16 @@
                 card2BillPopup.style.display = "none";
             }
             function pay2() {
-                var req2 = document.getElementById("reqAmount2").value;
-                var payed2 = document.getElementById("payAmount2").value;
-                if (payed2 != "") {
-                    var amount2 = (req2 - payed2);
-                    document.getElementById("reqAmount2").textContent = amount2;
+                var reqAmountElement2 = document.getElementById("reqAmount2");
+                var req2 = parseFloat(reqAmountElement2.innerText.slice(0, -1));
+                var payed2 = parseInt(document.getElementById("payAmount2").value);
+                if (!isNaN(payed2)) {
+                    var amount2 = req2 - payed2;
+                    reqAmountElement2.innerText = amount2 + reqAmountElement2.innerText.slice(-1);
                     alert("Payment received");
                     document.getElementById("payAmount2").value = "";
                     closeBill2();
                 }
-                
             }
 
             function viewPts2() {
@@ -352,8 +362,9 @@
             }
             function submitReport2() {
                 //submit report
-                alert("Report has been submitted and card will now be blocked.");
+                alert("Report has been submitted and card will now be blocked. A request for a replacement has been issued for you.");
                 closeReport2();
+                document.getElementById("card2").classList.toggle("disable-hover");
                 //document.getElementById("card1").className = "card-picture-blocked";
             }
         </script>
@@ -364,7 +375,7 @@
                     <div>
                         <h1 class="visafont">MASTERCARD</h1>
                         <h1 class="cardInfo-text"></h1>
-                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0092727290</span></h1>
+                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 123498765</span></h1>
                         <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina Nabil</span></h1>
                         <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 1/30</span></h1>
                         <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 237</span></h1>
@@ -382,8 +393,9 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeBill3" class="cardPopup-close-button" onClick="closeBill3()">&times;</span>
-                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount3" class="cardPopup-text"> 3600</span></h1>
-                            <input type="number" id="payAmount3" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount3" class="cardPopup-text"> 600$</span></h1>
+                            <h1 class="cardPopup-text">  Due: <span id="due3" class="cardPopup-text"> 2/7/2023</span></h1>
+                            <input type="number" id="payAmount3" placeholder="Amount to pay" class="cardPopup-input" required>
                             <button type="button" id="pay3" onClick="pay3()" class="cardPopup-button">Pay</button>
                         </div>
                     </div>
@@ -393,7 +405,7 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closePts3" class="cardPopup-close-button" onClick="closePts3()">&times;</span>
-                            <h1 class="cardPopup-text">  Points: <span id="points3" class="cardPopup-text"> 300</span></h1><br>
+                            <h1 class="cardPopup-text">  Total points: <span id="points3" class="cardPopup-text"> 300pts</span></h1><br>
                             <button type="button" id="claimPoints3" onClick="claimPoints3()" class="cardPopup-button">Claim Points</button>
                         </div>
                     </div>
@@ -404,7 +416,7 @@
                         <div>
                             <span id="closeLimit3" class="cardPopup-close-button" onClick="closeLimit3()">&times;</span>
                             <h1 class="cardPopup-text">  Limit:</h1>
-                            <span id="limit3" class="cardPopup-textlimit"> 5000</span>
+                            <span id="limit3" class="cardPopup-textlimit"> 5000$</span>
                         </div>
                     </div>
                 </div>
@@ -413,19 +425,21 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeReport3" class="cardPopup-close-button" onClick="closeReport3()">&times;</span><br>
+                            <h1 class="cardPopup-text">  Reporting Issue:</h1>
                             <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
                                 <option value="">Issue for report</option>
                                 <option value="Theft">Theft</option>
                                 <option value="Loss">Loss</option>
                                 <option value="Damage">Damage</option>
-                            </select><br><br>
+                            </select><br>
+                            <h6 class="transtext">jj</h6>
                             <button type="button" id="submitReport3" onClick="submitReport3()" class="cardPopup-button">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <script>
             var card3PointsPopup = document.getElementById("card3PointsPopup");
             var card3LimitPopup = document.getElementById("card3LimitPopup");
@@ -439,17 +453,18 @@
                 card3BillPopup.style.display = "none";
             }
             function pay3() {
-                var req3 = document.getElementById("reqAmount3").value;
-                var payed3 = document.getElementById("payAmount3").value;
-                if (payed3 != "") {
-                    var amount3 = (req3 - payed3);
-                    document.getElementById("reqAmount3").textContent = amount3.toString;
+                var reqAmountElement3 = document.getElementById("reqAmount3");
+                var req3 = parseFloat(reqAmountElement3.innerText.slice(0, -1));
+                var payed3 = parseInt(document.getElementById("payAmount3").value);
+                if (!isNaN(payed3)) {
+                    var amount3 = req3 - payed3;
+                    reqAmountElement3.innerText = amount3 + reqAmountElement3.innerText.slice(-1);
                     alert("Payment received");
                     document.getElementById("payAmount3").value = "";
                     closeBill3();
                 }
-                
             }
+
 
             function viewPts3() {
                 card3PointsPopup.style.display = "block";
@@ -485,8 +500,9 @@
             }
             function submitReport3() {
                 //submit report
-                alert("Report has been submitted and card will now be blocked.");
+                alert("Report has been submitted and card will now be blocked. A request for a replacement has been issued for you.");
                 closeReport3();
+                document.getElementById("card3").classList.toggle("disable-hover");
                 //document.getElementById("card1").className = "card-picture-blocked";
             }
         </script>
@@ -497,10 +513,10 @@
                     <div>
                         <h1 class="visafont">MASTERCARD</h1>
                         <h1 class="cardInfo-text"></h1>
-                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 0056272720</span></h1>
-                        <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> olga mohammed</span></h1>
-                        <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 10/39</span></h1>
-                        <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 111</span></h1>
+                        <h1 class="cardInfo-text">  Card Number: <span class="cardInfo-info"> 432156789</span></h1>
+                        <h1 class="cardInfo-text">  Card Holder: <span class="cardInfo-info"> Youstina</span></h1>
+                        <h1 class="cardInfo-text2">  Expiration Date: <span class="cardInfo-info2"> 6/23</span></h1>
+                        <h1 class="cardInfo-text2">  CVV: <span class="cardInfo-info2"> 254</span></h1>
                         <h1 class="cardInfo-text"></h1>
                         <div class="smallContainer" style="justify-content: space-between;">
                             <button type="button" id="viewPts4" onClick="viewPts4()" class="card-btn">Points</button>
@@ -515,8 +531,9 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeBill4" class="cardPopup-close-button" onClick="closeBill4()">&times;</span>
-                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount4" class="cardPopup-text"> 3600</span></h1>
-                            <input type="number" id="payAmount4" placeholder="Amount to pay" class="cardPopup-input" required><br>
+                            <h1 class="cardPopup-text">  Required Amount: <span id="reqAmount4" class="cardPopup-text"> 1300$</span></h1>
+                            <h1 class="cardPopup-text">  Due: <span id="due4" class="cardPopup-text"> 15/8/2023</span></h1>
+                            <input type="number" id="payAmount4" placeholder="Amount to pay" class="cardPopup-input" required>
                             <button type="button" id="pay4" onClick="pay4()" class="cardPopup-button">Pay</button>
                         </div>
                     </div>
@@ -526,7 +543,7 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closePts4" class="cardPopup-close-button" onClick="closePts4()">&times;</span>
-                            <h1 class="cardPopup-text">  Points: <span id="points4" class="cardPopup-text"> 300</span></h1><br>
+                            <h1 class="cardPopup-text">  Total points: <span id="points3" class="cardPopup-text"> 500pts</span></h1><br>
                             <button type="button" id="claimPoints4" onClick="claimPoints4()" class="cardPopup-button">Claim Points</button>
                         </div>
                     </div>
@@ -535,9 +552,9 @@
                 <div id="card4LimitPopup" class="cardPopup">
                     <div class="cardPopup-content">
                         <div>
-                            <span id="closeLimit4" class="cardPopup-close-button" onClick="closeLimit4()">&times;</span>
-                            <h1 class="cardPopup-text">  Limit: </h1>
-                            <span id="limit4" class="cardPopup-textlimit"> 10000</span>
+                            <span id="closeLimit3" class="cardPopup-close-button" onClick="closeLimit3()">&times;</span>
+                            <h1 class="cardPopup-text">  Limit:</h1>
+                            <span id="limit3" class="cardPopup-textlimit"> 5000$</span>
                         </div>
                     </div>
                 </div>
@@ -546,19 +563,21 @@
                     <div class="cardPopup-content">
                         <div>
                             <span id="closeReport4" class="cardPopup-close-button" onClick="closeReport4()">&times;</span><br>
+                            <h1 class="cardPopup-text">  Reporting Issue:</h1>
                             <select type="text" id="reportIssue" placeholder="Issue for report" class="cardPopup-input" required>
                                 <option value="">Issue for report</option>
                                 <option value="Theft">Theft</option>
                                 <option value="Loss">Loss</option>
                                 <option value="Damage">Damage</option>
-                            </select><br><br>
-                            <button type="button" id="submitReport4" onClick="submitReport4()" class="cardPopup-button">Submit</button>
+                            </select><br>
+                            <h6 class="transtext">jj</h6>
+                            <button type="button" id="submitReport4" onClick="submitReport3()" class="cardPopup-button">Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <script>
             var card4PointsPopup = document.getElementById("card4PointsPopup");
             var card4LimitPopup = document.getElementById("card4LimitPopup");
@@ -571,18 +590,19 @@
             function closeBill4() {
                 card4BillPopup.style.display = "none";
             }
-            function pay3() {
-                var req4 = document.getElementById("reqAmount4").value;
-                var payed4 = document.getElementById("payAmount4").value;
-                if (payed4 != "") {
-                    var amount4 = (req4 - payed4);
-                    document.getElementById("reqAmount4").textContent = amount4.toString;
+            function pay4() {
+                var reqAmountElement4 = document.getElementById("reqAmount4");
+                var req4 = parseFloat(reqAmountElement4.innerText.slice(0, -1));
+                var payed4 = parseInt(document.getElementById("payAmount4").value);
+                if (!isNaN(payed4)) {
+                    var amount4 = req4 - payed4;
+                    reqAmountElement4.innerText = amount4 + reqAmountElement4.innerText.slice(-1);
                     alert("Payment received");
                     document.getElementById("payAmount4").value = "";
                     closeBill4();
                 }
-                
             }
+
 
             function viewPts4() {
                 card4PointsPopup.style.display = "block";
@@ -618,17 +638,100 @@
             }
             function submitReport4() {
                 //submit report
-                alert("Report has been submitted and card will now be blocked.");
+                alert("Report has been submitted and card will now be blocked. A request for a replacement has been issued for you.");
                 closeReport4();
+                document.getElementById("card4").classList.toggle("disable-hover");
                 //document.getElementById("card1").className = "card-picture-blocked";
             }
         </script>
 
     </div>
-    <!--toaster-->
+    <!--end toaster-->
     <div>
         <div class="center-container">
-            <button id="viewPendingBtn" class="viewPending-btn" >View Pending Applications</button>
+            <button type="button" onclick="openReminders(event)" class="reminder-button">
+                <i class="fas fa-bell"></i>
+                Set reminders
+            </button>
+
+
+            <div id="popup25" class="popup1">
+                <div class="popup-content align-items-center">
+                    <div class="report-container3">
+                        <div class="report-header5">
+                            <h1 style="color: rgb(2, 47, 121);align-items: center">Choose prefered <br> date and time</h1>
+                            <button id="openBtn137" onclick="closeReminders(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                        </div>
+                        <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
+                            <div class="report-topic-heading">
+                                <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                            </div>
+                            <br>
+                            <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
+                                <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
+                                    <select name="date" id="day">
+                                        <option value="" selected disabled>Day</option>
+                                        <option value="01">01</option>
+
+                                    </select>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-items: center;" class="dropdown12">
+                                    <select name="month" id="month">
+                                        <option value="" selected disabled>Freq</option>
+                                        <option value="01">Monthly</option>
+                                        <option value="02">3 Months</option>
+                                        <option value="02">6 Months</option>
+                                        <!-- Add more options for the date -->
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="report-topic-heading">
+                                <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                            </div>
+                            <br>
+                            <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
+                                <div style="text-align: center;align-items: center;" class="dropdown12">
+                                    <select name="time" id="hour">
+                                        <option value="" selected disabled>Hour</option>
+                                        <option value="00:00">00:00</option>
+                                        <option value="01:00">01:00</option>
+                                        <!-- Add more options for the time -->
+                                    </select>
+                                </div>
+                                <div style="text-align: center;align-items: center;" class="dropdown12">
+                                    <select name="time" id="min">
+                                        <option value="" selected disabled>Min</option>
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <button style="text-align: center;align-items: center;" onclick="setReminders(event)" id="closebtn123" class="close-button1">Set</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="popup28" class="popup2">
+                <div class="popup-content2">
+                    <h2>Reminder set successfully</h2>
+                    <button id="closebutton12" onclick="closeDonePopup(event)" class="close-button1">Close</button>
+                </div>
+                 </div>
+        </div>
+     </div>
+
+
+ 
+
+
+    <div>
+        <div class="center-container">
+            <button id="viewPendingBtn" class="viewPending-btn">View Pending Applications</button>
 
             <div id="panel" class="appsPanel">
                 <h2 class="appsPanelTitle">Pending Applications</h2>
@@ -640,15 +743,37 @@
                 const panel = document.getElementById('panel');
                 const applicationsList = document.getElementById('applicationsList');
                 const btnvalue = viewPendingBtn.textContent;
-       //         const panelToggleBtn = document.getElementById('panelToggleBtn'); // Assuming there is a button to toggle the panel
+                //         const panelToggleBtn = document.getElementById('panelToggleBtn'); // Assuming there is a button to toggle the panel
                 let isPanelOpen = false; // Flag to track the panel state
+
+                function openReminders() {
+                    var remi = document.getElementById('popup25');
+                    remi.style.display = "block";
+                }
+                function closeReminders() {
+                    var remi = document.getElementById('popup25');
+                    remi.style.display = "none";
+                }
+                function setReminders() {
+                    var remi = document.getElementById('popup25');
+                    remi.style.display = "none";
+                    openDonePopup();
+                }
+                function openDonePopup() {
+                    var remi = document.getElementById('popup28');
+                    remi.style.display = "block";
+                }
+                function closeDonePopup() {
+                    var remi = document.getElementById('popup28');
+                    remi.style.display = "none";
+                }
 
                 // Add click event listener to the button
                 viewPendingBtn.addEventListener('click', () => {
                     const pendingApplications = [
-                        { cardNumber: '1234', accountNumber: '12345678', cardType: 'Visa', limitSet: '10000', status: 'pending' },
-                        { cardNumber: '5678', accountNumber: '91017899', cardType: 'Mastercard', limitSet: '20000', status: 'rejected' },
-                        { cardNumber: '9101', accountNumber: '23452537', cardType: 'Visa', limitSet: '15000', status: 'pending' }
+                        { cardNumber: '6382645739', accountNumber: '1abc2345678', cardType: 'Visa', limitSet: '10000$', status: 'pending' },
+                        { cardNumber: '6284783937', accountNumber: '1abc2345678', cardType: 'Mastercard', limitSet: '20000$', status: 'rejected' },
+                        { cardNumber: '7264738378', accountNumber: '9abc8765432', cardType: 'Visa', limitSet: '15000$', status: 'pending' }
                     ];
 
                     // Clear previous list items
@@ -659,10 +784,10 @@
 
                         const listItem = document.createElement('li');
                         listItem.innerHTML = `Card Number: ${application.cardNumber}<br>
-                          Account Number: ${application.accountNumber}<br>
-                          Card Type: ${application.cardType}<br>
-                          Limit Set: ${application.limitSet}<br>
-                          Status: <span class="${application.status === 'rejected' ? 'rejected' : 'pending'}">${application.status}</span>`;
+                                                                          Account Number: ${application.accountNumber}<br>
+                                                                          Card Type: ${application.cardType}<br>
+                                                                          Limit Set: ${application.limitSet}<br>
+                                                                          Status: <span class="${application.status === 'rejected' ? 'rejected' : 'pending'}">${application.status}</span>`;
 
                         // Add line break between each application, except for the last one
                         if (index < pendingApplications.length - 1) {
@@ -672,7 +797,7 @@
                         applicationsList.appendChild(listItem);
                     });
                     // Toggle the panel by changing the right value
-                  //  panel.style.right = panel.style.right === '0px' ? '-300px' : '0px';
+                    //  panel.style.right = panel.style.right === '0px' ? '-300px' : '0px';
                     // Toggle the panel by changing the right value and update the toggle button text
                     if (isPanelOpen) {
                         panel.style.right = '-300px';
@@ -781,7 +906,7 @@
                 </div>
             </div>
         </div>
-        
+
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
