@@ -95,7 +95,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">2000€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">01/06/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
+                    <p id="p1"style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                     <div id="popupContainerCard" class="appPopup-container">
                         <div class="appPopup-content appPopup-content-border">
                             <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
@@ -125,7 +125,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">1000€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">11/11/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
+                    <p id="p2" style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                 </div>
                 <br>
                 <div class="item1">
@@ -133,7 +133,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">1500€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">10/08/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
+                    <p id="p3"style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                 </div>
                 <br>
                 <div class="item1">
@@ -141,7 +141,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">3000€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">07/06/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
+                    <p id="p4"style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                 </div>
             </div>
         </div>
@@ -198,7 +198,7 @@
             else {
                 pop1.style.display = "none";
                 window.alert("Accepted!");
-
+                document.getElementById("p1").innerText = "Accepted";
             }
         }
         function reject() {
@@ -210,6 +210,7 @@
             else {
                 pop1.style.display = "none";
                 window.alert("Rejected!");
+                document.getElementById("p2").innerText = "Rejected";
 
             }
 
