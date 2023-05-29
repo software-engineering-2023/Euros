@@ -123,13 +123,198 @@
                                 <option value="0092727290">0092727290</option>
                                 <option value="0056272720">0056272720</option>
                             </select>
-                            <br></br>
+                            <br>
 
                             <button type="button" id="electricityButton" onClick="payBillElectricity()" class="appPopup-button"> Pay </button>
+                            <br>
+                            <br>
+                            <button type="button" id="reminderElectricityButton" onClick="openPopupBills(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
                         </form>
                         <button id="closeElectricityButton" onClick="closeElectricityPopup()" class="appPopup-close-button">Close</button>
                     </div>
                 </div>
+
+
+                <div id="popupBills" class="popup1">
+                    <div class="popup-content align-items-center">
+                        <div class="report-container3">
+                            <div class="report-header5">
+                                <h1 style="color: rgb(2, 47, 121)">Choose prefered <br> date and time</h1>
+                                <button id="openBtn17" onclick="closePopupBills2(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                            </div>
+                            <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
+                                    <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
+                                        <select name="date" id="day">
+                                            <option value="" selected disabled>Day</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="month" id="month">
+                                            <option value="" selected disabled>Freq</option>
+                                            <option value="01">Monthly</option>
+                                            <option value="02">3 Months</option>
+                                            <option value="02">6 Months</option>
+                                            <!-- Add more options for the date -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="hour">
+                                            <option value="" selected disabled>Hour</option>
+                                            <option value="00:00">00:00</option>
+                                            <option value="01:00">01:00</option>
+                                            <option value="02:00">02:00</option>
+                                            <option value="03:00">03:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                            <option value="19:00">19:00</option>
+                                            <option value="20:00">20:00</option>
+                                            <option value="21:00">21:00</option>
+                                            <option value="22:00">22:00</option>
+                                            <option value="23:00">23:00</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="min">
+                                            <option value="" selected disabled>Min</option>
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <button style="text-align: center;align-items: center;" onclick="closePopupBills(event)" id="closebtn12" class="close-button1">Set</button>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div id="popupCloseSet" class="popup2">
+                    <div class="popup-content2">
+                        <h2>Reminder set successfully</h2>
+                        <button id="closebutton35" onclick="closePopupBillsSet(event)" class="close-button1">Close</button>
+                    </div>
+                </div>
+               
+                <!-- scripttt -->
                 <script>
                     var electricityBtn = document.getElementById("electricity");
                     var popupContainerElectricity = document.getElementById("popupContainerElectricity");
@@ -150,7 +335,37 @@
                     electricityBtn.addEventListener("click", function () {
                         popupContainerElectricity.style.display = "block";
                     });
+
+                function openPopupBills(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills");
+                popup.style.display = "block";
+            }
+            function closePopupBills(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills");
+                popup.style.display = "none";
+                openPopupBillsSet(event);
+            }
+            function closePopupBills2(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills");
+                popup.style.display = "none";
+            }
+            function openPopupBillsSet(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet");
+                popup.style.display = "block";
+            }
+            function closePopupBillsSet(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet");
+                popup.style.display = "none";
+    
+            }
                 </script>
+
+
 
                 <div class="col-lg-3 col-sm-6">
                     <div id="telephone" class="wallet_box text_align_center ma_hover">
@@ -199,11 +414,191 @@
                                 <option value="0092727290">0092727290</option>
                                 <option value="0056272720">0056272720</option>
                             </select>
-                            <br></br>
+                            <br>
 
                             <button type="button" id="telephoneButton" onClick="payBillTelephone()" class="appPopup-button"> Pay </button>
+                            <br>
+                            <br>
+                            <button type="button" id="reminderElectricityButton" onClick="openPopupBills3(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
                         </form>
                         <button id="closeTelephoneButton" onClick="closeTelephonePopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+
+                <div id="popupBills3" class="popup1">
+                    <div class="popup-content align-items-center">
+                        <div class="report-container3">
+                            <div class="report-header5">
+                                <h1 style="color: rgb(2, 47, 121)">Choose prefered <br> date and time</h1>
+                                <button id="openBtn17" onclick="closePopupBills31(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                            </div>
+                            <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
+                                    <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
+                                        <select name="date" id="day">
+                                            <option value="" selected disabled>Day</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="month" id="month">
+                                            <option value="" selected disabled>Freq</option>
+                                            <option value="01">Monthly</option>
+                                            <option value="02">3 Months</option>
+                                            <option value="02">6 Months</option>
+                                            <!-- Add more options for the date -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="hour">
+                                            <option value="" selected disabled>Hour</option>
+                                            <option value="00:00">00:00</option>
+                                            <option value="01:00">01:00</option>
+                                            <option value="02:00">02:00</option>
+                                            <option value="03:00">03:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                            <option value="19:00">19:00</option>
+                                            <option value="20:00">20:00</option>
+                                            <option value="21:00">21:00</option>
+                                            <option value="22:00">22:00</option>
+                                            <option value="23:00">23:00</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="min">
+                                            <option value="" selected disabled>Min</option>
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <button style="text-align: center;align-items: center;" onclick="closePopupBills3(event)" id="closebtn12" class="close-button1">Set</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popupCloseSet3" class="popup2">
+                    <div class="popup-content2">
+                        <h2>Reminder set successfully</h2>
+                        <button id="closebutton3" onclick="closePopupBillsSet3(event)" class="close-button1">Close</button>
                     </div>
                 </div>
                 <script>
@@ -226,6 +621,33 @@
                     telephoneBtn.addEventListener("click", function () {
                         popupContainerTelephone.style.display = "block";
                     });
+                function openPopupBills3(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills3");
+                popup.style.display = "block";
+            }
+            function closePopupBills3(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills3");
+                popup.style.display = "none";
+                openPopupBillsSet3(event);
+            }
+            function closePopupBills31(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills3");
+                popup.style.display = "none";
+            }
+            function openPopupBillsSet3(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet3");
+                popup.style.display = "block";
+            }
+            function closePopupBillsSet3(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet3");
+                popup.style.display = "none";
+    
+            }
                 </script>
 
                 <div class="col-lg-3 col-sm-6">
@@ -266,12 +688,193 @@
                                 <option value="0092727290">0092727290</option>
                                 <option value="0056272720">0056272720</option>
                             </select>
-                            <br></br>
+                            <br>
 
 
                             <button type="button" id="waterButton" onClick="payBillWater()" class="appPopup-button"> Pay </button>
+                            <br>
+                            <br>
+                            <button type="button" id="reminderElectricityButton" onClick="openPopupBills4(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
                         </form>
                         <button id="closeWaterButton" onClick="closeWaterPopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+
+
+                
+                <div id="popupBills4" class="popup1">
+                    <div class="popup-content align-items-center">
+                        <div class="report-container3">
+                            <div class="report-header5">
+                                <h1 style="color: rgb(2, 47, 121)">Choose prefered <br> date and time</h1>
+                                <button id="openBtn17" onclick="closePopupBills41(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                            </div>
+                            <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
+                                    <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
+                                        <select name="date" id="day">
+                                            <option value="" selected disabled>Day</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="month" id="month">
+                                            <option value="" selected disabled>Freq</option>
+                                            <option value="01">Monthly</option>
+                                            <option value="02">3 Months</option>
+                                            <option value="02">6 Months</option>
+                                            <!-- Add more options for the date -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="hour">
+                                            <option value="" selected disabled>Hour</option>
+                                            <option value="00:00">00:00</option>
+                                            <option value="01:00">01:00</option>
+                                            <option value="02:00">02:00</option>
+                                            <option value="03:00">03:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                            <option value="19:00">19:00</option>
+                                            <option value="20:00">20:00</option>
+                                            <option value="21:00">21:00</option>
+                                            <option value="22:00">22:00</option>
+                                            <option value="23:00">23:00</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="min">
+                                            <option value="" selected disabled>Min</option>
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <button style="text-align: center;align-items: center;" onclick="closePopupBills4(event)" id="closebtn12" class="close-button1">Set</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="popupCloseSet4" class="popup2">
+                    <div class="popup-content2">
+                        <h2>Reminder set successfully</h2>
+                        <button id="closebutton4" onclick="closePopupBillsSet4(event)" class="close-button1">Close</button>
                     </div>
                 </div>
                 <script>
@@ -294,6 +897,34 @@
                     waterBtn.addEventListener("click", function () {
                         popupContainerWater.style.display = "block";
                     });
+                    function openPopupBills4(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills4");
+                popup.style.display = "block";
+            }
+            function closePopupBills4(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills4");
+                popup.style.display = "none";
+                openPopupBillsSet4(event);
+            }
+            function closePopupBills41(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills4");
+                popup.style.display = "none";
+            }
+            function openPopupBillsSet4(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet4");
+                popup.style.display = "block";
+            }
+            function closePopupBillsSet4(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet4");
+                popup.style.display = "none";
+    
+            }
+                    
                 </script>
 
 
@@ -344,11 +975,190 @@
                                 <option value="0092727290">0092727290</option>
                                 <option value="0056272720">0056272720</option>
                             </select>
-                            <br></br>
+                            <br>
 
                             <button type="button" id="gasButton" onClick="payBillGas()" class="appPopup-button"> Pay </button>
+                            <br>
+                            <br>
+                            <button type="button" id="reminderElectricityButton" onClick="openPopupBills5(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
                         </form>
                         <button id="closeGasButton" onClick="closeGasPopup()" class="appPopup-close-button">Close</button>
+                    </div>
+                </div>
+                <div id="popupBills5" class="popup1">
+                    <div class="popup-content align-items-center">
+                        <div class="report-container3">
+                            <div class="report-header5">
+                                <h1 style="color: rgb(2, 47, 121)">Choose prefered <br> date and time</h1>
+                                <button id="openBtn17" onclick="closePopupBills51(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                            </div>
+                            <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
+                                    <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
+                                        <select name="date" id="day">
+                                            <option value="" selected disabled>Day</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="month" id="month">
+                                            <option value="" selected disabled>Freq</option>
+                                            <option value="01">Monthly</option>
+                                            <option value="02">3 Months</option>
+                                            <option value="02">6 Months</option>
+                                            <!-- Add more options for the date -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="report-topic-heading">
+                                    <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                                </div>
+                                <br>
+                                <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="hour">
+                                            <option value="" selected disabled>Hour</option>
+                                            <option value="00:00">00:00</option>
+                                            <option value="01:00">01:00</option>
+                                            <option value="02:00">02:00</option>
+                                            <option value="03:00">03:00</option>
+                                            <option value="04:00">04:00</option>
+                                            <option value="05:00">05:00</option>
+                                            <option value="06:00">06:00</option>
+                                            <option value="07:00">07:00</option>
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="18:00">18:00</option>
+                                            <option value="19:00">19:00</option>
+                                            <option value="20:00">20:00</option>
+                                            <option value="21:00">21:00</option>
+                                            <option value="22:00">22:00</option>
+                                            <option value="23:00">23:00</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                    <div style="text-align: center;align-items: center;" class="dropdown12">
+                                        <select name="time" id="min">
+                                            <option value="" selected disabled>Min</option>
+                                            <option value="00">00</option>
+                                            <option value="01">01</option>
+                                            <option value="02">02</option>
+                                            <option value="03">03</option>
+                                            <option value="04">04</option>
+                                            <option value="05">05</option>
+                                            <option value="06">06</option>
+                                            <option value="07">07</option>
+                                            <option value="08">08</option>
+                                            <option value="09">09</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="32">32</option>
+                                            <option value="33">33</option>
+                                            <option value="34">34</option>
+                                            <option value="35">35</option>
+                                            <option value="36">36</option>
+                                            <option value="37">37</option>
+                                            <option value="38">38</option>
+                                            <option value="39">39</option>
+                                            <option value="40">40</option>
+                                            <option value="41">41</option>
+                                            <option value="42">42</option>
+                                            <option value="43">43</option>
+                                            <option value="44">44</option>
+                                            <option value="45">45</option>
+                                            <option value="46">46</option>
+                                            <option value="47">47</option>
+                                            <option value="48">48</option>
+                                            <option value="49">49</option>
+                                            <option value="50">50</option>
+                                            <option value="51">51</option>
+                                            <option value="52">52</option>
+                                            <option value="53">53</option>
+                                            <option value="54">54</option>
+                                            <option value="55">55</option>
+                                            <option value="56">56</option>
+                                            <option value="57">57</option>
+                                            <option value="58">58</option>
+                                            <option value="59">59</option>
+                                            <!-- Add more options for the time -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <button style="text-align: center;align-items: center;" onclick="closePopupBills5(event)" id="closebtn12" class="close-button1">Set</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popupCloseSet5" class="popup2">
+                    <div class="popup-content2">
+                        <h2>Reminder set successfully</h2>
+                        <button id="closebutton5" onclick="closePopupBillsSet5(event)" class="close-button1">Close</button>
                     </div>
                 </div>
                 <script>
@@ -371,6 +1181,33 @@
                     gasBtn.addEventListener("click", function () {
                         popupContainerGas.style.display = "block";
                     });
+                    function openPopupBills5(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills5");
+                popup.style.display = "block";
+            }
+            function closePopupBills5(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills5");
+                popup.style.display = "none";
+                openPopupBillsSet5(event);
+            }
+            function closePopupBills51(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupBills5");
+                popup.style.display = "none";
+            }
+            function openPopupBillsSet5(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet5");
+                popup.style.display = "block";
+            }
+            function closePopupBillsSet5(event) {
+                event.preventDefault();
+                const popup = document.getElementById("popupCloseSet5");
+                popup.style.display = "none";
+    
+            }
                 </script>
 
 
