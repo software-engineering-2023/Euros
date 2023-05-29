@@ -187,4 +187,20 @@ function checkUserinfo(event) {
 	
 }
 
+function checkUserinfo2(event) {
+	// Prevent default form submission behavior
+	if (un === "admin" && pass === "admin") {
+		window.location.href = "admininfo.html";
+	}
+	else if (un === "banker" && pass === "banker") {
+		window.location.href = "bankerinfo.html";
+	}
+	else if (un === "client" && pass === "client") {
+		window.location.href = "customerinfo.html";
+	}
+	
+}
+
+
+  
 const switchBox = document.getElementById('mySwitch');

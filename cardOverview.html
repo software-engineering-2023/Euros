@@ -21,7 +21,7 @@
         <!-- bootstrap css -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- style css -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/haysom.css">
         <link rel="stylesheet" href="css/yousty.css">
         <!-- responsive-->
         <link rel="stylesheet" href="css/responsive.css">
@@ -91,87 +91,87 @@
         </div>
         <br>
         <div class="container">
-            <style>
-                .center-column {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 130vh;
-                }
-                /* Custom CSS to adjust column width */
-                .thicker-col {
-                    width: 30%; /* Adjust the width value to make the column thicker */
-                }
-            
-                /* Custom CSS to adjust column width */
-                .thicker-col-trans {
-                    width: 100%; /* Adjust the width value to make the column thicker */
-                }
-                .text {
-                    margin-right: 10px; /* Adjust the margin value to create space */
-                }
-            </style>
-            <div class="row center-column">
-                <div class="col-sm-10 thicker-col">
-                    <div id="wa_hover" style="align-items: center" class="wallet_box text_align_center">
-                            <div class="report">
-                                <h1 style="color: rgb(2, 47, 121)">Visa</h1>
-                            </div>
-                            <br>
-                            <p> A credit card is a powerful financial tool that provides you with a convenient and flexible way to make purchases, both online and offline. It acts as a revolving line of credit, allowing you to borrow money from the card issuer to make payments for goods and services. 
-                                With a credit card, you can enjoy the convenience of cashless transactions and the flexibility to pay off your balance over time. 
-                                Our online banking system enables you to easily manage your credit card account, giving you access to real-time information about your transactions, available credit, and billing statements. You can conveniently track your expenses, set up payment reminders, and securely make online payments. 
-                                We prioritize the security of your credit card information, implementing advanced encryption and authentication measures to safeguard your data. 
-                                Experience the benefits of a credit card and take control of your spending with our user-friendly online banking platform. 
-                                Apply for a credit card today and enjoy the convenience and rewards it offers while building a positive credit history.</p>
-                        </a>
-                    </div>
+            <script>
+            function slideCard1(card) {
+                var cardType = card.querySelector('h3').innerHTML;
+                var cardDescription = '';
+              
+                  cardDescription = `<b>Card Details:</b><br>
+                    Debit Card Details:<br>
+                    - Linked to your bank account<br>
+                    - Allows purchases and cash withdrawals<br>
+                    - Transactions deducted from your account balance`;
+               
+              
+                document.getElementById('card-type').innerHTML = cardType;
+                document.getElementById('card-description').innerHTML = cardDescription;
+                card.classList.toggle('active');
+              }
+              function slideCard2(card) {
+                var cardType = card.querySelector('h3').innerHTML;
+                var cardDescription = '';
+          
+                  cardDescription = `<b>Card Details:</b><br>
+                    Credit Card Details:<br>
+                    - Borrow money up to a credit limit<br>
+                    - Use for purchases and pay over time<br>
+                    - Incurs interest charges if not fully paid`;
+              
+                document.getElementById('card-type2').innerHTML = cardType;
+                document.getElementById('card-description2').innerHTML = cardDescription;
+                card.classList.toggle('active');
+              }
+              </script>
+            <div class="card-container">
+                <div class="card " onclick="slideCard1(this)">
+                  <svg class="card-picture2" fill="whitesmoke" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>MASTERCARD</title>
+                      <path d="M0 26.016q0 0.832 0.576 1.408t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.408v-20q0-0.832-0.576-1.408t-1.408-0.608h-28q-0.832 0-1.44 0.608t-0.576 1.408v20zM2.016 26.016v-14.016h28v14.016h-28zM2.016 8v-1.984h28v1.984h-28zM4 24h4v-1.984h-4v1.984zM4 20h6.016v-5.984h-6.016v5.984zM10.016 24h4v-1.984h-4v1.984zM16 24h4v-1.984h-4v1.984zM22.016 24h1.984v-1.984h-1.984v1.984zM26.016 24h1.984v-1.984h-1.984v1.984z"></path>
+                    </g>
+                  </svg>
+                  <h3>VISA</h3>
                 </div>
-
-                <div class="col-sm-10">
-                    <div id="wa_hover" style="align-items: center" class="wallet_box text_align_center">
-                    
-                            <div class="icon-container">
-                            </div>
-                            <div class="report">
-                                <h1 style="color: rgb(2, 47, 121)">Mastercard </h1>
-                            </div>
-                            <br>
-                            <p>A debit card is a convenient and secure financial tool that allows you to access funds directly from your bank account. 
-                                It provides you with a hassle-free way to make purchases and withdraw cash. With a debit card, you can conveniently pay for goods and services online or at physical stores, eliminating the need to carry cash. 
-                                Our online banking system enables you to easily manage your debit card transactions and account. You can view your transaction history, track your expenses, and monitor your available balance in real-time. 
-                                We prioritize the security of your debit card, implementing robust measures to protect your card information and transactions. With our user-friendly online banking platform, you can conveniently activate your debit card, set spending limits, and easily report any suspicious activity. 
-                                Experience the convenience and control of a debit card with our online banking platform and enjoy the peace of mind that comes with managing your finances efficiently. 
-                                Apply for a debit card today and simplify your everyday transactions while keeping your spending in check.</p>
-                        </a>
-                    </div>
-
-                        </a>
-                    </div>
-                    <br></br>
+                <div class="card2" onclick="slideCard2(this)">
+                  <svg class="card-picture2" fill="whitesmoke" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>MASTERCARD</title>
+                      <path d="M0 26.016q0 0.832 0.576 1.408t1.44 0.576h28q0.8 0 1.408-0.576t0.576-1.408v-20q0-0.832-0.576-1.408t-1.408-0.608h-28q-0.832 0-1.44 0.608t-0.576 1.408v20zM2.016 26.016v-14.016h28v14.016h-28zM2.016 8v-1.984h28v1.984h-28zM4 24h4v-1.984h-4v1.984zM4 20h6.016v-5.984h-6.016v5.984zM10.016 24h4v-1.984h-4v1.984zM16 24h4v-1.984h-4v1.984zM22.016 24h1.984v-1.984h-1.984v1.984zM26.016 24h1.984v-1.984h-1.984v1.984z"></path>
+                    </g>
+                  </svg>
+                  <h3>MASTERCARD</h3>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div id = "det1" class="card-details">
+                <div class="card-details-content">
+                  <p>
+                    <b style="color:  rgb(2, 47, 121);">Card Details:</b><br>
+                    <span style="color:  rgb(2, 47, 121);" id="card-type"></span><br>
+                    <span style="color:  rgb(2, 47, 121);"id="card-description"></span>
+                  </p>
+                </div>
+              </div>
+              <div id="det2" class="card-details2">
+                <div class="card-details-content2">
+                  <p>
+                    <b style="color:  rgb(2, 47, 121);">Card Details:</b><br>
+                    <span style="color:  rgb(2, 47, 121);" id="card-type2"></span><br>
+                    <span style="color:  rgb(2, 47, 121);"id="card-description2"></span>
+                  </p>
+                </div>
+              </div>
+              </div>
+              
+              
+              
+          </div>
+              </div>
 
 
-    <!--  <div class="wallet_box text_align_center">
-        <i><img src="images/wa4.svg" alt="#" /></i>
-        <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-                <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
-                <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
-            </svg>
-        </div>
-    </div>-->
-    <!-- end wallet -->
-    <!-- about -->
-    <!-- end about -->
-    <!-- graf -->
-    <!-- end graf -->
-    <!-- testimonial -->
-    <!-- works -->
-    <!-- footer -->
+
     <footer>
         <div class="footer">
             <!-- report issue-->

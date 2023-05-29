@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Euros OBS</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/haysom.css">
+    <!-- responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- awesome fontfamily -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+    </div>
+    <!-- end loader -->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="admininfo.html">My Account</a>
+        <a href="login.html">Log Out</a>
+        <div class="row d_flex">
+            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        </div>
+    </div>
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="head-top">
+            <div class="container-fluid">
+                <div class="row d_flex">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a href="admin.html">EurosOBS</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                      
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="email text_align_right">
+                            <li>
+                                <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start slider section -->
+    <!-- end slider section -->
+    <!-- wallet -->
+   
+   
+    
+        <div class="container">
+            
+            
+
+            <div class="report-container15">
+                <div class="report-header">
+                    <h1  style="color: rgb(2, 47, 121)">Bankers</h1>
+                    <button style="background-color: transparent;" id="openBtn1" onclick="openPopupadd(event)" ><img src="images/useraddd.png"></button>
+
+                </div>
+                <div class="report-body17">
+                    <div class="report-topic-heading15">
+                        <p  style="color: rgb(2, 47, 121)" class="t-op">ID</p>
+                        <p  style="color: rgb(2, 47, 121)" class="t-op">First name</p>
+                        <p  style="color: rgb(2, 47, 121)" class="t-op">Last name</p>
+                        <p  style="color: rgb(2, 47, 121)" class="t-op">Authority</p>
+                        <p  style="color: rgb(2, 47, 121)" class="t-op">Remove</p>
+                    </div>
+<br>
+                   
+                        <div class="items">
+                            <div class="item15">
+                                <p style="color: rgb(2, 47, 121); text-align: left;" class="t-op-nextlvl">BN-0068</p>
+                                <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl ">Ahmed</p>
+                                <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl">Haytham</p>
+                                <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl">Top manager</p>
+                                  <script>
+                                
+                                    function openPopupadd(event){
+                                        var popup = document.getElementById("popupadd");
+                                        popup.style.display = "block";
+                                    }
+                                    function savePopupadd(event){
+                                        var popup = document.getElementById("popupadd");
+                                        popup.style.display = "none";
+                                        openPopup89();
+                                    }
+                                    function openPopup89(event){
+                                        var popup = document.getElementById("popup89");
+                                        popup.style.display = "block"
+                                    }
+                                    function closePopup89(event){
+                                        var popup = document.getElementById("popup89");
+                                        popup.style.display = "none"
+                                    }
+                                    function cancelPopupadd(event){
+                                        var popup = document.getElementById("popupadd");
+                                        popup.style.display = "none";
+                                    }
+                                    function openPopup1(event){
+                                        event.preventDefault();
+                                        var popup = document.getElementById("popup1");
+                                        popup.style.display = "block"; 
+                                    }
+                                    function closePopup1(event){
+                                        var popup = document.getElementById("popup1");
+                                        popup.style.display = "none"; 
+                                        openPopup81();
+                                    }
+                                    function cancelPopup1(event){
+                                        var popup = document.getElementById("popup1");
+                                        popup.style.display = "none"; 
+                    
+                                    }
+                                    function openPopup81(event){
+                                        var popup = document.getElementById("popup81");
+                                        popup.style.display = "block"; 
+                                    }
+                                    function closePopup81(event){
+                                        var popup = document.getElementById("popup81");
+                                        popup.style.display = "none"; 
+                                    }
+                                    </script>
+                                  
+
+                                <button style="background-color: transparent;" id="openBtn1" onclick="openPopup1(event)" ><img src="images/trashcannn.png"></button>
+                                <div  id="popup1" class="popup1">
+                                  <div  style = "align-items: center;" class="popup-content">
+                                        <div style = "align-items: center;"class="report-container19">
+                                            <div class="report-header">
+                                                <h1 style="color: red">WARNING</h1>
+                                                <button onclick="cancelPopup1(event)" class="close-button1">Close</button>
+                                              </div>
+                                                <div class="report-body">
+                                                     <div class="report-topic-heading">
+                                                            <p style="color: rgb(2, 47, 121)" class="t-op">Are you sure you want to remove this user?</p>
+                                                     </div><br>
+                                            <br>
+                                            <button onclick="closePopup1(event)" class="close-button1">Confirm</button>
+                                            <button onclick="cancelPopup1(event)" class="close-button1">Cancel</button>
+
+
+                                                    </div>
+                                        </div>
+                                  </div>
+                                </div>
+                                <div id="popup81" class="popup2">
+                                    <div class="popup-content2">
+                                        <h2>Banker no longer exists</h2>
+                                        <button id="closebutton1212" onclick="closePopup81(event)" class="close-button1">Close</button>
+                                    </div>
+                                </div>
+                              </div>
+                              <div  id="popupadd" class="popup1">
+                                <div  style = "align-items: center;" class="popup-content">
+                                      <div style = "align-items: center;"class="report-container113">
+                                          <div class="report-header">
+                                              <h1 style="color: red">Add banker</h1>
+                                              <button onclick="cancelPopupadd(event)" class="close-button1">Close</button>
+                                            </div>
+                                              <div class="report-body12">
+                                                <div class="row">
+                                                <div style="color: rgb(2, 47, 121)" class="col-lg-5">
+                                                <h1 style="color: rgb(2, 47, 121)">ID:</h1>
+                                                <h1 style="color: rgb(2, 47, 121)">Name:</h1>
+                                                <h1 style="color: rgb(2, 47, 121)">Email:</h1>
+                                                <h1 style="color: rgb(2, 47, 121)">Phone:</h1>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <input id= "annHeader1" class="contactus" placeholder="ID" type="type" name="Announcement headline">
+                                                <input id= "annHeader2" class="contactus" placeholder="Name" type="type" name="Announcement headline">
+                                                <input id= "annHeader3" class="contactus" placeholder="Email" type="type" name="Announcement headline">
+                                                <input id= "annHeader4" class="contactus" placeholder="Phone" type="type" name="Announcement headline">
+
+                                            </div>
+                                        </div>
+                                                  <br>
+                                          <br>
+                                          <button onclick="savePopupadd(event)" class="close-button1">Confirm</button>
+                                          <button onclick="cancelPopupadd(event)" class="close-button1">Cancel</button>
+
+
+                                                  </div>
+                                      </div>
+                                </div>
+                              </div>
+                              <div id="popup89" class="popup2">
+                                  <div class="popup-content2">
+                                      <h2>Banker added to the system</h2>
+                                      <button id="closebutton12" onclick="closePopup89(event)" class="close-button1">Close</button>
+                                  </div>
+                              </div>
+                            </div>
+                          
+<br>
+                        <div class="item15">
+                            <p  style="color: rgb(2, 47, 121); text-align: left;"  class="t-op-nextlvl">BN-0072</p>
+                            <p  style="color: rgb(2, 47, 121);text-align: left;"  class="t-op-nextlvl">Sarah</p>
+                            <p  style="color: rgb(2, 47, 121);text-align: left;"  class=" t-op-nextlvl">Ehab</p>
+                            <p  style="color: rgb(2, 47, 121);text-align: left;"  class=" t-op-nextlvl">Banker</p>
+
+
+                              <script>
+                                
+                                function openPopup2(event){
+                                    event.preventDefault();
+                                    const popup = document.getElementById("popup5");
+                                    popup.style.display = "block"; 
+                                }
+                                function closePopup2(event){
+                                    const popup = document.getElementById("popup5");
+                                    popup.style.display = "none"; 
+                                }
+                                </script>
+                        <button style="background-color: transparent;" id="openBtn122" onclick="openPopup1(event)" ><img src="images/trashcannn.png"></button>
+                         <div id="popup5" class="popup1">
+                                <div class="popup-content">                   
+                                    <div class=" report-container1">
+                                        <div class="report-header">
+                                            <h1  style="color: rgb(2, 47, 121)">Details</h1>
+                                                <button onclick="closePopup2(event)"  class="close-button1">Close</button>
+                                        </div>
+                        
+                                        <div class="report-body">
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">ID:   RP-0072</p>
+                                            </div><br>
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">Details:</p>
+                                             </div><br>
+                                             <p  style="color: rgb(2, 47, 121); text-align: left;">My balance keeps changing on its own with every refresh</p>
+                                   
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+<br>
+                        <div class="item15">
+                            <p  style="color: rgb(2, 47, 121)"  class="t-op-nextlvl">BN-0077</p>
+                            <p  style="color: rgb(2, 47, 121)"  class="t-op-nextlvl">Mohamed</p>
+                            <p  style="color: rgb(2, 47, 121)"  class=" t-op-nextlvl">Mahran</p>
+                            <p  style="color: rgb(2, 47, 121);text-align: left;"  class=" t-op-nextlvl">Banker</p>
+                            <button style="background-color: transparent;" id="openBtn1323" onclick="openPopup1(event)" ><img src="images/trashcannn.png"></button>
+                            <script>
+                                
+                                function openPopup3(event){
+                                    event.preventDefault();
+                                    var popup = document.getElementById("popup3");
+                                    popup.style.display = "block"; 
+                                }
+                                function closePopup3(event){
+                                    var popup = document.getElementById("popup3");
+                                    popup.style.display = "none"; 
+                                }
+                                </script>
+                            
+                            <div id="popup3" class="popup1">
+                                <div class="popup-content1">                   
+                                    <div class=" report-container1">
+                                        <div class="report-header">
+                                            <h1  style="color: rgb(2, 47, 121)">Details</h1>
+                                                <button onclick = "closePopup3(event)" class="close-button1">Close</button>
+                                        </div>
+                        
+                                        <div class="report-body">
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">ID:   RP-0077</p>
+                                            </div><br>
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">Details:</p>
+                                             </div><br>
+                                             <p  style="color: rgb(2, 47, 121); text-align: left;">I made a transaction and it was completed but can't find it in the log</p>
+                                   
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+<br>
+                        <div class="item15">
+                            <p  style="color: rgb(2, 47, 121)"  class="t-op-nextlvl">BN-0080</p>
+                            <p  style="color: rgb(2, 47, 121)"  class="t-op-nextlvl">Youstina</p>
+                            <p  style="color: rgb(2, 47, 121)"  class=" t-op-nextlvl">Nabil</p>
+                            <p  style="color: rgb(2, 47, 121);text-align: left;"  class=" t-op-nextlvl">Banker</p>
+                              
+                              <script>
+                                
+                                function openPopup4(event){
+                                    event.preventDefault();
+                                    var popup = document.getElementById("popup4");
+                                    popup.style.display = "block"; 
+                                }
+                                function closePopup4(event){
+                                    var popup = document.getElementById("popup4");
+                                    popup.style.display = "none"; 
+                                }
+                                </script>
+
+
+                        <button style="background-color: transparent;" id="openBtn18349" onclick="openPopup1(event)" ><img src="images/trashcannn.png"></button>
+                            <div id="popup4" class="popup1">
+                                <div class="popup-content">                   
+                                    <div class=" report-container1">
+                                        <div class="report-header">
+                                            <h1  style="color: rgb(2, 47, 121)">Details</h1>
+                                                <button onclick="closePopup4(event)" id = "closebtn1" class="close-button1">Close</button>
+                                        </div>
+                        
+                                        <div class="report-body">
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">ID:   RP-0080</p>
+                                            </div><br>
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">Details:</p>
+                                             </div>
+                                             <br>
+                                             <p  style="color: rgb(2, 47, 121); text-align: left;">can't check the employe points it is not visible</p>
+                                   
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+
+
+                        <br>
+                        <div class="item15">
+                            <p  style="color: rgb(2, 47, 121)"  class="t-op-nextlvl">BN-0077</p>
+                            <p  style="color: rgb(2, 47, 121)"  class="t-op-nextlvl">Mayar</p>
+                            <p  style="color: rgb(2, 47, 121)"  class=" t-op-nextlvl">Sherif</p>
+                            <p  style="color: rgb(2, 47, 121);text-align: left;"  class=" t-op-nextlvl">Banker</p>
+                            <button style="background-color: transparent;" id="openBtn10987" onclick="openPopup1(event)" ><img src="images/trashcannn.png"></button>
+                            <script>
+                                
+                                function openPopup3(event){
+                                    event.preventDefault();
+                                    var popup = document.getElementById("popup3");
+                                    popup.style.display = "block"; 
+                                }
+                                function closePopup3(event){
+                                    var popup = document.getElementById("popup3");
+                                    popup.style.display = "none"; 
+                                }
+                                </script>
+                            
+                            <div id="popup3" class="popup1">
+                                <div class="popup-content1">                   
+                                    <div class=" report-container1">
+                                        <div class="report-header">
+                                            <h1  style="color: rgb(2, 47, 121)">Details</h1>
+                                                <button onclick = "closePopup3(event)" class="close-button1">Close</button>
+                                        </div>
+                        
+                                        <div class="report-body">
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">ID:   RP-0077</p>
+                                            </div><br>
+                                            <div class="report-topic-heading">
+                                                <p  style="color: rgb(2, 47, 121)" class="t-op">Details:</p>
+                                             </div><br>
+                                             <p  style="color: rgb(2, 47, 121); text-align: left;">I made a transaction and it was completed but can't find it in the log</p>
+                                   
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+<br>
+                    </div>
+                </div>
+            </div>  
+</div>
+
+
+        </div>
+
+    <!-- end wallet -->
+    <!-- about -->
+    <!-- end about -->
+    <!-- graf -->
+    <!-- end graf -->
+    <!-- testimonial -->
+    <!-- works -->
+    <!-- contact -->
+    <!-- end contact -->
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <!-- report issue-->
+            <!-- Button to pop-up box -->
+            <div id="slideOutButton" class="slide-out-button" onclick="openReportPopup()">
+                <i class="fas fa-exclamation-circle"></i>
+                <span> Report Technical Issue</span>
+            </div>
+            <!-- Pop-up box -->
+            <div id="popupBoxReport" class="popup">
+                <span class="close-button" onclick="closeReportPopup()">&times;</span>
+                <p class="popup-text">What is your issue?</p>
+                <input type="text" id="textInput">
+                <br>
+                <button class="transparent-button" id="submitButton" onclick="closeReportPopup()">Submit</button>
+            </div>
+        
+            <!-- end report issue-->
+            <br>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="Informa conta ">
+                            <h3>Contact Us</h3>
+                            <ul>
+                                <li>
+                                <li>
+                                    <a href="Javascript:void(0) ">
+                                        <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
+                                    </a>
+                                </li>
+                                </li>
+                                <li>
+                                    <a href="Javascript:void(0) ">
+                                        <i class="fa fa-phone " aria-hidden="true "></i> Call +49 1636238603
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Javascript:void(0) ">
+                                        <i class="fa fa-envelope " aria-hidden="true "></i>requesthelp@eurosOBS.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text_align_center ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <p>© 2023 All Rights Reserved. Design by Euros Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="js/jquery-3.0.0.min.js "></script>
+    <script src="js/custom.js "></script>
+</body>
+</html>
