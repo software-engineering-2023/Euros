@@ -49,7 +49,7 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="banker.html">Banker</a>
+                            <a href="homePage.html">Euros OBS</a>
                         </div>
                     </div>
                     <!-- <div class="col-sm-5">
@@ -91,17 +91,19 @@
                 <p style="color: rgb(2, 47, 121)" class="t-op">Loan Type</p>
                 <p style="color: rgb(2, 47, 121)" class="t-op">Status</p>
                 <p style="color: rgb(2, 47, 121)" class="t-op">Action</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">LoanID</p>
             </div>
             <br>
             <div class="items ">
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 1</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Education</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status1">Pending</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">154892</p>
                     <div id="popupContainerCard1" class="appPopup-container">
                         <div class="appPopup-content appPopup-content-border">
-                            <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
+                            <button id="closebtn" onClick="closePop1()" style="position: absolute; right: 0;">close</button>
                             <p class="appPopup-title">Accept/Reject Loan</p>
                             <label class="appPopup-details"><a href="loan.pdf" target="_blank">PRESS FOR LOAN DETAILS</a></label>
 
@@ -109,8 +111,8 @@
                             <form>
                                 <label for="name" class="appPopup-label">Loan ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number">
-                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
                                 </div>
 
 
@@ -131,8 +133,8 @@
                             <form>
                                 <label for="name" class="appPopup-label">Loan ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number">
-                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
                                 </div>
 
 
@@ -154,8 +156,8 @@
                             <form>
                                 <label for="name" class="appPopup-label">Loan ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number">
-                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
                                 </div>
 
 
@@ -176,8 +178,8 @@
                             <form>
                                 <label for="name" class="appPopup-label">Loan ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number">
-                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
                                 </div>
 
 
@@ -192,10 +194,10 @@
                 <br>
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 2</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Home </p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Personal </p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status2">Pending</p>
                     <button class="accept_btn" onClick="AR2()">Accept/Reject</button>
-
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">78493</p>
                 </div>
                 <br>
                 <div class="item1">
@@ -203,15 +205,15 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Personal</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status3">Pending</p>
                     <button class="accept_btn" onClick="AR3()">Accept/Reject</button>
-
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">67891</p>
                 </div>
                 <br>
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 4</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car Loan</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status4">Pending</p>
                     <button class="accept_btn" onClick="AR4()">Accept/Reject</button>
-
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">12345</p>
                 </div>
             </div>
         </div>
@@ -288,6 +290,7 @@
                 pop1.style.display = "none";
                 window.alert("Accepted!");
                 status.textContent = "Accepted";
+                status.style.color = 'green';
 
             }
         }
@@ -303,7 +306,7 @@
                 pop1.style.display = "none";
                 window.alert("Rejected!");
                 status.textContent = "Rejected";
-
+                status.style.color = 'darkred';
 
             }
         }
@@ -320,7 +323,7 @@
                     pop2.style.display = "none";
                     window.alert("Accepted!");
                     status.textContent = "Accepted";
-
+                    status.style.color = 'green';
                 }
             }
         function rejectTwo() {
@@ -335,7 +338,7 @@
                 pop2.style.display = "none";
                 window.alert("Rejected!");
                 status.textContent = "Rejected";
-
+                status.style.color = 'darkred';
 
             }
         }
@@ -352,7 +355,7 @@
                         pop3.style.display = "none";
                         window.alert("Accepted!");
                         status.textContent = "Accepted";
-
+                        status.style.color = 'green';
                     }
                 }
         function rejectThree() {
@@ -367,7 +370,7 @@
                 pop3.style.display = "none";
                 window.alert("Rejected!");
                 status.textContent = "Rejected";
-
+                status.style.color = 'darkred';
 
             }
         }
@@ -384,7 +387,7 @@
                             pop4.style.display = "none";
                             window.alert("Accepted!");
                             status.textContent = "Accepted";
-
+                            status.style.color = 'green';
                         }
                     }
                     function rejectFour() {
@@ -399,45 +402,45 @@
                             pop4.style.display = "none";
                             window.alert("Rejected!");
                             status.textContent = "Rejected";
-
+                            status.style.color = 'darkred';
 
                         }
 
 
                     }
-        function closePop() {
+        function closePop1() {
 
             pop1.style.visibility = "hidden";
 
 
             pop1.style.display = "none";
-
+        
                     }
 
                     function closePop2() {
 
-                        pop1.style.visibility = "hidden";
+                        pop2.style.visibility = "hidden";
 
 
-                        pop1.style.display = "none";
+                        pop2.style.display = "none";
 
                     }
 
                     function closePop3() {
 
-                        pop1.style.visibility = "hidden";
+                        pop3.style.visibility = "hidden";
 
 
-                        pop1.style.display = "none";
+                        pop3.style.display = "none";
 
                     }
 
                     function closePop4() {
 
-                        pop1.style.visibility = "hidden";
+                        pop4.style.visibility = "hidden";
 
 
-                        pop1.style.display = "none";
+                        pop4.style.display = "none";
 
                     }
 
