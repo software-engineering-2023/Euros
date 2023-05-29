@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- basic -->
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewuser.css">
+
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
@@ -33,7 +35,7 @@
     </div>
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Ã—</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="banker.html">Home</a>
         <a href="bankeraccount.html">My Account</a>
         <a href="homepage.html">Logout</a>
@@ -74,160 +76,168 @@
     </header>
 
 
+    <div id="popupContainerCard" class="appPopup-container">
+        <div class="appPopup-content appPopup-content-border">
+            <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
+            <p class="appPopup-title" id="clientText">Client 1 Details</p>
+
+                    <div class=" viewDetails">
+                        
+                        <div class="report-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="topic-heading">
+                                        <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 20px;">Account ID:</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 18px;">CLIENT-9248</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="topic-heading">
+                                        <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 20px;">Credit Card Number:</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 18px;">XXX-XXX-XXX</p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="topic-heading">
+                                        <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 20px;">Phone Number:</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 18px;">XXX-XXX-XXX</p>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+
+        </div>
+    </div>
 
 
     <div class=" report-container">
         <div class="report-header">
-            <h1 style="color: rgb(2, 47, 121)">Loan Requests</h1>
+            <h1 style="color: rgb(2, 47, 121)">View Clients</h1>
             <input type="text" id="searchBanker" placeholder="Search...">
 
         </div>
 
         <div class="report-body">
-            <div class="report-topic-heading">
-                <p style="color: rgb(2, 47, 121)" class="t-op">Username</p>
-                <p style="color: rgb(2, 47, 121)" class="t-op">Loan Type</p>
-                <p style="color: rgb(2, 47, 121)" class="t-op">Level</p>
-                <p style="color: rgb(2, 47, 121)" class="t-op">Action</p>
+            <div class="pair-container">
+                <div class="box" onclick="one()">
+                    <img class="content-image" src="clientpg.png">
+                    <h1 style="color: rgb(2, 47, 121)" id="clientName">&nbsp;&nbsp;&nbsp;Client 1</h1>
+                </div>
+                <div class="box" onclick="two()">
+                    <img class="content-image" src="clientpg.png">
+                    <h1 style="color: rgb(2, 47, 121)">&nbsp;&nbsp;&nbsp;Client 2</h1>
+                </div>
+                <div class="box" onclick="three()">
+                    <img class="content-image" src="clientpg.png">
+                    <h1 style="color: rgb(2, 47, 121)">&nbsp;&nbsp;&nbsp;Client 3</h1>
+                </div>
+                <div class="box" onclick="four()">
+                    <img class="content-image" src="clientpg.png">
+                    <h1 style="color: rgb(2, 47, 121)">&nbsp;&nbsp;&nbsp;Client 4</h1>
+                </div>
+                <div class="box" onclick="five()">
+                    <img class="content-image" src="clientpg.png">
+                    <h1 style="color: rgb(2, 47, 121)">&nbsp;&nbsp;&nbsp;Client 5</h1>
+                </div>
+                <div class="box" onclick="six()">
+                    <img class="content-image" src="clientpg.png">
+                    <h1 style="color: rgb(2, 47, 121)">&nbsp;&nbsp;&nbsp;Client 6</h1>
+                </div>
+
+
             </div>
-            <br>
-            <div class="items ">
-                <div class="item1">
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 1</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Education</p>
-                    <p style="color: rgb(216, 7, 7)" class=" t-op-nextlvl3">Urgent</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-                    <div id="popupContainerCard" class="appPopup-container">
-                        <div class="appPopup-content appPopup-content-border">
-                            <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
-                            <p class="appPopup-title">Accept/Reject Loan</p>
-                            <label class="appPopup-details"><a href="loan.pdf"target="_blank">PRESS FOR LOAN DETAILS</a></label>
 
-                            <br></br>
-                            <form>
-                                <label for="name" class="appPopup-label">Loan ID:</label>
-                                <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number">
-                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
-                                </div>
-
-
-                                <button class="accept_btn" onClick="accept()">Accept</button>
-                            </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="reject()">Reject</button>
-                        </div>
-                    </div>
-
-                </div>
-                <br>
-                <div class="item1">
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 2</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Home </p>
-                    <p style="color: rgb(225, 103, 9)" class=" t-op-nextlvl3">High</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
-                </div>
-                <br>
-                <div class="item1">
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 3</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Personal</p>
-                    <p style="color: rgb(255, 194, 28)" class=" t-op-nextlvl3">Normal</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
-                </div>
-                <br>
-                <div class="item1">
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 4</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car Loan</p>
-                    <p style="color: rgb(62, 176, 5)" class=" t-op-nextlvl3">Low</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
-                </div>
-            </div>
         </div>
+
     </div>
 
-
-
     <script>
-
-        const searchBox = document.getElementById('searchBanker');
-        searchBox.addEventListener('keyup', searchReports);
-        function searchReports() {
-            const query = searchBox.value.toLowerCase();
-
-            const reportItems = document.querySelectorAll('.item1');
-
-            reportItems.forEach(item => {
-
-                const headline = item.querySelector('.t-op-nextlvl').textContent.toLowerCase();
-                const headline2 = item.querySelector('.t-op-nextlvl2').textContent.toLowerCase();
-                const headline3 = item.querySelector('.t-op-nextlvl3').textContent.toLowerCase();
-
-                const btn = item.querySelector('.accept_btn');
-                if (headline.includes(query) || headline2.includes(query) || headline3.includes(query)) {
-                    item.style.visibility = 'visible';
-                    btn.style.visibility = 'visible';
-
-                    if (item.parentNode.firstChild !== item) {
-                        item.parentNode.insertBefore(item, item.parentNode.firstChild);
-                    }
-                } else {
-                    item.style.visibility = 'hidden';
-                    btn.style.visibility = 'hidden';
-
-
-                }
-            });
-        }
-        var pop1 = document.getElementById("popupContainerCard");
-
-        function AR() {
-            event.preventDefault();
-            pop1.style.visibility = "visible";
-            pop1.style.display = "block";
-        }
-
-
-        function accept() {
-            event.preventDefault();
-            const inputField = document.querySelector('.textbox');
-            if (inputField.value.trim() === '') {
-                window.alert("Please enter a loan id");
-            }
-            else {
-                pop1.style.display = "none";
-                window.alert("Accepted!");
-
-            }
-        }
-        function reject() {
-            event.preventDefault();
-            const inputField = document.querySelector('.textbox');
-            if (inputField.value.trim() === '') {
-                window.alert("Please enter a loan id");
-            }
-            else {
-                pop1.style.display = "none";
-                window.alert("Rejected!");
-
-            }
-
-        }
+        var pop = document.getElementById("popupContainerCard");
         function closePop() {
-
-            pop1.style.visibility = "hidden";
-
-
-            pop1.style.display = "none";
+            pop.style.visibility = "hidden";
+            pop.style.display = "none";
+        }
+        function one() {
+            var clientText = document.getElementById('clientText');
+            clientText.textContent = "Client 1 Name"
+                event.preventDefault();
+                pop.style.visibility = "visible";
+                pop.style.display = "block";
+            
+           
 
         }
-
-        function showLoanDetails() {
+        function two() {
+            var clientText = document.getElementById('clientText');
+            clientText.textContent = "Client 2 Name"
             event.preventDefault();
+            pop.style.visibility = "visible";
+            pop.style.display = "block";
 
-            window.alert('test');
+
+
         }
+        function three() {
+            var clientText = document.getElementById('clientText');
+            clientText.textContent = "Client 3 Name"
+            event.preventDefault();
+            pop.style.visibility = "visible";
+            pop.style.display = "block";
+
+
+
+        }
+        function four() {
+            var clientText = document.getElementById('clientText');
+            clientText.textContent = "Client 4 Name"
+            event.preventDefault();
+            pop.style.visibility = "visible";
+            pop.style.display = "block";
+
+
+
+        }
+        function five() {
+            var clientText = document.getElementById('clientText');
+            clientText.textContent = "Client 5 Name"
+            event.preventDefault();
+            pop.style.visibility = "visible";
+            pop.style.display = "block";
+
+
+
+        }
+        function six() {
+            var clientText = document.getElementById('clientText');
+            clientText.textContent = "Client 6 Name"
+            event.preventDefault();
+            pop.style.visibility = "visible";
+            pop.style.display = "block";
+
+
+
+        }
+
+
+
 
 
     </script>
@@ -309,7 +319,7 @@
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <p>Â© 2020 All Rights Reserved. Design by Euros Team</p>
+                        <p>© 2020 All Rights Reserved. Design by Euros Team</p>
                     </div>
                 </div>
             </div>
