@@ -657,233 +657,360 @@
 
             <div id="popup25" class="popup1">
                 <div class="popup-content align-items-center">
-                    <div class="report-container3">
-                        <div class="report-header5">
-                            <h1 style="color: rgb(2, 47, 121);align-items: center">Choose prefered <br> date and time</h1>
-                            <button id="openBtn137" onclick="closeReminders(event)" style="color: #ffffff" class="label-tag close-button1">close</button>
+                    <div class="big-container" style="background-color:whitesmoke; padding:10px; margin-left:60px; border-radius:5px; padding-bottom: 20px;">
+                        <button id="closeReminders" onclick="closeReminders()" class="cardPopup-close-button" style="margin-left: 340px">&times;</button>
+                        <h1 class="reminderTitle">Create a Bill Reminder</h1>
+                        <div class="center-container">
+                            <div class="col-sm-6 thing-text" style="margin-left:50px;">
+                                <h1 class="thing-text">Card Number:</h1>
+                                <select id="cardno" class="reminder-input" required>
+                                    <option value="">Card Number</option>
+                                    <option value="123456789">123456789</option>
+                                    <option value="987654321">987654321</option>
+                                    <option value="123498765">123498765</option>
+                                    <option value="432156789">432156789</option>
+                                </select>
+                            </div>
                         </div>
-                        <div style="text-align: center;align-content: center; align-items: center;" class="report-body12">
-                            <div class="report-topic-heading">
-                                <p style="color: rgb(2, 47, 121);  text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Date:</p>
+                        <div class="center-container">
+                            <div class="col-sm-3 thing-text">
+                                <h1 class="thing-text">Date:</h1>
+                                <select id="date" class="reminder-input" required>
+                                    <option value="">Day</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
                             </div>
-                            <br>
-                            <div style="text-align: center;align-content: center; align-items: center; padding:  0px 0px 0px 70px;" class="row ">
-                                <div style="text-align: center;align-content: center; align-items: center;" class="dropdown12">
-                                    <select name="date" id="day">
-                                        <option value="" selected disabled>Day</option>
-                                        <option value="01">01</option>
-
-                                    </select>
-                                </div>
-                                <br>
-                                <div style="text-align: center;align-items: center;" class="dropdown12">
-                                    <select name="month" id="month">
-                                        <option value="" selected disabled>Freq</option>
-                                        <option value="01">Monthly</option>
-                                        <option value="02">3 Months</option>
-                                        <option value="02">6 Months</option>
-                                        <!-- Add more options for the date -->
-                                    </select>
-                                </div>
+                            <div class="col-sm-3 thing-text">
+                                <h1 class="thing-text">Month:</h1>
+                                <select id="month" class="reminder-input" required>
+                                    <option value="">Month</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
+                                    <option value="April">April</option>
+                                    <option value="May">May</option>
+                                    <option value="June">June</option>
+                                    <option value="July">July</option>
+                                    <option value="August">August</option>
+                                    <option value="September">September</option>
+                                    <option value="October">October</option>
+                                    <option value="November">November</option>
+                                    <option value="December">December</option>
+                                </select>
                             </div>
-                            <br>
-                            <div class="report-topic-heading">
-                                <p style="color: rgb(2, 47, 121); text-align: center;padding:  0px 0px 0px 50px;" class="t-op">Time:</p>
+                        </div>
+                        <div class="center-container">
+                            <div class="col-sm-3 thing-text">
+                                <h1 class="thing-text">Hour:</h1>
+                                <select id="hour" class="reminder-input" required>
+                                    <option value="">Hour</option>
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
                             </div>
-                            <br>
-                            <div style="text-align: center;align-items: center; padding:  0px 0px 0px 80px;" class="row">
-                                <div style="text-align: center;align-items: center;" class="dropdown12">
-                                    <select name="time" id="hour">
-                                        <option value="" selected disabled>Hour</option>
-                                        <option value="00:00">00:00</option>
-                                        <option value="01:00">01:00</option>
-                                        <!-- Add more options for the time -->
-                                    </select>
-                                </div>
-                                <div style="text-align: center;align-items: center;" class="dropdown12">
-                                    <select name="time" id="min">
-                                        <option value="" selected disabled>Min</option>
-                                        <option value="00">00</option>
-                                        <option value="01">01</option>
-                                    </select>
-                                </div>
+                            <div class="col-sm-3 thing-text">
+                                <h1 class="thing-text">Minute:</h1>
+                                <select id="minute" class="reminder-input" required>
+                                    <option value="">Min</option>
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
+                                    <option value="51">51</option>
+                                    <option value="52">52</option>
+                                    <option value="53">53</option>
+                                    <option value="54">54</option>
+                                    <option value="55">55</option>
+                                    <option value="56">56</option>
+                                    <option value="57">57</option>
+                                    <option value="58">58</option>
+                                    <option value="59">59</option>
+                                </select>
                             </div>
-                            <br>
-                            <button style="text-align: center;align-items: center;" onclick="setReminders(event)" id="closebtn123" class="close-button1">Set</button>
+                        </div>
+                        <div class="center-container">
+                            <button onclick="setReminders()" id="reminderDone" class="cardPopup-button" style="font-size: 14px; padding-left:20px; padding-right:20px; ">Set</button>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <div id="popup28" class="popup2">
-                <div class="popup-content2">
-                    <h2>Reminder set successfully</h2>
-                    <button id="closebutton12" onclick="closeDonePopup(event)" class="close-button1">Close</button>
-                </div>
-                 </div>
+</div>
         </div>
-     </div>
 
 
- 
 
 
-    <div>
-        <div class="center-container">
-            <button id="viewPendingBtn" class="viewPending-btn">View Pending Applications</button>
 
-            <div id="panel" class="appsPanel">
-                <h2 class="appsPanelTitle">Pending Applications</h2>
-                <ul class="appsPanelFont" id="applicationsList"></ul>
-            </div>
-            <script>
-                // Get the elements
-                const viewPendingBtn = document.getElementById('viewPendingBtn');
-                const panel = document.getElementById('panel');
-                const applicationsList = document.getElementById('applicationsList');
-                const btnvalue = viewPendingBtn.textContent;
-                //         const panelToggleBtn = document.getElementById('panelToggleBtn'); // Assuming there is a button to toggle the panel
-                let isPanelOpen = false; // Flag to track the panel state
+            <div>
+                <div class="center-container">
+                    <button id="viewPendingBtn" class="viewPending-btn">View Pending Applications</button>
 
-                function openReminders() {
-                    var remi = document.getElementById('popup25');
-                    remi.style.display = "block";
-                }
-                function closeReminders() {
-                    var remi = document.getElementById('popup25');
-                    remi.style.display = "none";
-                }
-                function setReminders() {
-                    var remi = document.getElementById('popup25');
-                    remi.style.display = "none";
-                    openDonePopup();
-                }
-                function openDonePopup() {
-                    var remi = document.getElementById('popup28');
-                    remi.style.display = "block";
-                }
-                function closeDonePopup() {
-                    var remi = document.getElementById('popup28');
-                    remi.style.display = "none";
-                }
+                    <div id="panel" class="appsPanel">
+                        <h2 class="appsPanelTitle">Pending Applications</h2>
+                        <ul class="appsPanelFont" id="applicationsList"></ul>
+                    </div>
+                    <script>
+                        // Get the elements
+                        const viewPendingBtn = document.getElementById('viewPendingBtn');
+                        const panel = document.getElementById('panel');
+                        const applicationsList = document.getElementById('applicationsList');
+                        const btnvalue = viewPendingBtn.textContent;
+                        //         const panelToggleBtn = document.getElementById('panelToggleBtn'); // Assuming there is a button to toggle the panel
+                        let isPanelOpen = false; // Flag to track the panel state
 
-                // Add click event listener to the button
-                viewPendingBtn.addEventListener('click', () => {
-                    const pendingApplications = [
-                        { cardNumber: '6382645739', accountNumber: '1abc2345678', cardType: 'Visa', limitSet: '10000$', status: 'pending' },
-                        { cardNumber: '6284783937', accountNumber: '1abc2345678', cardType: 'Mastercard', limitSet: '20000$', status: 'rejected' },
-                        { cardNumber: '7264738378', accountNumber: '9abc8765432', cardType: 'Visa', limitSet: '15000$', status: 'pending' }
-                    ];
+                        function openReminders() {
+                            var remi = document.getElementById('popup25');
+                            remi.style.display = "block";
+                        }
+                        function closeReminders() {
+                            var remi = document.getElementById('popup25');
+                            remi.style.display = "none";
+                        }
+                        function setReminders() {
+                            var date = document.getElementById('date').value;
+                            var month = document.getElementById('month').value;
+                            var hour = document.getElementById('hour').value;
+                            var minute = document.getElementById('minute').value;
+                            var cardno = document.getElementById('cardno').value;
+                           
+                            if (cardno!="" & date != "" & month != "" & hour != "" & minute != "") {
 
-                    // Clear previous list items
-                    applicationsList.innerHTML = '';
+                                alert("Reminder is set for card no. " + cardno + " on " + date + " " + month + " at " + hour + ":" + minute);
+                                closeReminders();
+                                document.getElementById('date').value = "";
+                                document.getElementById('month').value = "";
+                                document.getElementById('hour').value = "";
+                                document.getElementById('minute').value = "";
+                                document.getElementById('cardno').value = "";
+                            }
 
-                    // Populate the list with pending applications
-                    pendingApplications.forEach((application, index) => {
-
-                        const listItem = document.createElement('li');
-                        listItem.innerHTML = `Card Number: ${application.cardNumber}<br>
-                                                                          Account Number: ${application.accountNumber}<br>
-                                                                          Card Type: ${application.cardType}<br>
-                                                                          Limit Set: ${application.limitSet}<br>
-                                                                          Status: <span class="${application.status === 'rejected' ? 'rejected' : 'pending'}">${application.status}</span>`;
-
-                        // Add line break between each application, except for the last one
-                        if (index < pendingApplications.length - 1) {
-                            listItem.innerHTML += '<br><br>';
                         }
 
-                        applicationsList.appendChild(listItem);
-                    });
-                    // Toggle the panel by changing the right value
-                    //  panel.style.right = panel.style.right === '0px' ? '-300px' : '0px';
-                    // Toggle the panel by changing the right value and update the toggle button text
-                    if (isPanelOpen) {
-                        panel.style.right = '-300px';
-                        panelToggleBtn.textContent = 'Open';
-                    } else {
-                        panel.style.right = '0px';
-                        panelToggleBtn.textContent = 'Close';
-                    }
-                    isPanelOpen = !isPanelOpen; // Toggle the panel state
-                });
-                viewPendingBtn.addEventListener('click', () => {
-                    if (isPanelOpen) {
-                        panel.style.right = '-300px';
-                        viewPendingBtn.textContent = 'View Pending Applications';
-                    } else {
-                        panel.style.right = '0px';
-                        viewPendingBtn.textContent = 'Close Pending Applications';
-                    }
-                    isPanelOpen = !isPanelOpen; // Toggle the panel state
-                });
+                        // Add click event listener to the button
+                        viewPendingBtn.addEventListener('click', () => {
+                            const pendingApplications = [
+                                { cardNumber: '6382645739', accountNumber: '1abc2345678', cardType: 'Visa', limitSet: '10000$', status: 'pending' },
+                                { cardNumber: '6284783937', accountNumber: '1abc2345678', cardType: 'Mastercard', limitSet: '20000$', status: 'rejected' },
+                                { cardNumber: '7264738378', accountNumber: '9abc8765432', cardType: 'Visa', limitSet: '15000$', status: 'pending' }
+                            ];
 
-            </script>
-        </div>
-    </div>
-    <!-- footer -->
-    <footer>
-        <div class="footer">
+                            // Clear previous list items
+                            applicationsList.innerHTML = '';
 
-            <!-- report issue-->
-            <!-- Button to pop-up box -->
-            <div id="slideOutButton" class="slide-out-button" onClick="openReportPopup()">
-                <i class="fas fa-exclamation-circle"></i>
-                <span> Report Technical Issue</span>
+                            // Populate the list with pending applications
+                            pendingApplications.forEach((application, index) => {
+
+                                const listItem = document.createElement('li');
+                                listItem.innerHTML = `Card Number: ${application.cardNumber}<br>
+                                                                                              Account Number: ${application.accountNumber}<br>
+                                                                                              Card Type: ${application.cardType}<br>
+                                                                                              Limit Set: ${application.limitSet}<br>
+                                                                                              Status: <span class="${application.status === 'rejected' ? 'rejected' : 'pending'}">${application.status}</span>`;
+
+                                // Add line break between each application, except for the last one
+                                if (index < pendingApplications.length - 1) {
+                                    listItem.innerHTML += '<br><br>';
+                                }
+
+                                applicationsList.appendChild(listItem);
+                            });
+                            // Toggle the panel by changing the right value
+                            //  panel.style.right = panel.style.right === '0px' ? '-300px' : '0px';
+                            // Toggle the panel by changing the right value and update the toggle button text
+                            if (isPanelOpen) {
+                                panel.style.right = '-300px';
+                                panelToggleBtn.textContent = 'Open';
+                            } else {
+                                panel.style.right = '0px';
+                                panelToggleBtn.textContent = 'Close';
+                            }
+                            isPanelOpen = !isPanelOpen; // Toggle the panel state
+                        });
+                        viewPendingBtn.addEventListener('click', () => {
+                            if (isPanelOpen) {
+                                panel.style.right = '-300px';
+                                viewPendingBtn.textContent = 'View Pending Applications';
+                            } else {
+                                panel.style.right = '0px';
+                                viewPendingBtn.textContent = 'Close Pending Applications';
+                            }
+                            isPanelOpen = !isPanelOpen; // Toggle the panel state
+                        });
+
+                    </script>
+                </div>
             </div>
-            <!-- Pop-up box -->
-            <div id="popupBoxReport" class="popup">
-                <span class="close-button" onClick="closeReportPopup()">&times;</span>
-                <p class="popup-text">What is your issue?</p>
-                <input type="text" id="textInput">
-                <br>
-                <button class="transparent-button" id="submitButton" onClick="closeReportPopup()">Submit</button>
-            </div>
-            <script>
-                var popupBoxReport = document.getElementById("popupBoxReport");
-                var submitButton = document.getElementById("submitButton");
+            <!-- footer -->
+            <footer>
+                <div class="footer">
 
-                function openReportPopup() {
-                    // Display pop-up box
-                    popupBoxReport.style.display = "block";
-                }
+                    <!-- report issue-->
+                    <!-- Button to pop-up box -->
+                    <div id="slideOutButton" class="slide-out-button" onClick="openReportPopup()">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span> Report Technical Issue</span>
+                    </div>
+                    <!-- Pop-up box -->
+                    <div id="popupBoxReport" class="popup">
+                        <span class="close-button" onClick="closeReportPopup()">&times;</span>
+                        <p class="popup-text">What is your issue?</p>
+                        <input type="text" id="textInput">
+                        <br>
+                        <button class="transparent-button" id="submitButton" onClick="closeReportPopup()">Submit</button>
+                    </div>
+                    <script>
+                        var popupBoxReport = document.getElementById("popupBoxReport");
+                        var submitButton = document.getElementById("submitButton");
 
-                function closeReportPopup() {
-                    // Get the entered text
-                    var text = document.getElementById("textInput").value;
+                        function openReportPopup() {
+                            // Display pop-up box
+                            popupBoxReport.style.display = "block";
+                        }
 
-                    if (text != "") {
-                        alert("Noted. Your issue will be fixed shortly.");
-                        document.getElementById("textInput").value = "";
-                    }
-                    // Hide pop-up box
-                    popupBoxReport.style.display = "none";
-                }
-            </script>
-            <!-- end report issue-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6" ">
-                        <div class="Informa conta ">
-                            <h3>Contact Us</h3>
-                            <ul>
-                                <li>
-                                    <a href="Javascript:void(0) ">
-                                        <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Javascript:void(0) ">
-                                        <i class="fa fa-phone " aria-hidden="true "></i> Call +49 1636238603
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Javascript:void(0) ">
-                                        <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@euros.com
-                                    </a>
-                                </li>
-                            </ul>
+                        function closeReportPopup() {
+                            // Get the entered text
+                            var text = document.getElementById("textInput").value;
+
+                            if (text != "") {
+                                alert("Noted. Your issue will be fixed shortly.");
+                                document.getElementById("textInput").value = "";
+                            }
+                            // Hide pop-up box
+                            popupBoxReport.style.display = "none";
+                        }
+                    </script>
+                    <!-- end report issue-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6" ">
+                                <div class="Informa conta ">
+                                    <h3>Contact Us</h3>
+                                    <ul>
+                                        <li>
+                                            <a href="Javascript:void(0) ">
+                                                <i class="fa fa-map-marker " aria-hidden="true "></i> Staakener Strasse 20
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Javascript:void(0) ">
+                                                <i class="fa fa-phone " aria-hidden="true "></i> Call +49 1636238603
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Javascript:void(0) ">
+                                                <i class="fa fa-envelope " aria-hidden="true "></i> requesthelp@euros.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright text_align_center ">
+                            <div class="container ">
+                                <div class="row ">
+                                    <div class="col-md-12 ">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -891,28 +1018,18 @@
                     <div class="container ">
                         <div class="row ">
                             <div class="col-md-12 ">
+                                <p>� 2023 All Rights Reserved. Design by Euros Team</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="copyright text_align_center ">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-md-12 ">
-                        <p>� 2023 All Rights Reserved. Design by Euros Team</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
-    <script src="js/jquery.min.js "></script>
-    <script src="js/bootstrap.bundle.min.js "></script>
-    <script src="js/jquery-3.0.0.min.js "></script>
-    <script src="js/custom.js "></script>
+            </footer>
+            <!-- end footer -->
+            <!-- Javascript files-->
+            <script src="js/jquery.min.js "></script>
+            <script src="js/bootstrap.bundle.min.js "></script>
+            <script src="js/jquery-3.0.0.min.js "></script>
+            <script src="js/custom.js "></script>
 </body>
 </html>

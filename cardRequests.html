@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- awesome fontfamily -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--[if lt IE 9]>
@@ -84,6 +86,7 @@
                 <p style="color: rgb(2, 47, 121)" class="t-op">Limit</p>
                 <p style="color: rgb(2, 47, 121)" class="t-op">Date applied</p>
                 <p style="color: rgb(2, 47, 121)" class="t-op">Action</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">Status</p>
             </div>
             <br>
             <div class="items ">
@@ -92,6 +95,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">2000€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">01/06/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
+                    <p id="p1"style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                     <div id="popupContainerCard" class="appPopup-container">
                         <div class="appPopup-content appPopup-content-border">
                             <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
@@ -108,11 +112,11 @@
 
 
                                 <button class="accept_btn" onClick="accept()">Accept</button>
+                                <button class="accept_btn" onClick="reject()">Reject</button>
                             </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="reject()">Reject</button>
                         </div>
                     </div>
-                    
+
 
                 </div>
                 <br>
@@ -121,7 +125,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">1000€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">11/11/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
+                    <p id="p2" style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                 </div>
                 <br>
                 <div class="item1">
@@ -129,7 +133,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">1500€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">10/08/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
+                    <p id="p3"style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                 </div>
                 <br>
                 <div class="item1">
@@ -137,7 +141,7 @@
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">3000€</p>
                     <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">07/06/2023</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
+                    <p id="p4"style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3">Pending</p>
                 </div>
             </div>
         </div>
@@ -194,7 +198,7 @@
             else {
                 pop1.style.display = "none";
                 window.alert("Accepted!");
-
+                document.getElementById("p1").innerText = "Accepted";
             }
         }
         function reject() {
@@ -206,6 +210,7 @@
             else {
                 pop1.style.display = "none";
                 window.alert("Rejected!");
+                document.getElementById("p2").innerText = "Rejected";
 
             }
 

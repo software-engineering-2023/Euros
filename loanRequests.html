@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- awesome fontfamily -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--[if lt IE 9]>
@@ -47,7 +49,7 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="banker.html">Banker</a>
+                            <a href="homePage.html">Euros OBS</a>
                         </div>
                     </div>
                     <!-- <div class="col-sm-5">
@@ -87,34 +89,104 @@
             <div class="report-topic-heading">
                 <p style="color: rgb(2, 47, 121)" class="t-op">Username</p>
                 <p style="color: rgb(2, 47, 121)" class="t-op">Loan Type</p>
-                <p style="color: rgb(2, 47, 121)" class="t-op">Level</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">Status</p>
                 <p style="color: rgb(2, 47, 121)" class="t-op">Action</p>
+                <p style="color: rgb(2, 47, 121)" class="t-op">LoanID</p>
             </div>
             <br>
             <div class="items ">
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 1</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Education</p>
-                    <p style="color: rgb(216, 7, 7)" class=" t-op-nextlvl3">Urgent</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car</p>
+                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status1">Pending</p>
                     <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-                    <div id="popupContainerCard" class="appPopup-container">
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">154892</p>
+                    <div id="popupContainerCard1" class="appPopup-container">
                         <div class="appPopup-content appPopup-content-border">
-                            <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
+                            <button id="closebtn" onClick="closePop1()" style="position: absolute; right: 0;">close</button>
                             <p class="appPopup-title">Accept/Reject Loan</p>
-                            <label class="appPopup-details"><a href="loan.pdf"target="_blank">PRESS FOR LOAN DETAILS</a></label>
+                            <label class="appPopup-details"><a href="loan.pdf" target="_blank">PRESS FOR LOAN DETAILS</a></label>
 
                             <br></br>
                             <form>
                                 <label for="name" class="appPopup-label">Loan ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number">
-                                    <div class="textbox-error">Please enter the loan id you want to accept/reject</div>
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
                                 </div>
 
 
                                 <button class="accept_btn" onClick="accept()">Accept</button>
+                                <button class="accept_btn" onClick="reject()">Reject</button>
+
                             </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="reject()">Reject</button>
+                        </div>
+                    </div>
+
+                    <div id="popupContainerCard2" class="appPopup-container">
+                        <div class="appPopup-content appPopup-content-border">
+                            <button id="closebtn" onClick="closePop2()" style="position: absolute; right: 0;">close</button>
+                            <p class="appPopup-title">Accept/Reject Loan</p>
+                            <label class="appPopup-details"><a href="loan.pdf" target="_blank">PRESS FOR LOAN DETAILS</a></label>
+
+                            <br></br>
+                            <form>
+                                <label for="name" class="appPopup-label">Loan ID:</label>
+                                <div class="textbox-container">
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
+                                </div>
+
+
+                                <button class="accept_btn" onClick="acceptTwo()">Accept</button>
+                                <button class="accept_btn" onClick="rejectTwo()">Reject</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div id="popupContainerCard3" class="appPopup-container">
+                        <div class="appPopup-content appPopup-content-border">
+                            <button id="closebtn" onClick="closePop3()" style="position: absolute; right: 0;">close</button>
+                            <p class="appPopup-title">Accept/Reject Loan</p>
+                            <label class="appPopup-details"><a href="loan.pdf" target="_blank">PRESS FOR LOAN DETAILS</a></label>
+
+                            <br></br>
+                            <form>
+                                <label for="name" class="appPopup-label">Loan ID:</label>
+                                <div class="textbox-container">
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
+                                </div>
+
+
+                                <button class="accept_btn" onClick="acceptThree()">Accept</button>
+                                <button class="accept_btn" onClick="rejectThree()">Reject</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="popupContainerCard4" class="appPopup-container">
+                        <div class="appPopup-content appPopup-content-border">
+                            <button id="closebtn" onClick="closePop4()" style="position: absolute; right: 0;">close</button>
+                            <p class="appPopup-title">Accept/Reject Loan</p>
+                            <label class="appPopup-details"><a href="loan.pdf" target="_blank">PRESS FOR LOAN DETAILS</a></label>
+
+                            <br></br>
+                            <form>
+                                <label for="name" class="appPopup-label">Loan ID:</label>
+                                <div class="textbox-container">
+                                    <input type="text" class="textbox" placeholder="Enter LoanID">
+                                    <div class="textbox-error">Enter LoanID for confirmation</div>
+                                </div>
+
+
+                                <button class="accept_btn" onClick="acceptFour()">Accept</button>
+                                <button class="accept_btn" onClick="rejectFour()">Reject</button>
+
+                            </form>
                         </div>
                     </div>
 
@@ -122,26 +194,26 @@
                 <br>
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 2</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Home </p>
-                    <p style="color: rgb(225, 103, 9)" class=" t-op-nextlvl3">High</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Personal </p>
+                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status2">Pending</p>
+                    <button class="accept_btn" onClick="AR2()">Accept/Reject</button>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">78493</p>
                 </div>
                 <br>
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 3</p>
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Personal</p>
-                    <p style="color: rgb(255, 194, 28)" class=" t-op-nextlvl3">Normal</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
+                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status3">Pending</p>
+                    <button class="accept_btn" onClick="AR3()">Accept/Reject</button>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">67891</p>
                 </div>
                 <br>
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 4</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car Loan</p>
-                    <p style="color: rgb(62, 176, 5)" class=" t-op-nextlvl3">Low</p>
-                    <button class="accept_btn" onClick="AR()">Accept/Reject</button>
-
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Car</p>
+                    <p style="color: rgb(2, 47, 121)" class=" t-op-nextlvl3" id="status4">Pending</p>
+                    <button class="accept_btn" onClick="AR4()">Accept/Reject</button>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">12345</p>
                 </div>
             </div>
         </div>
@@ -180,17 +252,36 @@
                 }
             });
         }
-        var pop1 = document.getElementById("popupContainerCard");
+        var pop1 = document.getElementById("popupContainerCard1");
+        var pop2 = document.getElementById("popupContainerCard2");
+        var pop3 = document.getElementById("popupContainerCard3");
+        var pop4 = document.getElementById("popupContainerCard4");
 
         function AR() {
             event.preventDefault();
             pop1.style.visibility = "visible";
             pop1.style.display = "block";
         }
+        function AR2() {
+            event.preventDefault();
+            pop2.style.visibility = "visible";
+            pop2.style.display = "block";
+        } function AR3() {
+            event.preventDefault();
+            pop3.style.visibility = "visible";
+            pop3.style.display = "block";
+        }
+        function AR4() {
+            event.preventDefault();
+            pop4.style.visibility = "visible";
+            pop4.style.display = "block";
+        }
 
 
         function accept() {
             event.preventDefault();
+            var status = document.getElementById('status1');
+
             const inputField = document.querySelector('.textbox');
             if (inputField.value.trim() === '') {
                 window.alert("Please enter a loan id");
@@ -198,11 +289,15 @@
             else {
                 pop1.style.display = "none";
                 window.alert("Accepted!");
+                status.textContent = "Accepted";
+                status.style.color = 'green';
 
             }
         }
         function reject() {
             event.preventDefault();
+            var status = document.getElementById('status1');
+
             const inputField = document.querySelector('.textbox');
             if (inputField.value.trim() === '') {
                 window.alert("Please enter a loan id");
@@ -210,24 +305,147 @@
             else {
                 pop1.style.display = "none";
                 window.alert("Rejected!");
+                status.textContent = "Rejected";
+                status.style.color = 'darkred';
 
             }
-
         }
-        function closePop() {
+
+            function acceptTwo() {
+                event.preventDefault();
+                var status = document.getElementById('status2');
+
+                const inputField = document.querySelector('.textbox');
+                if (inputField.value.trim() === '') {
+                    window.alert("Please enter a loan id");
+                }
+                else {
+                    pop2.style.display = "none";
+                    window.alert("Accepted!");
+                    status.textContent = "Accepted";
+                    status.style.color = 'green';
+                }
+            }
+        function rejectTwo() {
+            event.preventDefault();
+            var status = document.getElementById('status2');
+
+            const inputField = document.querySelector('.textbox');
+            if (inputField.value.trim() === '') {
+                window.alert("Please enter a loan id");
+            }
+            else {
+                pop2.style.display = "none";
+                window.alert("Rejected!");
+                status.textContent = "Rejected";
+                status.style.color = 'darkred';
+
+            }
+        }
+
+                function acceptThree() {
+                    event.preventDefault();
+                    var status = document.getElementById('status3');
+
+                    const inputField = document.querySelector('.textbox');
+                    if (inputField.value.trim() === '') {
+                        window.alert("Please enter a loan id");
+                    }
+                    else {
+                        pop3.style.display = "none";
+                        window.alert("Accepted!");
+                        status.textContent = "Accepted";
+                        status.style.color = 'green';
+                    }
+                }
+        function rejectThree() {
+            event.preventDefault();
+            var status = document.getElementById('status3');
+
+            const inputField = document.querySelector('.textbox');
+            if (inputField.value.trim() === '') {
+                window.alert("Please enter a loan id");
+            }
+            else {
+                pop3.style.display = "none";
+                window.alert("Rejected!");
+                status.textContent = "Rejected";
+                status.style.color = 'darkred';
+
+            }
+        }
+
+                    function acceptFour() {
+                        event.preventDefault();
+                        var status = document.getElementById('status4');
+
+                        const inputField = document.querySelector('.textbox');
+                        if (inputField.value.trim() === '') {
+                            window.alert("Please enter a loan id");
+                        }
+                        else {
+                            pop4.style.display = "none";
+                            window.alert("Accepted!");
+                            status.textContent = "Accepted";
+                            status.style.color = 'green';
+                        }
+                    }
+                    function rejectFour() {
+                        event.preventDefault();
+                        var status = document.getElementById('status4');
+
+                        const inputField = document.querySelector('.textbox');
+                        if (inputField.value.trim() === '') {
+                            window.alert("Please enter a loan id");
+                        }
+                        else {
+                            pop4.style.display = "none";
+                            window.alert("Rejected!");
+                            status.textContent = "Rejected";
+                            status.style.color = 'darkred';
+
+                        }
+
+
+                    }
+        function closePop1() {
 
             pop1.style.visibility = "hidden";
 
 
             pop1.style.display = "none";
+        
+                    }
 
-        }
+                    function closePop2() {
 
-        function showLoanDetails() {
-            event.preventDefault();
+                        pop2.style.visibility = "hidden";
 
-            window.alert('test');
-        }
+
+                        pop2.style.display = "none";
+
+                    }
+
+                    function closePop3() {
+
+                        pop3.style.visibility = "hidden";
+
+
+                        pop3.style.display = "none";
+
+                    }
+
+                    function closePop4() {
+
+                        pop4.style.visibility = "hidden";
+
+
+                        pop4.style.display = "none";
+
+                    }
+
+
+       
 
 
     </script>
