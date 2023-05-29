@@ -560,7 +560,8 @@ canvas {
     }
 
 .viewPending-btn {
-    border-radius:3px;
+    transition: ease-in all 0.3s;
+    border-radius: 3px;
     background-color: rgb(2, 47, 121);
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
@@ -568,13 +569,13 @@ canvas {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    
 }
     .viewPending-btn:hover {
         color: rgb(2, 47, 121);
         background-color: lightsteelblue;
     }
 .reminder-button {
+    transition: ease-in all 0.3s;
     border-radius: 4px;
     background-color: #ccc;
     font-family: 'Poppins', sans-serif;
@@ -585,8 +586,8 @@ canvas {
     cursor: pointer;
 }
     .reminder-button:hover {
-        color:whitesmoke;
-        background-color: rgb(2, 47, 121)
+        color: rgb(2, 47, 121);
+        background-color: lightsteelblue;
     }
 .rejected {
     color: darkred;
