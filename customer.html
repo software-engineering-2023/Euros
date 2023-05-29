@@ -96,17 +96,23 @@
                 <div id="popupContainerCard" class="appPopup-container">
                     <div class="appPopup-content appPopup-content-border">
                         <p class="appPopup-title">CARD APPLICATION</p>
-                        <br></br>
-                        <br></br>
                         <form>
+                            <br></br>
                             <label for="name" class="appPopup-label">Account Number:</label>
                             <select type="text" id="name" placeholder="Choose account" class="appPopup-input" required>
                                 <option value="">Choose account</option>
                                 <option value="1abc2345678">1abc2345678</option>
                                 <option value="9abc8764523">9abc8764523</option>
                                 <option value="4abc7294058">4abc7294058</option>
-                            </select>
-                            <br></br>
+                            </select><br>
+                            <label for="name" class="appPopup-label">Card Holder Name:</label>
+                            <input type="text" id="cardName" placeholder="Specifyname on card" class="appPopup-input" required> </input><br>
+                            <label for="name" class="appPopup-label">Card Type:</label>
+                            <select type="text" id="name1" placeholder="Choose card type" class="appPopup-input" required>
+                                <option value="">Choose card type</option>
+                                <option value="Visa">Visa</option>
+                                <option value="MasterCard">MasterCard</option>
+                            </select><br>
                             <label for="amount" class="appPopup-label">Card Limit:</label>
                             <select type="number" id="limit" placeholder="Set limit" class="appPopup-input" required>
                                 <option value="">Set limit</option>
@@ -116,7 +122,8 @@
                                 <option value="20000">20000</option>
                             </select>
                             <br></br>
-                            <br></br>
+                            <label for="documentLoan" class="appPopup-label">Required Documents:</label>
+                            <input type="file" accept="application/pdf"><br><br>
                             <button type="button" id="applyCardButton" onClick="applyCardApp()" class="appPopup-button"> Apply</button>
                         </form>
                         <button id="closeCardAppButton" onClick="closeCardAppPopup()" class="appPopup-close-button">Close</button>
@@ -182,7 +189,8 @@
                                 <option value="5 percent">5%</option>
                                 <option value="10 percent">10%</option>
                             </select><br>
-                            <br></br><br>
+                            <label for="documentLoan" class="appPopup-label">Required Documents:</label>
+                            <input type="file" accept="application/pdf"><br><br /><br>
                             <button type="button" id="applyLoanButton" onClick="applyLoanApp()" class="appPopup-button"> Apply</button>
                         </form>
                         <button id="closeLoanAppButton" onClick="closeLoanAppPopup()" class="appPopup-close-button">Close</button>
@@ -224,19 +232,19 @@
                     <div class="appPopup-content appPopup-content-border">
                         <p class="appPopup-title">OPEN ACCOUNT</p>
                         <form>
-                            <br /><br />
-                            <br /><br />
+                            <br><br/><br>
                             <label for="AccType" class="appPopup-label">Account Type:</label>
                             <select type="text" id="AccType" placeholder="Choose account type" class="appPopup-input" required>
                                 <option value="">Choose account type</option>
                                 <option value="Current">Current</option>
                                 <option value="Savings">Savings</option>
                             </select>
-                            <br></br>
+                            <br>
                             <label for="nationalID" class="appPopup-label">National ID:</label>
                             <input type="number" id="nationalID" placeholder="Enter national ID" class="appPopup-input" required> </input>
-                            <br></br>
-                            <br></br>
+                            <br>
+                            <label for="documentLoan" class="appPopup-label">Required Documents:</label>
+                            <input type="file" accept="application/pdf"><br><br><br><br><br>
                             <button type="button" id="applyAccButton" onClick="applyAccApp()" class="appPopup-button">Open </button>
                         </form>
                         <button id="closeAccAppButton" onClick="closeAccAppPopup()" class="appPopup-close-button">Close</button>
