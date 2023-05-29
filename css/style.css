@@ -2169,3 +2169,34 @@ label {
     font-weight: lighter;
     font: sans-serif;
 }
+
+
+
+
+.acc_banker {
+    min-height: 100%;
+    max-width: 95%;
+    margin: 70px auto 0px auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 20px 20px 20px;
+}
+
+.acc_banker_header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 2px solid rgba(0, 20, 151, 0.59);
+}
+
+.welcome_textBanker h7 {
+    color: whitesmoke;
+    padding-top: 200px;
+    font-weight: lighter;
+}
