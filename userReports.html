@@ -109,8 +109,8 @@
 
 
                                 <button class="accept_btn" onClick="acceptOne()">Freeze</button>
+                                <button class="accept_btn" onClick="rejOne()">Close</button>
                             </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="rejOne()">Close</button>
                         </div>
                     </div>
 
@@ -137,8 +137,8 @@
 
 
                                 <button class="accept_btn" onClick="acceptTwo()">Freeze</button>
+                                <button class="accept_btn" onClick="rejTwo()">Close</button>
                             </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="rejTwo()">Close</button>
                         </div>
                     </div>
 
@@ -159,14 +159,14 @@
                             <form>
                                 <label for="name" class="appPopup-label">Card ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number"  id="textBoxThree">
+                                    <input type="text" class="textbox" placeholder="Enter card number" id="textBoxThree">
                                     <div class="textbox-error">Please enter the card id you want to replace</div>
                                 </div>
 
 
                                 <button class="accept_btn" onClick="acceptThree()">Replace</button>
+                                <button class="accept_btn" onClick="rejThree()">Close</button>
                             </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="rejThree()">Close</button>
                         </div>
                     </div>
 
@@ -174,7 +174,7 @@
                 <br>
                 <div class="item1">
                     <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl">User 4</p>
-                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Card Loss</p>
+                    <p style="color: rgb(2, 47, 121)" class="t-op-nextlvl2">Got my card back</p>
                     <p style="color: rgb(62, 176, 5)" class=" t-op-nextlvl3">Low</p>
                     <button class="accept_btn" onClick="AR4()">See Details</button>
                     <div id="popupContainerCard4" class="appPopup-container">
@@ -187,14 +187,14 @@
                             <form>
                                 <label for="name" class="appPopup-label">Card ID:</label>
                                 <div class="textbox-container">
-                                    <input type="text" class="textbox" placeholder="Enter card number"  id="textBoxFour">
-                                    <div class="textbox-error">Please enter the card id you want to freeze</div>
+                                    <input type="text" class="textbox" placeholder="Enter card number" id="textBoxFour">
+                                    <div class="textbox-error">Please enter the card id you want to unfreeze</div>
                                 </div>
 
 
-                                <button class="accept_btn" onClick="acceptFour()">Freeze</button>
+                                <button class="accept_btn" onClick="acceptFour()">Unfreeze</button>
+                                <button class="accept_btn" onClick="rejFour()">Close</button>
                             </form>
-                            <button class="accept_btn" style="width: 300px; margin: 0 auto;" onClick="rejFour()">Close</button>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
             }
             else {
                 pop4.style.display = "none";
-                window.alert("Freezed and replacement is in the way!");
+                window.alert("Unfreezed!");
 
             }
         }
