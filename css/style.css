@@ -1854,44 +1854,36 @@ label {
 }
 
 .accept_btn {
-    max-width: 191px;
-    display: inline-block;
-    background: transparent;
-    height: 51px;
-    width: 100%;
-    color: #000;
+    border-radius: 3px;
+    background-color: rgb(2, 47, 121);
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
     font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: ease-in all 0.5s;
-    border: #ffffff solid 2px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
     .accept_btn:hover {
-        background: #face34;
-        transition: ease-in all 0.5s;
-        border: #face34 solid 2px;
+        color: rgb(2, 47, 121);
+        background-color: lightsteelblue;
     }
 
 
 .reject_btn {
-    max-width: 191px;
-    display: inline-block;
-    background: transparent;
-    height: 51px;
-    width: 100%;
-    color: #c9c7c7;
+    border-radius: 3px;
+    background-color: rgb(2, 47, 121);
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
     font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: ease-in all 0.5s;
-    border: #ffffff solid 2px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
     .reject_btn:hover {
-        background: #face34;
-        transition: ease-in all 0.5s;
-        border: #face34 solid 2px;
+        color: rgb(2, 47, 121);
+        background-color: lightsteelblue;
     }
 
 
@@ -2226,3 +2218,22 @@ label {
     color: rgb(2, 47, 121);
     font-family: 'Poppins', sans-serif;
 }
+
+
+
+
+.viewPending-btn {
+    border-radius: 3px;
+    background-color: rgb(2, 47, 121);
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    .viewPending-btn:hover {
+        color: rgb(2, 47, 121);
+        background-color: lightsteelblue;
+    }

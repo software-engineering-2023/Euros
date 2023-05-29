@@ -146,10 +146,10 @@ function logout(){
 
 function checkUser(event) {
 	event.preventDefault(); // Prevent default form submission behavior
-	
+
 	un = document.getElementById("un").value;
 	pass = document.getElementById("pass").value;
-   
+
 	if (un === "admin" && pass === "admin") {
 		window.location.href = "admin.html";
 	}
@@ -158,6 +158,9 @@ function checkUser(event) {
 	}
 	else if (un === "client" && pass === "client") {
 		window.location.href = "customer.html";
+	}
+	else if (un != "client" && pass != "client" || un != "banker" && pass != "banker" || un != "admin" && pass != "admin" || un != "" && pass != "" ) {
+		window.alert("Wrong username or password");
 	}
 	else if (un === "" && pass === "") {
 		alert("Please enter a username and a password");
