@@ -38,12 +38,12 @@
         }
 
         body {
-            background-color: #777;
+            background-color: #fff;
             font-family: 'Poppins', sans-serif
         }
 
         .wrapper {
-            background-color: #222;
+            background-color: #fff;
             min-height: 100px;
             max-width: 800px;
             margin: 10px auto;
@@ -52,16 +52,17 @@
 
         .dark,
         .input:focus {
-            background-color: #222
+            background-color: #fff
         }
 
         .navbar {
             padding: 0.5rem 0rem
         }
 
-            .navbar .navbar-brand {
-                font-size: 30px
-            }
+        .text-black-header {
+            font-size: 30px;
+            color: #646c74;
+        }
 
         #income {
             border-right: 1px solid #bbb
@@ -71,11 +72,12 @@
             display: none
         }
 
+
         .nav-item .nav-link .fa-bell-o,
         .fa-long-arrow-down,
         .fa-long-arrow-up {
             padding: 10px 10px;
-            background-color: #444;
+            background-color: #fff;
             border-radius: 50%;
             position: relative;
             font-size: 18px
@@ -87,7 +89,7 @@
                 width: 7px;
                 height: 7px;
                 border-radius: 50%;
-                background-color: #ffc0cb;
+                background-color: #fff;
                 right: 10px;
                 top: 10px
             }
@@ -109,11 +111,17 @@
                 border-top-right-radius: 0
             }
 
+        .pagination .page-item.disabled .page-link {
+            background-color: rgb(2,47,121);
+            color: rgb(2,47,121);
+            cursor: crosshair
+        }
+
         #searchButton {
             border: none;
             outline: none;
             box-shadow: none;
-            background-color: #555;
+            background-color: rgb(2, 47, 121);
             padding: 3px 10px;
             color: #fff;
             border-bottom-left-radius: 4px;
@@ -145,7 +153,7 @@
             font-size: 15px;
             list-style: none;
             text-align: left;
-            color: #fff;
+            color: #000;
             z-index: 1000
         }
 
@@ -159,7 +167,7 @@
                 }
 
         .notify.active .fa-bell-o {
-            background-color: #555
+            background-color: #fff
         }
 
         .notify.active .list-notify {
@@ -178,18 +186,35 @@
         }
 
             .user-box .text {
-                color: #fff;
+                color: #000;
                 font-size: 15px
             }
 
-            .user-box .text-white {
-                color: #fff
+            .user-box .text-black {
+                color: #000
             }
 
-                .user-box .text-white.money {
+                .user-box .text-black.money {
                     font-weight: bold;
                     font-size: 20px
                 }
+
+        input[type="date"] {
+            color: #fff; /* Change the text color */
+            background-color: rgb(2, 47, 121); /* Change the background color */
+            /* Add any other styling properties as needed */
+        }
+
+        .date-search-container {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            justify-content: flex-end;
+        }
+
+            .date-search-container input {
+                margin-right: auto;
+            }
     </style>
 </head>
 <!-- body -->
@@ -207,6 +232,7 @@
         <a href="myLoans.html">My Loans</a>
         <a href="myCards.html">My Cards</a>
         <a class="active" href="Transactions.html">My Transactions</a>
+        <a href="Bills.html">My Bills</a>
         <a href="login.html">Log Out</a>
     </div>
 
@@ -245,45 +271,38 @@
     </header>
     <div class="wrapper rounded">
         <nav class="navbar navbar-expand-lg navbar-dark dark d-lg-flex align-items-lg-start">
-            <a class="navbar-brand" href="#">
-                Account Transactions
+            <a style="color: rgb(2, 47, 121)" class="text-black-header" href="#">
+                Account <li>Transactions</li>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
 
                 </span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-bell-o font-weight-bold">
-                            </span>
-                            <span class="notify">Notifications</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="#">
+                        <a href="#"></a>
+                        <!-- Add a container div for the date selection and search button -->
+                        <div class="date-search-container">
+                            <!-- Add an input field for date selection -->
+                            <input type="date" id="datePicker" />
 
-                        </a>
-                        <!-- Add an input field for date selection -->
-                        <input type="date" id="dateRange">
-
-                        <!-- Add a button to initiate the search -->
-
-                        <button id="searchButton"><span class="fa fa-search"></span></button>
-
-
+                            <!-- Add a button to initiate the search -->
+                            <button id="searchButton"><span class="fa fa-search"></span></button>
+                        </div>
                         <script>
-// Get references to the date input field and the search button
-const dateInput = document.getElementById('dateRange');
-const searchButton = document.getElementById('searchButton');
+                            // Get references to the date input field and the search button
+                            const datePicker = document.getElementById('datePicker');
+                            const searchButton = document.getElementById('searchButton');
 
-// Add event listener to the search button
-searchButton.addEventListener('click', function () {
+                            // Add event listener to the search button
+                            searchButton.addEventListener('click', function () {
                                 // Retrieve the entered or selected date range
-                                const startDate = new Date(dateInput.value);
-                                const endDate = new Date(startDate);
+                                const selectedDate = new Date(datePicker.value);
+                                const startDate = new Date(selectedDate);
+                                const endDate = new Date(selectedDate);
                                 endDate.setDate(endDate.getDate() + 1); // Add 1 day to include transactions up to the end of the selected day
 
                                 // Iterate over the transaction rows and compare their dates
@@ -299,39 +318,40 @@ searchButton.addEventListener('click', function () {
                                         row.style.display = 'none';
                                     }
                                 });
-});
+                            });
                         </script>
                     </li>
                 </ul>
             </div>
         </nav>
+
         <div class="row mt-2 pt-2">
             <div class="col-md-6" id="income">
                 <div class="d-flex justify-content-start align-items-center">
                     <p class="fa fa-long-arrow-down"></p>
-                    <p class="text mx-3">Income</p>
-                    <p class="text-white ml-4 money">$9,758.23</p>
+                    <p style="color: rgb(2, 47, 121)" class="text mx-3">Income</p>
+                    <div class="text-black ml-4 money">$9,758.23</div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="d-flex justify-content-md-end align-items-center">
                     <div class="fa fa-long-arrow-up"></div>
-                    <div class="text mx-3">Expense</div>
-                    <div class="text-white ml-4 money">
+                    <div style="color: rgb(2, 47, 121)" class="text mx-3">Expense</div>
+                    <div class="text-black ml-4 money">
                         $961.23
                     </div>
                 </div>
             </div>
         </div>
         <div class="table-responsive mt-3">
-            <table class="table table-dark table-borderless">
+            <table class="table table-white table-borderless">
                 <thead>
                     <tr>
-                        <th scope="col">Activity</th>
-                        <th scope="col">Account No.</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">TransactionID</th>
-                        <th scope="col" class="text-right">Amount</th>
+                        <th style="color: rgb(2, 47, 121)" scope="col">Activity</th>
+                        <th style="color: rgb(2, 47, 121)" scope="col">Account No.</th>
+                        <th style="color: rgb(2, 47, 121)" scope="col" class="text-center">Date</th>
+                        <th style="color: rgb(2, 47, 121)" scope="col">TransactionID</th>
+                        <th style="color: rgb(2, 47, 121)" scope="col" class="text-right">Amount</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -449,7 +469,7 @@ searchButton.addEventListener('click', function () {
             </table>
         </div>
         <div class="d-flex justify-content-between align-items-center results">
-            <span class="pl-md-3">Showing<b class="text-white"> 1-7 0f 200 </b> trasactions</span>
+            <span class="pl-md-3" style="color: rgb(2, 47, 121)">Showing<b class="text-black"> 1-7 0f 200 </b> trasactions</span>
             <div class="pt-3">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
@@ -458,7 +478,7 @@ searchButton.addEventListener('click', function () {
                                 <span aria-hidden="true">&lt;</span>
                             </a>
                         </li>
-                        <li class="page-item">
+                        <li class="page-item disabled">
                             <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&gt;</span>
                             </a>
@@ -468,29 +488,6 @@ searchButton.addEventListener('click', function () {
             </div>
         </div>
     </div>
-    </div>
-    <script>
-
-const search = document.getElementById('search');
-const list = document.querySelector('.list');
-const listItems = list.querySelectorAll('li');
-search.addEventListener('keyup', function (event) {
-            const term = event.target.value.toLowerCase();
-
-            Array.from(listItems).forEach(function (item) {
-                const title = item.textContent.toLowerCase();
-
-
-                if (title.indexOf(term) != -1) {
-                    item.style.visibility = "visible";
-
-                } else {
-                    item.style.visibility = "hidden";
-                }
-            });
-});
-    </script>
-
 
     <!-- footer -->
     <footer>
@@ -517,7 +514,7 @@ search.addEventListener('keyup', function (event) {
                 function openReportPopup() {
                     // Display pop-up box
                     popupBoxReport.style.display = "block";
-}
+                }
 
                 function closeReportPopup() {
                     // Get the entered text
@@ -529,7 +526,7 @@ search.addEventListener('keyup', function (event) {
                     }
                     // Hide pop-up box
                     popupBoxReport.style.display = "none";
-}
+                }
             </script>
             <!-- end report issue-->
             <div class="container">
