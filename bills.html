@@ -47,7 +47,7 @@
         <a href="myAccounts.html">My Accounts</a>
         <a href="myLoans.html">My Loans</a>
         <a href="myCards.html">My Cards</a>
-        <a href="ViewTransactions.html">My Transactions</a>
+        <a href="transactions.html">My Transactions</a>
         <a class="active" href="myBills.html">My Bills</a>
         <a href="login.html">Log Out</a>
     </div>
@@ -105,7 +105,8 @@
                         <form>
                             <label for="date" class="appPopup-label">Due Date: 12/6/2023</label>
                             <br>
-                            <label for="amount" class="appPopup-label">Amount Due: 350</label>
+                            <label for="amount" class="appPopup-label">Amount Due:</label>
+                            <label id="amount1" for="amount" class="appPopup-label">350$</label>
                             <br></br>
                             <label for="accNum" class="appPopup-label">Pay From Account Number:</label>
                             <select type="text" id="name" placeholder="Choose account" class="appPopup-input" required>
@@ -125,7 +126,7 @@
                             </select>
                             <br>
 
-                            <button type="button" id="electricityButton" onClick="payBillElectricity()" class="appPopup-button"> Pay </button>
+                            <button type="button" id="electricityButton" onClick=" pay1()" class="appPopup-button"> Pay </button>
                             <br>
                             <br>
                             <button type="button" id="reminderElectricityButton" onClick="openPopupBills(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
@@ -328,6 +329,14 @@
                         }
                         closeElectricityPopup();
                     }
+                    function pay1() {
+                var reqAmountElement = document.getElementById("amount1");
+                var req = parseFloat(reqAmountElement.innerText.slice(0, -1));
+                    var amount = 0;
+                    reqAmountElement.innerText = amount + reqAmountElement.innerText.slice(-1);
+                    alert("Payment received");
+                    closeElectricityPopup();
+                }
                     function closeElectricityPopup() {
                         popupContainerElectricity.style.display = "none";
                     }
@@ -396,7 +405,8 @@
                         <form>
                             <label for="date" class="appPopup-label">Due Date: 12/6/2023</label>
                             <br>
-                            <label for="amount" class="appPopup-label">Amount Due: 350</label>
+                            <label for="amount" class="appPopup-label">Amount Due:</label>
+                            <label id = "amountt2"for="amount" class="appPopup-label">250$</label>
                             <br></br>
                             <label for="accNum" class="appPopup-label">Pay From Account Number:</label>
                             <select type="text" id="name1" placeholder="Choose account" class="appPopup-input" required>
@@ -416,7 +426,7 @@
                             </select>
                             <br>
 
-                            <button type="button" id="telephoneButton" onClick="payBillTelephone()" class="appPopup-button"> Pay </button>
+                            <button type="button" id="telephoneButton1" onClick="pay2()" class="appPopup-button"> Pay </button>
                             <br>
                             <br>
                             <button type="button" id="reminderElectricityButton" onClick="openPopupBills3(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
@@ -621,6 +631,14 @@
                     telephoneBtn.addEventListener("click", function () {
                         popupContainerTelephone.style.display = "block";
                     });
+                    function pay2() {
+                var reqAmountElement = document.getElementById("amountt2");
+                var req = parseFloat(reqAmountElement.innerText.slice(0, -1));
+                    var amount = 0;
+                    reqAmountElement.innerText = amount + reqAmountElement.innerText.slice(-1);
+                    alert("Payment received");
+                    closeTelephonePopup();
+                }
                 function openPopupBills3(event) {
                 event.preventDefault();
                 const popup = document.getElementById("popupBills3");
@@ -670,7 +688,8 @@
                         <form>
                             <label for="date" class="appPopup-label">Due Date: 12/6/2023</label>
                             <br>
-                            <label for="amount" class="appPopup-label">Amount Due: 350</label>
+                            <label for="amount" class="appPopup-label">Amount Due:</label>
+                            <label id = "amount3"for="amount" class="appPopup-label">150$</label>
                             <br></br>
                             <label for="accNum" class="appPopup-label">Pay From Account Number:</label>
                             <select type="text" id="name2" placeholder="Choose account" class="appPopup-input" required>
@@ -691,7 +710,7 @@
                             <br>
 
 
-                            <button type="button" id="waterButton" onClick="payBillWater()" class="appPopup-button"> Pay </button>
+                            <button type="button" id="waterButton" onClick="pay3()" class="appPopup-button"> Pay </button>
                             <br>
                             <br>
                             <button type="button" id="reminderElectricityButton" onClick="openPopupBills4(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
@@ -897,6 +916,17 @@
                     waterBtn.addEventListener("click", function () {
                         popupContainerWater.style.display = "block";
                     });
+                    function pay3() {
+                var reqAmountElement = document.getElementById("amount3");
+                var req = parseFloat(reqAmountElement.innerText.slice(0, -1));
+                    var amount = 0;
+                    reqAmountElement.innerText = amount + reqAmountElement.innerText.slice(-1);
+                    alert("Payment received");
+                    closeWaterPopup();
+                    }
+
+
+
                     function openPopupBills4(event) {
                 event.preventDefault();
                 const popup = document.getElementById("popupBills4");
@@ -957,7 +987,8 @@
                         <form>
                             <label for="date" class="appPopup-label">Due Date: 12/6/2023</label>
                             <br>
-                            <label for="amount" class="appPopup-label">Amount Due: 350</label>
+                            <label for="amount" class="appPopup-label">Amount Due:</label>
+                            <label id= "amount4"for="amount" class="appPopup-label">50$</label>
                             <br></br>
                             <label for="accNum" class="appPopup-label">Pay From Account Number:</label>
                             <select type="text" id="name2" placeholder="Choose account" class="appPopup-input" required>
@@ -977,7 +1008,7 @@
                             </select>
                             <br>
 
-                            <button type="button" id="gasButton" onClick="payBillGas()" class="appPopup-button"> Pay </button>
+                            <button type="button" id="gasButton" onClick="pay4()" class="appPopup-button"> Pay </button>
                             <br>
                             <br>
                             <button type="button" id="reminderElectricityButton" onClick="openPopupBills5(event)" class="t-op-nextlvl label-tag close-button1"> Set Reminder </button>
@@ -1181,6 +1212,15 @@
                     gasBtn.addEventListener("click", function () {
                         popupContainerGas.style.display = "block";
                     });
+
+                    function pay4() {
+                var reqAmountElement = document.getElementById("amount4");
+                var req = parseFloat(reqAmountElement.innerText.slice(0, -1));
+                    var amount = 0;
+                    reqAmountElement.innerText = amount + reqAmountElement.innerText.slice(-1);
+                    alert("Payment received");
+                    closeGasPopup();
+                    }
                     function openPopupBills5(event) {
                 event.preventDefault();
                 const popup = document.getElementById("popupBills5");
@@ -1267,7 +1307,7 @@
             <!-- end report issue-->
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6" ">
+                    <div class="col-md-3 col-sm-6" >
                         <div class="Informa conta ">
                             <h3>Contact Us</h3>
                             <ul>
