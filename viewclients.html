@@ -17,7 +17,9 @@
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/viewuser.css">
-
+    <link rel="stylesheet" href="css/yousty.css">
+    <!-- extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- awesome fontfamily -->
@@ -35,7 +37,7 @@
     </div>
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Ã—</a>
         <a href="banker.html">Home</a>
         <a href="bankeraccount.html">My Account</a>
         <a href="homepage.html">Logout</a>
@@ -49,7 +51,7 @@
                 <div class="row d_flex justify-content-between align-items-center">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="banker.html">Banker</a>
+                            <a href="homePage.html">Euros OBS</a>
                         </div>
                     </div>
                     <!-- <div class="col-sm-5">
@@ -77,53 +79,67 @@
 
 
     <div id="popupContainerCard" class="appPopup-container">
-        <div class="appPopup-content appPopup-content-border">
-            <button id="closebtn" onClick="closePop()" style="position: absolute; right: 0;">close</button>
+        <div class="appPopup-content" style="border: lightsteelblue solid 5px; border-radius: 10px;">
+            <br>
+            <button id="closebtn" onClick="closePop()" class ="cardPopup-close-button" style="position: absolute; right: 0;">close</button>
             <p class="appPopup-title" id="clientText">Client 1 Details</p>
+            <br>
+            <div class=" viewDetails" style="margin-bottom:0px;">
 
-                    <div class=" viewDetails">
-                        
-                        <div class="report-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="topic-heading">
-                                        <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 20px;">Account ID:</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 18px;">CLIENT-9248</p>
-                                </div>
+                <div class="report-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="topic-heading">
+                                <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 13px;">Account ID:</p>
                             </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="topic-heading">
-                                        <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 20px;">Credit Card Number:</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 18px;">XXX-XXX-XXX</p>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="topic-heading">
-                                        <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 20px;">Phone Number:</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 18px;">XXX-XXX-XXX</p>
-                                </div>
-                            </div>
-
-
-
-
                         </div>
-
+                        <div class="col-lg-6">
+                            <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 12px;">CLIENT-9248</p>
+                        </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="topic-heading">
+                                <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 13px;">Credit Card Number:</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 12px;">XXX-XXX-XXX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" viewDetails">
 
+                <div class="report-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="topic-heading">
+                                <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 13px;">Account ID:</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 12px;">CLIENT-2438</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="topic-heading">
+                                <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 13px;">Credit Card Number:</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <p style="color: rgb(2, 47, 121); font-weight: bolder;;font-size: 12px;">XXX-XXX-XXX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <a class="cardPopup-button" style="font-size: 14px; padding-left:20px; padding-right:20px; margin-top:300px; " href="profile.html">Access Profile</a>
+            </div>
         </div>
     </div>
 
@@ -319,7 +335,7 @@
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <p>© 2020 All Rights Reserved. Design by Euros Team</p>
+                        <p>ï¿½ 2020 All Rights Reserved. Design by Euros Team</p>
                     </div>
                 </div>
             </div>
