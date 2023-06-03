@@ -34,7 +34,7 @@
     <!-- end loader -->
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="active" href="homePageLogged.html">Home</a>
+        <a class="active" href="admin.html">Home</a>
         <a href="admininfo.html">My Account</a>
         <a href="login.html">Log Out</a>
         
@@ -47,7 +47,7 @@
                 <div class="row d_flex">
                     <div class="col-sm-3">
                         <div class="logo">
-                            <a href="admin.html">EurosOBS</a>
+                            <a href="homePageLogged.html">EurosOBS</a>
                         </div>
                     </div>
                     <div class="col-sm-5">
@@ -93,7 +93,7 @@
                    
                         <div class="items">
                             <div class="item15">
-                                <p style="color: rgb(2, 47, 121); text-align: left;" class="t-op-nextlvl">BN-0068</p>
+                                <p id = "bn" style="color: rgb(2, 47, 121); text-align: left;" class="t-op-nextlvl">BN-0068</p>
                                 <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl ">Ahmed</p>
                                 <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl">Haytham</p>
                                 <p style="color: rgb(2, 47, 121);text-align: left;" class="t-op-nextlvl">Top manager</p>
@@ -110,11 +110,12 @@
                                     }
                                     function openPopup89(event){
                                         var popup = document.getElementById("popup89");
-                                        popup.style.display = "block"
+                                        popup.style.display = "block";
                                     }
                                     function closePopup89(event){
                                         var popup = document.getElementById("popup89");
-                                        popup.style.display = "none"
+                                        popup.style.display = "none";
+                                        
                                     }
                                     function cancelPopupadd(event){
                                         var popup = document.getElementById("popupadd");
@@ -142,6 +143,7 @@
                                     function closePopup81(event){
                                         var popup = document.getElementById("popup81");
                                         popup.style.display = "none"; 
+                                        document.getElementById("bn").innerText = "N/A";
                                     }
                                     </script>
                                   

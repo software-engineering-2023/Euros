@@ -137,8 +137,8 @@ function closePopup() {
 
 	document.getElementById("popup1").style.display = "none";
 }
-var un = document.getElementById("un").value;
-var pass = document.getElementById("pass").value;
+var un ;
+var pass;
 function logout(){
 	un = ""
 	pass  = ""

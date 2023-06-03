@@ -1293,6 +1293,22 @@ ul.email {
     overflow-x: hidden; /* Hide horizontal scrollbar */
     justify-content: space-between;
 }
+.report-topic-heading121{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 80px;
+    width: 100%;
+    display: flex,left;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.item121 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 90px;
+    width: 100%;
+    display: flex,left;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 
 .item1::-webkit-scrollbar {
     display: none;
